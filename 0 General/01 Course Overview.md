@@ -107,11 +107,11 @@ For your capstone presentation, you should plan out what features of your projec
 
 ## Rough Timeline
 
-- Week 1, 2, 3, 4, 5: Python
-- Week 6, 7: HTML + CSS
-- Week 7, 8, 9, 10: JavaScript
-- Week 11, 12, 13, 14: Django
-- Week 15, 16, 17, 18: Capstone
+- Week 1-4: Python
+- Week 5-7: HTML + CSS
+- Week 8-10: Django
+- Week 11-14: Django
+- Week 15-18: Capstone
 
 ## Code of Conduct
 
@@ -137,3 +137,9 @@ At PDX Code Guild we seek to create an environment conducive to personal and pro
 Do not look at the solution or other students' solutions until you've finished the lab yourself. Do not copy other student's code. Do not copy code off the internet unless it's a small amount and you know exactly what it means. Do not try and complete a lab by googling a tutorial. You're only inhibiting your own learning by doing so. Cheating is also a violation of our code of conduct and can result in expulsion.
 
 You are encouraged to use resources (docs, online, books, each other) to research solutions. If you copy code from the internet or a book, you must understand what it means and how it works. If you're not sure, look up the function in the docs, try running it with a variety of inputs, and try tweaking the syntax, throw in print statements to print the values of variables at different times, etc. You also cannot use a single function which performs the entirety of the solution for you. The early labs are designed to practice string and list operations, using a function that does it all defeats the purpose.
+
+## Attendance
+
+Students are expected to be on time and attend all scheduled class times. The school requires ninety percent (90%) completion of class hours in order to receive a certificate of completion from the course. Students can miss no more than 7 days for the day class and 9 days for the evening class. Students can also not be absent for more than 5 days consecutively (this includes weekends).
+
+Any Student arriving more than 15 minutes late for scheduled class time will be marked tardy. Tardiness without legitimate reason on three different occasions will be counted as one absence.
