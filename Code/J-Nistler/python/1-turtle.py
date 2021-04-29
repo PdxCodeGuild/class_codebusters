@@ -38,7 +38,7 @@ forward(100)
 
 # Draw Left Arm
 pendown()
-left (85)
+left (80)
 forward(100)
 
 # Return to Neck
