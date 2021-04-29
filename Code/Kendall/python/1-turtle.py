@@ -1,6 +1,12 @@
 from turtle import *
 
-# Square Head
+# Circle Head
+circle(100)
+
+
+'''
+
+#Square Head
 forward(100)
 left(90)
 forward(100)
@@ -10,8 +16,9 @@ left(90)
 forward(100)
 left(90)
 
+'''
+
 # Upper Body
-forward(50)
 right(90)
 forward(100)
 right(90)
