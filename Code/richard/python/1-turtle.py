@@ -9,25 +9,36 @@
 # fillcolor(color_name) sets the fill color, begin_fill() indicates you'd like to begin filling in whatever you draw, end_fill() actually fills the shape in.
 # Use these functions to draw a stick figure with a head, body, two arms, and two legs. Once you're done, go through the examples below and create your own drawing.
 from turtle import *
-
+speed(0)
+#head
 for i in range(360):
     pendown()
     forward(1)
     left(1)
+#neck
 right(90)
 forward(50)
+#arms
 left(90)
 forward(50)
 left(180)
 forward(100)
 left(180)
 forward(50)
+#waist
 right(90)
 forward(50)
+#legs
 left(45)
 forward(75)
 left(180)
 forward(75)
 left(90)
 forward(75)
+
+
+penup()
+ht()
 done()
+
+
