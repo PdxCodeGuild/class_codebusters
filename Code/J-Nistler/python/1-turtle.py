@@ -2,7 +2,7 @@
 # PDX Code Guild
 # Class CodeBusters
 # Week 01
-# Lab 01
+# Lab 01 - Turtle
 # Jared Nistler
 #-----------------------------------------------#
 
