@@ -37,4 +37,3 @@ def test_precentage():
     assert percentage(1, 10) == '10%'
     assert percentage(600, 1200) == '50%'
     assert percentage(1, 3) == '33%'
-
