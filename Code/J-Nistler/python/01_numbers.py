@@ -10,9 +10,12 @@
 # Write a function returns whether a number is even or odd (hint, compare a/2 and a//2, or use a%2)
 
 def is_even(a):
+    # Check for remainder when dividing by two
     if a%2 == 0:
+        # If no remainder, a is even
         return True
     else:
+        # if remainder exists, a is odd
         return False
 
 def test_is_even():
@@ -23,8 +26,11 @@ def test_is_even():
 # Write a function that returns the ones digit of a number
 
 def ones_digit(num):
+    # Concert num to string
     str_num = str(num)
+    # Retrieve the last digit via index
     str_lst_dig = (str_num[-1])
+    # Return the last digit after converting to int
     return int(str_lst_dig)
 
 def test_ones_digit():
@@ -37,9 +43,13 @@ def test_ones_digit():
 # Write a function that takes two integers, a value and a maximum, and returns a string representing the percentage as an integer
 
 def percentage(v, max):
+    # Convert parameters into decimal by dividing them
     num_dec = v/max
+    # Convert decimal into percentage by multiplying by 100
     num_per = num_dec * 100
+    # Convert percentage to whole number int
     int_per = int(num_per)
+    # Return percentage as string with the percentage sign
     return str(int_per) + "%"
 
 def test_precentage():
