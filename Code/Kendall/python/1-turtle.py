@@ -1,5 +1,8 @@
 from turtle import *
 
+# Hide Turtle
+ht()
+
 # Circle Head
 circle(100)
 
