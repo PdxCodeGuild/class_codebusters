@@ -16,19 +16,25 @@ Make a functional solution that utilizes lists. For example, ask the user for 3 
 Add randomness! Use the random module, rather than selecting which adjective goes where in the story.
 '''
 
+# import the random module
 # Get user input for each word
+from random import *
 color = input('Enter a color: ')
 superlative = input('Enter a superlative (ending in "est"): ')
+
 # get four adjectives from user
 adjectives = input('Enter four adjectives, separated by commas: ')
+
 # convert adjectives to list
 adjectives = adjectives.split(', ')
-print(adjectives)
+
+# randomize adjectives
+shuffle(adjectives)
+
 body_part1 = input('Enter a body part (plural): ')
 body_part2 = input('Enter another body part (singlular): ')
 noun = input('Enter a noun: ')
 animal = input('Enter an animal (plural): ')
-
 
 # Concatenate with the rest of the mad lib
 mad_lib = f'''
