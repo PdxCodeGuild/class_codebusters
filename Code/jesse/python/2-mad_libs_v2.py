@@ -17,9 +17,9 @@ Add randomness! Use the random module, rather than selecting which adjective goe
 '''
 
 # import the random module
+from random import *
 
 # Get user input for each word
-from random import *
 color = input('Enter a color: ')
 superlative = input('Enter a superlative (ending in "est"): ')
 
