@@ -4,8 +4,9 @@ Make it repeatable. Once you're done prompting the user for words, prompt them f
 '''
 
 # import the random module
-# Get user input for each word
 from random import *
+
+# Get user input for each word
 color = input('Enter a color: ')
 superlative = input('Enter a superlative (ending in "est"): ')
 
