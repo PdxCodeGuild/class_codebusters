@@ -26,12 +26,9 @@ def test_is_even():
 # Write a function that returns the ones digit of a number
 
 def ones_digit(num):
-    # Concert num to string
-    str_num = str(num)
-    # Retrieve the last digit via index
-    str_lst_dig = (str_num[-1])
-    # Return the last digit after converting to int
-    return int(str_lst_dig)
+    # use modulus to divide by 10
+    # the remainder will be whatever is in the "ones" place
+    return num % 10
 
 def test_ones_digit():
     assert ones_digit(3) == 3

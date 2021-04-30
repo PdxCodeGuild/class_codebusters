@@ -1,4 +1,3 @@
-
 # Practice 1: Numbers & Arithmetic
 # Copy and paste this file into your own "01_numbers.py"
 # Fill in the code for each of the functions
@@ -8,30 +7,38 @@
 # Write a function returns whether a number is even or odd (hint, compare a/2 and a//2, or use a%2)
 
 def is_even(a):
-    return True if a % 2 == 0 else False
+    if a % 2 == 0:
+        return True
+    else:
+        return False
+
 
 def test_is_even():
     assert is_even(5) == False
     assert is_even(6) == True
 
-# Ones Digit
+
 # Write a function that returns the ones digit of a number
 
 def ones_digit(num):
-    return num % 10
+    solution = num % 10
+    return solution
+
 
 def test_ones_digit():
     assert ones_digit(3) == 3
     assert ones_digit(56) == 6
     assert ones_digit(812) == 2
 
-
 # Percentage
-# Write a function that takes two integers, a value and a maximum, and returns a string representing 
-# the percentage as an integer
+# Write a function that takes two integers, a value and a maximum, and returns a string representing the percentage as an integer
+
 
 def percentage(v, max):
-    return f"{int(v / max * 100)}%"
+    percent = v / max * 100
+    percent = int(percent)
+    return f"{percent}%"
+
 
 def test_precentage():
     assert percentage(1, 10) == '10%'

@@ -6,14 +6,15 @@ Display the Mad Lib to the user.
 '''
 
 # input statement for madlib
-Noun1 = input('Enter a noun ')
-Noun2 = input('Enter a plural noun ')
-Noun3 = input('Enter another noun ')
-Place = input('Enter a place ')
-Adjective = input('Enter a adjective ')
-Noun4 = input('Enter another noun ')
+Noun1 = input('Enter a noun: ')
+Noun2 = input('Enter a plural noun: ')
+Noun3 = input('Enter another noun: ')
+Place = input('Enter a place: ')
+Adjective = input('Enter a adjective: ')
+Noun4 = input('Enter another noun: ')
 
 # print statement concatinating the outputs from each input statement
+#print(f" The {adjective} person {verb} the {noun})
 print('Be kind to your Robber-footed ' + Noun1)
 print("For a duck may be somebody's " + Noun2)
 print('Be kind to your ' + Noun3 + " in " + Place)

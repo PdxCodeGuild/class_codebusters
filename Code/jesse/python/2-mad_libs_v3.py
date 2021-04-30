@@ -4,24 +4,26 @@ Make it repeatable. Once you're done prompting the user for words, prompt them f
 '''
 
 # import the random module
-# Get user input for each word
 from random import *
-color = input('Enter a color: ')
-superlative = input('Enter a superlative (ending in "est"): ')
+
+# Get user input for each word
+# convert all answers to lowercase
+color = input('Enter a color: ').lower()
+superlative = input('Enter a superlative (ending in "est"): ').lower()
 
 # get four adjectives from user
-adjectives = input('Enter four adjectives, separated by commas: ')
+adjectives = input('Enter four adjectives, separated by spaces: ').lower()
 
 # convert adjectives to list
-adjectives = adjectives.split(', ')
+adjectives = adjectives.split(' ')
 
 # randomize adjectives
 shuffle(adjectives)
 
-body_part1 = input('Enter a body part (plural): ')
-body_part2 = input('Enter another body part (singlular): ')
-noun = input('Enter a noun: ')
-animal = input('Enter an animal (plural): ')
+body_part1 = input('Enter a body part (plural): ').lower()
+body_part2 = input('Enter another body part (singlular): ').lower()
+noun = input('Enter a noun: ').lower()
+animal = input('Enter an animal (plural): ').lower()
 
 # Concatenate with the rest of the mad lib
 mad_lib = f'''
@@ -30,15 +32,25 @@ It has {adjectives[0]} {body_part1}, and a {body_part2}
 shaped like a {noun}. It loves to eat {animal},
 although it will feast on nearly anything. It is {adjectives[1]}
 and {adjectives[2]}. You must be {adjectives[3]} around it, or 
-you may end up as it`s meal!
-'''
+you may end up as it`s meal!'''
 
 # prompt user if they would like to hear the story again until the answer is "no"
-prompt = input('\nData received. Would you like to hear the story? ')
-if prompt == 'yes':
-    while True:
+# convert all user inputs to lowercase
+while True:
+    prompt = input('\nData received. Would you like to hear the story? ').lower()
+    if prompt == 'yes':
         print(mad_lib)
-        prompt = input('Would you like to hear the story again? ')
-        if prompt == 'no':
-            print('\nGoodbye!\n')
-            break
+
+        # ask the user if they would like to hear the story 
+        # again until the answer is no, but with a different message than before
+        while True:
+            prompt = input('\nWould you like to hear the story again? ').lower()
+            if prompt == 'yes':
+                print(mad_lib)
+                continue
+            elif prompt == 'no':
+                print('\nGoodbye!\n')
+                exit()
+    elif prompt == 'no':
+        print('\nGoodbye!\n')
+        break
