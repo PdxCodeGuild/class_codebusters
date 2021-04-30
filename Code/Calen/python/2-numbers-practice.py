@@ -41,6 +41,8 @@ def test_ones_digit():
 # Percentage
 # Write a function that takes two integers, a value and a maximum, and returns a string representing the percentage as an integer
 
+
+# I am not going to lie, I could probably do this with fewer lines but its functional and I am happy with it. 
 def percentage(v, max):
     solution = v/max
     solution = int(solution*100)
@@ -53,4 +55,3 @@ def test_precentage():
     assert percentage(600, 1200) == '50%'
     assert percentage(1, 3) == '33%'
 
-print(percentage(1, 10))
