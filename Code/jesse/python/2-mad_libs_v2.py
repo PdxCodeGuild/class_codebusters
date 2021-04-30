@@ -17,6 +17,7 @@ Add randomness! Use the random module, rather than selecting which adjective goe
 '''
 
 # import the random module
+
 # Get user input for each word
 from random import *
 color = input('Enter a color: ')
