@@ -1,7 +1,5 @@
 # Is Even
 # Write a function returns whether a number is even or odd (hint, compare a/2 and a//2, or use a%2)
-
-
 def is_even(num):
     if num % 2 == 0:
         return True
@@ -32,6 +30,7 @@ def test_ones_digit():
 # Write a function that takes two integers, a value and a maximum, and returns a string representing the percentage as an integer
 
 
+
 def percentage(v, max):
     decimal = (v / max)
     number = (decimal * 100)
@@ -42,4 +41,5 @@ def percentage(v, max):
 def test_precentage():
     assert percentage(1, 10) == '10%'
     assert percentage(600, 1200) == '50%'
-    assert percentage(1, 3) == '33%'
+    assert percentage(1, 3) == '33%
+
