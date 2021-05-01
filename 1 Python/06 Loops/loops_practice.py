@@ -12,7 +12,7 @@ def double_numbers(nums):
     ...
 
 def test_double_numbers():
-    assert double_numbers([1, 2, 3]) == [4, 5, 6]
+    assert double_numbers([1, 2, 3]) == [2, 4, 6]
 
 
 # Stars
