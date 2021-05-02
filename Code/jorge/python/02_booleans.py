@@ -1,4 +1,3 @@
-
 # Practice 2: Booleans, Comparisons, & Conditionals
 # Copy and paste this file into your own "02_booleans.py"
 # Fill in the code for each of the functions
@@ -8,9 +7,12 @@
 # Go Hiking
 # Write a function that takes a string indicating energy level and weather
 
-
 def go_hiking(energy, weather):
-    ...
+    if energy == 'spry' and weather == 'sunny':
+        return True
+    else:
+        return False
+
 
 def test_go_hiking():
     assert go_hiking('tired', 'rainy') == False
@@ -25,6 +27,7 @@ def test_go_hiking():
 def double_digit(num):
     ...
 
+
 def test_double_digit():
     assert double_digit(5) == False
     assert double_digit(55) == True
@@ -38,6 +41,7 @@ def test_double_digit():
 def opposite(a, b):
     ...
 
+
 def test_opposite():
     assert opposite(10, -1) == True
     assert opposite(2, 3) == False
@@ -50,6 +54,7 @@ def test_opposite():
 
 def near_100(num):
     ...
+
 
 def test_near_100():
     assert near_100(50) == False
@@ -65,7 +70,7 @@ def test_near_100():
 def maximum_of_three(a, b, c):
     ...
 
-def test_maximum_of_three():
-    assert maximum_of_three(5,6,2) == 6
-    assert maximum_of_three(-4,3,10) == 10
 
+def test_maximum_of_three():
+    assert maximum_of_three(5, 6, 2) == 6
+    assert maximum_of_three(-4, 3, 10) == 10

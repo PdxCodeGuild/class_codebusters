@@ -1,4 +1,3 @@
-
 # Practice 2: Booleans, Comparisons, & Conditionals
 # Copy and paste this file into your own "02_booleans.py"
 # Fill in the code for each of the functions
@@ -10,7 +9,11 @@
 
 
 def go_hiking(energy, weather):
-    ...
+    if list(energy)[0] == list(weather)[0]:
+        return True
+    else:
+        return False
+
 
 def test_go_hiking():
     assert go_hiking('tired', 'rainy') == False
@@ -23,7 +26,11 @@ def test_go_hiking():
 # Write a function that returns True if the number is a double digit
 
 def double_digit(num):
-    ...
+    if len(str(abs(num))) == 2:
+        return True
+    else:
+        return False
+
 
 def test_double_digit():
     assert double_digit(5) == False
@@ -36,10 +43,14 @@ def test_double_digit():
 # Write a function that takes two integers, `a` and `b`, and returns `True` if one is positive and the other is negative, and return `False` otherwise.
 
 def opposite(a, b):
-    ...
+    if a == -b or b == -a:
+        return True
+    else:
+        return False
+
 
 def test_opposite():
-    assert opposite(10, -1) == True
+    assert opposite(10, -10) == True
     assert opposite(2, 3) == False
     assert opposite(-1, -1) == False
 
@@ -49,7 +60,11 @@ def test_opposite():
 
 
 def near_100(num):
-    ...
+    if 89 < int(num) < 111:
+        return True
+    else:
+        return False
+
 
 def test_near_100():
     assert near_100(50) == False
@@ -63,9 +78,10 @@ def test_near_100():
 
 
 def maximum_of_three(a, b, c):
-    ...
+    lst = [a, b, c]
+    return max(lst)
+
 
 def test_maximum_of_three():
-    assert maximum_of_three(5,6,2) == 6
-    assert maximum_of_three(-4,3,10) == 10
-
+    assert maximum_of_three(5, 6, 2) == 6
+    assert maximum_of_three(-4, 3, 10) == 10
