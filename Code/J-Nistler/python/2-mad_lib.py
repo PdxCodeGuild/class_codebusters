@@ -11,7 +11,7 @@ Jared Nistler
 #-----------------------------------------------#
 '''
 Version 1: Completed
-Version 2: Completed
+Version 2: Not Complete - Must Use Functions
 Version 3: Under Development
 
 Future Improvements: 
@@ -28,6 +28,14 @@ import random
 #-----------------------------------------------#
 # Input from User
 #-----------------------------------------------#
+
+'''
+Defines a function that takes in []
+and returns []
+'''
+def get_input():
+    return
+
 
 #Prompt User for First Words and Validates Input
 while True:
