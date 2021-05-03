@@ -12,7 +12,7 @@ def loud_text(text):
     ...
 
 
-def test_loud_test():
+def test_loud_text():
     assert loud_text('hello') == 'H-E-L-L-O'
     assert loud_text(
         'this is loud text') == 'T-H-I-S- -I-S- -L-O-U-D- -T-E-X-T'
