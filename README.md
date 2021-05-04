@@ -21,5 +21,6 @@
 
 ### Week 2 / Python
 
-| Section | Docs | Practice | Labs | Solutions |
-| 05 Random | [Imports, Modules, & Packages](<1 Python/05 Random/05 Imports, Modules, & Packages.md>) [Random](<1 Python/05 Random/06 Random.md>) | | [(mob) Random Emoticons](<1 Python/05 Random/(mob01)Random Emoticon Generator.md>) |
+| Section   | Docs                                                                                                                                | Practice | Labs                                                                               | Solutions |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------------------------------------------- | --------- |
+| 05 Random | [Imports, Modules, & Packages](<1 Python/05 Random/05 Imports, Modules, & Packages.md>) [Random](<1 Python/05 Random/06 Random.md>) |          | [(mob) Random Emoticons](<1 Python/05 Random/(mob01)Random Emoticon Generator.md>) |
