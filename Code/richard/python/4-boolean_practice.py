@@ -22,7 +22,7 @@ def test_go_hiking():
 # Write a function that returns True if the number is a double digit
 
 def double_digit(num):
-    return True if num > -100 and num <= -10 or num < 100 and num >= 10 else False
+    return True if -10 >= num > -100 or 10 < num < 100 else False
 
 def test_double_digit():
     assert double_digit(5) == False
@@ -49,7 +49,7 @@ def test_opposite():
 
 
 def near_100(num):
-    return True if num >= 90 and num <= 110 else False
+    return True if 90 <= num <= 110 else False
 
 def test_near_100():
     assert near_100(50) == False
@@ -63,7 +63,13 @@ def test_near_100():
 
 
 def maximum_of_three(a, b, c):
-    return max(a,b,c)
+    # return max(a,b,c)
+    if a > b and a > c:
+        return a
+    elif b > a and b > c:
+        return b
+    else:
+        return c
 
 def test_maximum_of_three():
     assert maximum_of_three(5,6,2) == 6
