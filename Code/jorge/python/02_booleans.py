@@ -25,7 +25,10 @@ def test_go_hiking():
 # Write a function that returns True if the number is a double digit
 
 def double_digit(num):
-    ...
+    num = abs(num)
+    if num > 9 and num < 100:
+        return True
+    return False
 
 
 def test_double_digit():
@@ -39,7 +42,7 @@ def test_double_digit():
 # Write a function that takes two integers, `a` and `b`, and returns `True` if one is positive and the other is negative, and return `False` otherwise.
 
 def opposite(a, b):
-    ...
+    return (a > 0 and b < 0) or (a < 0 and b > 0)
 
 
 def test_opposite():
@@ -53,7 +56,7 @@ def test_opposite():
 
 
 def near_100(num):
-    ...
+    return num in range(90, 110)
 
 
 def test_near_100():
@@ -68,7 +71,7 @@ def test_near_100():
 
 
 def maximum_of_three(a, b, c):
-    ...
+    return max(a, b, c)
 
 
 def test_maximum_of_three():
