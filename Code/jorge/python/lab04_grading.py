@@ -1,5 +1,6 @@
+# input score
 grade = int(input(f'Please enter your score: '))
-
+# comparison
 if grade >= 98 or grade == 100:
     print('A+')
 elif grade >= 93 and grade <= 97:
