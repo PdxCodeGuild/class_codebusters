@@ -20,12 +20,13 @@ to a letter grade.
 # Developer Notes
 #-----------------------------------------------#
 '''
-Version 1: Pending
-Version 2: Pending
+Version 1: Complete
+Version 2: Complete
 
 Future Improvements:
 
-- 
+- Validate user input to only include a numerical value between
+1-100
 
 '''
 
@@ -35,7 +36,6 @@ Future Improvements:
 
 # Solicit user input
 user_input = input("Enter your numeric grade: ")
-# Conver user input into an int
 user_input = int(user_input)
 
 #-----------------------------------------------#
