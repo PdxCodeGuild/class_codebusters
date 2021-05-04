@@ -45,13 +45,12 @@ Below 65 F
 # else:
 #     print('F')
 
-# # user inputs a number grade from 0 to 100
+
+# user inputs a number grade from 0 to 100
 user_input = input('Enter a grade: ')
-
-# # convert string to integer
+# convert string to integer
 grade = int(user_input)
-
-# # comparison statements for letter grades
+# comparison statements for letter grades
 if grade >= 97:
     print('A+')
 elif grade >= 93 and grade <= 96:
