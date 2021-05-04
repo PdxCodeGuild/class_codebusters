@@ -198,15 +198,14 @@ def test_factorial():
 
 def find_unique(nums):
     numsDict = {}
+    uniqueList = []
     for i in nums:
         if i not in numsDict.keys():
-            numsDict[i].append(0)
-    return numsDict
-nums = [12, 24, 35, 24, 88, 120, 155, 88, 120, 155]
-print(find_unique(nums))
+            numsDict[i] = 1
+            uniqueList.append(i)
+    return uniqueList
 
-'''
+
 def test_find_unique():
     nums = [12, 24, 35, 24, 88, 120, 155, 88, 120, 155]
     assert find_unique(nums) == [12, 24, 35, 88, 120, 155]
-'''
