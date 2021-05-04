@@ -8,6 +8,8 @@
 - Weeks 11-14: JavaScript
 - Weeks 15-18: Capstone
 
+[Submitting your work](<0 General/Submitting Your Work.md>)
+
 ### Week 1 / Python
 
 | Section                                  | Docs                                                                                                                                     | Practice                                                                             | Labs                                                                                | Solutions |
