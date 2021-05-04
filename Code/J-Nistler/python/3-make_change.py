@@ -60,32 +60,17 @@ num_input = int(num_input)
 # Break Down Coins
 #-----------------------------------------------#
 
-# 
-'''
-Defines a function that takes in a coin type and amount
-of pennies and returns the number of coins of that type
-'''
-def count_coin(coin, num):
-    # Pull coin value
-    coin_val = coin[1]
-    # Count the number of coins in input value
-    coin_count = num//coin_val
-    # Return coin count
-    return coin_count
-
-
-# Coint the coins
+# Create list in which to store results
 total_count = []
-penny_count = num_input
 
 # Iterate through each coin type
 for coin in coins:
     # If there are still pennies to count, count them
     if num_input > 0:
         # Add the number of coins counted to the total count list
-        total_count.append([coin[0], count_coin(coin, num_input)])
+        total_count.append([coin[0], num_input//coin[1]])
         # Subtract the number of coins counted from the pennies remaining
-        num_input -= (count_coin(coin, num_input) * coin[1])
+        num_input %= coin[1]
     else:
         # If there are no coins left to be cointed, add that to list
         total_count.append([coin[0], 0])
