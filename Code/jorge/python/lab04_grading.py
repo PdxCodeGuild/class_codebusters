@@ -1,5 +1,13 @@
-# input score
-grade = int(input(f'Please enter your score: '))
+# Function to keep numbers valid
+while True:
+    # input score
+    grade = input(f'Please enter your score: ')
+    try:
+        grade = int(grade)
+        if 0 <= grade <= 100:
+            break
+    except ValueError:
+        print('Enter a valid number: ')
 # comparison
 if grade >= 98 or grade == 100:
     print('A+')
