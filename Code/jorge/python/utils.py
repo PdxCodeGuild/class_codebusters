@@ -1,3 +1,4 @@
+# Get int module
 def get_int(message):
     while True:
         # input score
