@@ -34,8 +34,9 @@ def double_digit(num):
     length = len(str(num))
     if length == 2:
         return True
-    else:
-        return False
+    return False
+
+# return 9 < abs(num) < 100
 
 
 def test_double_digit():
@@ -52,8 +53,7 @@ def test_double_digit():
 def opposite(a, b):
     if a > 0 and b < 0:
         return True
-    else:
-        return False
+    return False
 
 
 def test_opposite():
@@ -71,8 +71,9 @@ def near_100(num):
         return True
     elif 101 < num <= 110:
         return True
-    else:
-        return False
+    return False
+
+# return num in range(90,110)
 
 
 def test_near_100():
@@ -88,6 +89,8 @@ def test_near_100():
 def maximum_of_three(a, b, c):
     numbers = [a, b, c]
     return(max(numbers))
+
+# return max(a,b,c)
 
 
 def test_maximum_of_three():
