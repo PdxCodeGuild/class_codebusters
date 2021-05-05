@@ -27,7 +27,7 @@ def valleys(data):
             valleyList.append(i)
         i += 1
     return valleyList
-
+'''
 def peaks_and_valleys(data):
     return peaks(data) + valleys(data)
 
@@ -58,34 +58,45 @@ def createMountains(data):
 
 data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
 createMountains(data)
-
+'''
 # Version 3 (optional)
 # Imagine pouring water into onto these hills. The water would wash off the left and right sides,
 # but would accumulate in the valleys. Below the water is represented by O's. Given data, 
 # calculate the amount of water that would be collected, and if you can, draw the following diagram.
 
-# def fillWater(data):
-#     peak = peaks(data)
-#     valley = valleys(data)
-#     print(peak)
-#     print(valley)
-
-# data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
-# fillWater(data)
 
 
-# def loopData(data, num):
-#     rows = []
-#     for i in range(len(data)):
-#         if data[i] > num:
-#             rows.append('X')
-#         else:
-#             rows.append(' ')
-#     for i in rows:
-#         print(i, end = '')
+data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
+
+peak = peaks(data)
+valley = valleys(data)
+
+def loopData(data, num,peak,valley):
+    rows = []
+    j = 0
+    countWater = 0
+    for i in range(len(data)):
+        if i > (valley[j] - peak[j]) + valley[j]:
+            j += 1
+        if data[i] > num:
+            rows.append('X')
+        elif (i > peak[j]) and (data[i] < data[peak[j]] > num) and (data[i] <= num):
+            rows.append('O')
+            countWater += 1
+        else:
+            rows.append(' ')
+        
+    for i in rows:
+        print(i, end = '')
+    return countWater
 
 
-# def createMountains(data):
-#     for i in reversed(range(max(data))):
-#         loopData(data, i)
-#         print()
+def createMountains(data):
+    waterAmount = 0
+    peak = peaks(data)
+    valley = valleys(data)
+    for i in reversed(range(max(data))):
+        waterAmount += loopData(data, i,peak,valley)
+        print()
+    print(f"Water Amount is {waterAmount}")
+createMountains(data)
