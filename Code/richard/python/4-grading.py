@@ -15,8 +15,13 @@
 # or use modulus % to get the ones-digit to set another string to '+', '-', or ' '. Then you can 
 # concatenate that string with your grade string.
 
-strGrade = input("Please enter a number between 0 and 100: ")
-numGrade = int(strGrade)
+
+def getInt():
+    numGrade = int(input("Please enter a number between 0 and 100: "))
+    if numGrade > 100 or numGrade < 0:
+        numGrade = getInt()
+    return numGrade
+
 
 def getLetterGrade(numberGrade):
     if numberGrade >= 90:
@@ -41,6 +46,7 @@ def getPlusMinus(numberGrade):
         plusMinus = '-'
     return plusMinus
 
-yourLetGrade = getLetterGrade(numGrade)
-yourPlusMinus = getPlusMinus(numGrade)
+intNumGrade = getInt()
+yourLetGrade = getLetterGrade(intNumGrade)
+yourPlusMinus = getPlusMinus(intNumGrade)
 print(f"Your grade is {yourLetGrade}{yourPlusMinus}!")
