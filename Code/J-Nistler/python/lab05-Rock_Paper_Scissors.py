@@ -38,13 +38,13 @@ Rock, paper, scissors, lizard, Spock!
 # Developer Notes
 #-----------------------------------------------#
 '''
-Version 1: Under Development
-Version 2: Under Development
+Version 1: Complete
+Version 2: Complete
 Version 3: Under Development
 
 Future Improvements:
 
-- 
+- Fix Version two to not use a nested if statement
 
 '''
 
@@ -97,7 +97,17 @@ while True:
         result = throw_choice(user_choice, comp_choice)
         # Print the result message
         print(end_message(user_choice, comp_choice, result))
-        break
+        
+        # Ask the player if they want to play again
+        again_choice = input(f'''
+        
+        Would you like to play again? Yes or No.
+        ''').title()
+
+        if again_choice == "Yes":
+            continue
+        else:
+            break
     elif user_choice == "Exit":
         break
     else:
