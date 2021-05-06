@@ -28,7 +28,7 @@ computer = random.choice(options)
 # get user's choice, continue ony if valid entry
 while True:
     player = input('\nEnter rock, paper, or scissors: ').lower()
-    if 'rock' or 'paper' or 'scissors' in player:
+    if player in options:
         break
     else:
         print('\nInvalid entry.')
