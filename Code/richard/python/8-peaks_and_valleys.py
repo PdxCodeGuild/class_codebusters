@@ -76,7 +76,7 @@ def loopData(data, num,peak,valley):
     j = 0
     countWater = 0
     for i in range(len(data)):
-        if i > (valley[j] - peak[j]) + valley[j]:
+        if (j + 1 < len(peak)) and (i > (valley[j] - peak[j]) + valley[j]):
             j += 1
         if data[i] > num:
             rows.append('X')

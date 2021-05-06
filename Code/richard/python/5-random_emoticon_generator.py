@@ -20,8 +20,9 @@ def createEmoticon():
 
 print(createEmoticon())
 '''
-#version 2 Use a while loop to generate 5 emoticons.
 '''
+#version 2 Use a while loop to generate 5 emoticons.
+
 eyes = [':','=',';','>',]
 noses = ['-','']
 mouths = [')','D','}','P','O','X',']','(']
@@ -33,10 +34,13 @@ while i < 5:
     print(createEmoticon())
     i += 1
 '''
+
 #version 3 Randomly generate vertical emoticons like ^_^ (-_-), [*.*]
 eyes = ['^','-','*']
 cheeks = ['(','[','']
 mouths = ['-','.']
+
+print(len(eyes))
 
 def createEmoticon():
     eye = random.choice(eyes)
