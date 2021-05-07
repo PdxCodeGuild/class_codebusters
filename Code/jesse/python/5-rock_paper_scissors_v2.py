@@ -42,9 +42,9 @@ while True:
     if player == 'scissors':
         if computer == 'rock':
             print(lose) 
-        if computer == 'paper':
+        elif computer == 'paper':
             print(win)
-        if computer == 'scissors':
+        elif computer == 'scissors':
             print(tie)
             
     # loop again after asking user if they would like to continue playing

@@ -56,7 +56,7 @@ if player == 'paper':
 if player == 'scissors':
     if computer == 'rock':
         print(lose) 
-    if computer == 'paper':
+    elif computer == 'paper':
         print(win)
-    if computer == 'scissors':
+    elif computer == 'scissors':
         print(tie)
