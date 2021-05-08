@@ -18,14 +18,6 @@ The computer will ask the user for their choice (rock, paper, scissors)
 The computer will randomly choose rock, paper or scissors
 Determine who won and tell the user
 
-rock vs paper
-
-rock vs scissors
-paper vs rock
-paper vs scissors
-scissors vs rock
-scissors vs paper
-
 VERSION 2
 After playing, ask them if they'd like to play again. 
 If they say yes, restart the game, otherwise exit.
