@@ -1,4 +1,4 @@
-def go_hiking(energy, weather):
+'''def go_hiking(energy, weather):
     if energy == "spry":
         if weather == "sunny":
             return True
@@ -76,4 +76,11 @@ def maximum_of_three(a, b, c):
 
 def test_maximum_of_three():
     assert maximum_of_three(5, 6, 2) == 6
-    assert maximum_of_three(-4, 3, 10) == 10
+    assert maximum_of_three(-4, 3, 10) == 10'''
+
+
+def double_letters(word):
+    word = input('anyword: ')
+    print(word)
+    wordlist = list.word
+    print(wordlist*2)
