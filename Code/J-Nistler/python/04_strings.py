@@ -87,7 +87,10 @@ def test_snake_case():
 
 
 def camel_case(text):
-    text_list = list(text.title().strip(string.punctuation))
+    for char in text:
+        if char in string.punctuation:
+            text = text.replace(char, '')
+    text_list = list(text.title())
     text_list[0] = text_list[0].lower()
     result = "".join(text_list)
     return result.replace(" ", "")
