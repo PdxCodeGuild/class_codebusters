@@ -14,7 +14,6 @@ def loud_text(text):
     result = "-".join(text_list)
     return result.upper()
 
-
 def test_loud_text():
     assert loud_text('hello') == 'H-E-L-L-O'
     assert loud_text(
@@ -25,11 +24,7 @@ def test_loud_text():
 # Get a string from the user, print out another string, doubling every letter.
 
 def double_letters(word):
-    new_word = []
-    for char in word:
-        new_word.append(char)
-        new_word.append(char)
-    return "".join(new_word)
+    return "".join([char * 2 for char in word])
 
 def test_double_letters():
     assert double_letters('hello') == 'hheelllloo'
@@ -58,7 +53,7 @@ def latest_letter(word):
 
 
 def test_latest_letter():
-    return latest_letter('pneumonoultramicroscopicsilicovolcanoconiosis') == 'v'
+    assert latest_letter('pneumonoultramicroscopicsilicovolcanoconiosis') == 'v'
 
 
 # Count Hi
