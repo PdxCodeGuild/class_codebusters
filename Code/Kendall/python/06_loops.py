@@ -39,6 +39,8 @@ def extract_less_than_ten(nums):
 
     return new_nums
 
+    # return [num for num in nums if num < 10]
+
 
 def test_extract_less_than_ten():
     assert extract_less_than_ten([2, 8, 12, 18]) == [2, 8]
