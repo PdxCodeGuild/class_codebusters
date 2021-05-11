@@ -35,6 +35,7 @@ def stars(n):
         output += '*'
     return output
 
+#return "*" * n
 
 def test_stars():
     assert stars(1) == '*'
