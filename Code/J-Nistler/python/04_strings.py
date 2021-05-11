@@ -72,7 +72,10 @@ def test_count_hi():
 # Write a function that converts text to snake case (all lowercase, underscores for spaces, no special characters).
 
 def snake_case(text):
-    return text.lower().replace(' ', '_').strip(string.punctuation)
+    for char in text:
+        if char in string.punctuation:
+            text = text.replace(char, '')
+    return text.lower().replace(' ', '_')
 
 
 def test_snake_case():
