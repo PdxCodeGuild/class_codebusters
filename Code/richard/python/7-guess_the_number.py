@@ -10,7 +10,7 @@
 import random
 
 theNumber = random.randint(0,10)
-
+'''
 i = 1
 
 while i < 11:
@@ -21,7 +21,7 @@ while i < 11:
     else:
         print('Try Again!')
     i += 1
-
+'''
 
 # Part 2
 # Allow the user to make an unlimited number of guesses using a while True and break. Keep track of how 

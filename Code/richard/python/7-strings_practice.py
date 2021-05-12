@@ -9,10 +9,12 @@
 # Capitalize text and insert dashes between each letter
 
 def loud_text(text):
-    dashedStr = ''
-    for i in range(len(text)):
-        dashedStr += text[i] + '-'
-    return dashedStr[:-1].upper()
+    # dashedStr = ''
+    # for i in range(len(text)):
+    #     dashedStr += text[i] + '-'
+    # return dashedStr[:-1].upper()
+    text = text.upper()
+    return '-'.join(text)
 
 def test_loud_test():
     assert loud_text('hello') == 'H-E-L-L-O'
@@ -24,10 +26,11 @@ def test_loud_test():
 # Get a string from the user, print out another string, doubling every letter.
 
 def double_letters(word):
-    doubleStr = ''
-    for i in range(len(word)):
-        doubleStr += word[i] + word[i]
-    return doubleStr
+    # doubleStr = ''
+    # for i in range(len(word)):
+    #     doubleStr += word[i] + word[i]
+    # return doubleStr
+    return ''.join([char * 2 for char in word])
 
 def test_double_letters():
     assert double_letters('hello') == 'hheelllloo'
@@ -52,13 +55,13 @@ def test_count_letter():
 
 def latest_letter(word):
     lastLetter = ''
-    for i in range(len(word)):
-        if word[i] > lastLetter:
-            lastLetter = word[i]
+    for i in word:
+        if i > lastLetter:
+            lastLetter = i
     return lastLetter
 
 def test_latest_letter():
-    return latest_letter('pneumonoultramicroscopicsilicovolcanoconiosis') == 'v'
+    assert latest_letter('pneumonoultramicroscopicsilicovolcanoconiosis') == 'v'
 
 
 # Count Hi
