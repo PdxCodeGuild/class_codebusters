@@ -157,29 +157,37 @@ def combine_all(nums):
 def test_combine_all():
     assert combine_all([[5, 2, 3], [4, 5, 1], [7, 6, 3]]) == [5, 2, 3, 4, 5, 1, 7, 6, 3]
 
+# Fibonacci
+# Write a function that takes `n` as a parameter, and returns a 
+# list containing the first `n` [Fibonacci Numbers](https://en.wikipedia.org/wiki/Fibonacci_number).
 
-#----------------
-# To be completed:
-# #----------------
+def fibonacci(n):
+    result_list = []
 
-# # Fibonacci
-# # Write a function that takes `n` as a parameter, and returns a 
-# # list containing the first `n` [Fibonacci Numbers](https://en.wikipedia.org/wiki/Fibonacci_number).
+    for i in range(n):
+        if i == 0 or i == 1:
+            result_list.append(1)
+        else:
+            result_list.append(result_list[i-1] + result_list[i-2])
+    return result_list
 
-# def fibonacci(n):
-#     ...
 
+def test_fibonacci():
+    assert fibonacci(8) == [1, 1, 2, 3, 5, 8, 13, 21]
 
-# def test_fibonacci():
-#     assert fibonacci(8) == [1, 1, 2, 3, 5, 8, 13, 21]
-
-# # Factorial
-# # Write a function that takes `n` as a parameter and returns `n` factorial.
-
+# Factorial
+# Write a function that takes `n` as a parameter and returns `n` factorial.
 
 # def factorial(n):
-#     ...
+#     factorial_list = [num for num in range(n + 1)]
+#     factorial_list.pop(0)
 
+#     for num in range(len(factorial_list)):
+
+
+#     return factorial_list
+
+# print(factorial(5))
 
 # def test_factorial():
 #     assert factorial(5) == 120
