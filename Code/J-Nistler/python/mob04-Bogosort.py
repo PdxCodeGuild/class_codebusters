@@ -47,6 +47,7 @@ list is sorted
 #-----------------------------------------------#
 
 import random
+import time
 
 #-----------------------------------------------#
 # Begin Mob Code
@@ -103,21 +104,24 @@ randomly shuffles the list until it is sorted from least
 to greatest.
 '''
 def bogosort(nums):
+    start_time = time.time()
     count = 0
     sorted = False
     while sorted != True:
         shuff_list = shuffle(nums)
         print(shuff_list)
         sorted = is_sorted(shuff_list)
-        count += 1     
+        count += 1
+    end_time = time.time()
     return f'''
-    You sorted the list in {count} attempts!'''
+    You sorted the list in {count} attempts!
+    It took {end_time - start_time:0.2f} seconds'''
 
 #-----------------------------------------------#
 # Testing
 #-----------------------------------------------#
 
-test_num = 11
+test_num = 8
 test_list = random_list(test_num)
 print(test_list)
 print(bogosort(test_list))
