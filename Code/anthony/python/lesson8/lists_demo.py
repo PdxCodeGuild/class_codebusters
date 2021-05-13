@@ -34,7 +34,7 @@ car_brands = ["ford", ["honda", "acura"], "toyota", "tesla", "volkswagen",
 car_brands.insert(2, "kia")
 while "oldsmobile" in car_brands:
     car_brands.remove("oldsmobile")
-car_brands.pop(-2)
+# car_brands.pop(-2)
 
 del car_brands[0]
 # del car_brands    # removes list
@@ -42,7 +42,8 @@ del car_brands[0]
 car_brands.extend(['lexus', 'gmc', 'chevy', 'subaru'])
 car_brands.insert(0, 'jaguar')
 
-car_brands[0], car_brands[2] = car_brands[2], car_brands[0]
+car_brands[0], car_brands[2] = (car_brands[2], car_brands[0])
+x, y = ("hello", "word")
 
 # temp = car_brands[0]
 # car_brands[0] = car_brands[2]
@@ -60,8 +61,64 @@ del rival_brands[1]
 
 nums = [3, 1, 5, 6]
 # nums.sort()   # Sorts original list
-new_nums = sorted(nums)  # Creates a new sorted list
-newer_nums = reversed(nums)
+# new_nums = sorted(nums)  # Creates a new sorted list
+# newer_nums = reversed(nums)
+
+# print(new_nums)
+
+# doubled_nums = []
+# for num in nums:
+#     doubled_nums.append(num*2)
+
+# doubled_nums = [num * 2 for num in nums]
+
+# print(doubled_nums)
+
+# short_brands = []
+# for brand in car_brands:
+#     if brand.startswith('t') or brand.startswith('s'):
+#         short_brands.append(brand)
+
+# car_brands.pop(1)
+# short_brands = [brand for brand in car_brands if brand.startswith(
+#     't') or brand.startswith('s')]
+# print(short_brands)
+
+"""
+[
+    [0, 1, 2],
+    [0, 1, 2],
+    [0, 1, 2]
+]
+"""
+
+# grid = []
+# for x in range(3):
+#     row = []
+#     for y in range(3):
+#         row.append(y)
+#     grid.append(row)
+
+# grid = [[y for y in range(3)] for x in range(3)]
+
+# print(grid)
 
 
-print(new_nums)
+# dict_comp = {str(x): x for x in range(5)}
+# print(dict_comp)
+
+
+# contact_info = ('123 Main St', '503-555-1234', 'apt 123')
+# # Throws TypeError
+# contact_info = list(contact_info)
+# contact_info[0] = '456 Water Ave'
+# contact_info = tuple(contact_info)
+# print(contact_info)
+
+
+def say_hello(name):
+    return "Hello", name
+
+
+greeting, name = say_hello("Bill")
+print(greeting, name)
