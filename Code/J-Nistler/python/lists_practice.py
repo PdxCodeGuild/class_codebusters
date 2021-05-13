@@ -178,29 +178,31 @@ def test_fibonacci():
 # Factorial
 # Write a function that takes `n` as a parameter and returns `n` factorial.
 
-# def factorial(n):
-#     factorial_list = [num for num in range(n + 1)]
-#     factorial_list.pop(0)
+def factorial(n):
+    total = 1
+    # Generate factorial list
+    factorial_list = [num for num in range(n + 1)]
+    # Remove zero value from list
+    factorial_list.pop(0)
+    # Multiply each element with each other
+    for i in range(len(factorial_list)):
+        total *= factorial_list[i]
+    return total
 
-#     for num in range(len(factorial_list)):
-
-
-#     return factorial_list
-
-# print(factorial(5))
-
-# def test_factorial():
-#     assert factorial(5) == 120
+def test_factorial():
+    assert factorial(5) == 120
 
 
 # # Find Unique
 # # Write a function which takes a list as a parameter and returns a new list with any duplicates removed.
+def find_unique(nums):
+    result = []
+    for i in range(len(nums)):
+        if nums[i] not in result:
+            result.append(nums[i])
+    return result
 
 
-# def find_unique(nums):
-#     ...
-
-
-# def test_find_unique():
-#     nums = [12, 24, 35, 24, 88, 120, 155, 88, 120, 155]
-#     assert find_unique(nums) == [12, 24, 35, 88, 120, 155]
+def test_find_unique():
+    nums = [12, 24, 35, 24, 88, 120, 155, 88, 120, 155]
+    assert find_unique(nums) == [12, 24, 35, 88, 120, 155]
