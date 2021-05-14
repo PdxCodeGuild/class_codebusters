@@ -149,8 +149,8 @@ def test_merge():
 
 def combine_all(nums):
     result_list = []
-    for list in nums:
-        result_list.extend([num for num in list])
+    for _list in nums:
+        result_list.extend(_list)
     return result_list
 
 

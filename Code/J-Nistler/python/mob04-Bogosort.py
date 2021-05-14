@@ -121,7 +121,7 @@ def bogosort(nums):
 # Testing
 #-----------------------------------------------#
 
-test_num = 8
+test_num = 11
 test_list = random_list(test_num)
 print(test_list)
 print(bogosort(test_list))
