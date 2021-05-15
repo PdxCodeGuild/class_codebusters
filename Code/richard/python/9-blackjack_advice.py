@@ -50,6 +50,7 @@ def adviseUser(one,two,three):
         return f"{sum} Hit"
 
 print(adviseUser(one,two,three))
+
 # Version 2 (optional)
 # Aces can be worth 11 if they won't put the total point value of both cards over 21. Remember 
 # that you can have multiple aces in a hand. Try generating a list of all possible hand values 
@@ -85,4 +86,3 @@ print(adviseUser(one,two,three))
 #         # else:
 #         #     return f"{sumList[j]} Hit"
 # print(adviseUser(one,two,three))
-

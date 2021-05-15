@@ -21,7 +21,6 @@
 # bogosort(nums) continues to generate random arrangements until the list is sorted
 import random
 
-
 def random_list(n):
     randomList = []
     for i in range(n):
@@ -49,7 +48,6 @@ def bogosort(nums):
         print(shuffList)
         sorted = is_sorted(shuffList)
     return(f"You've sorted the list!")
-    
+
 numList = random_list(4)
 print(bogosort(numList))
-
