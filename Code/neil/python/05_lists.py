@@ -55,6 +55,7 @@ def test_reverse():
 
 
 def common_elements(nums1, nums2):
+    # return [x for x in nums1 if x in nums2]
     common_nums = []
 
     for num1 in nums1:
@@ -74,15 +75,27 @@ def test_common_elements():
 
 
 def combine(nums1, nums2):
-    ...
+    combined_list = []
 
+    # if len(nums1) == len(nums2):
+    #     for letter, num in zip(nums1, nums2):
+    #         combined_list.append([letter, num])
+    
+    # return combined_list
+
+    for i in range(len(nums1)):
+        combined_list.extend(nums1[i], nums2[i])
+    
+    return combined_list
 
 def test_combine():
     assert combine(['a', 'b', 'c'], [1, 2, 3]) == ['a', 1, 'b', 2, 'c', 3]
 
 
 # Find Pair
-# Given a list of numbers, and a target number, find a pair of numbers from the list that sum to a target number. Optional: return a list of all pairs of numbers that sum to a target value.
+# Given a list of numbers, and a target number, find a pair of numbers from 
+# the list that sum to a target number. Optional: return a list of all pairs 
+# of numbers that sum to a target value.
 
 
 def find_pair(nums, target):
@@ -98,7 +111,13 @@ def test_find_pair():
 
 
 def average(nums):
-    ...
+
+    sum = 0
+
+    for num in nums:
+        sum += num
+        
+    return sum / len(nums)
 
 
 def test_average():
