@@ -5,20 +5,20 @@
 # type to an int, as input returns a string. Hint: random.choice can be used to pick a character out 
 # of a string, as well as an element out of a list.
 import random
+import string
+
 '''
-allChar = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()'
+allChar = string.ascii_letters + string.digits + string.punctuation
 
 def generatePassword(n):
-    i = 0
     password = ''
-    while i < n:
+    while len(password) < n:
         password += random.choice(allChar)
-        i += 1
     return password
 
+ userInput = int(input("Please enter the length of password: "))
 
-userInput = int(input("Please enter the length of password: "))
-print(generatePassword(userInput))
+ print(generatePassword(userInput))
 '''
 
 # Part 2 (optional)
@@ -28,31 +28,28 @@ print(generatePassword(userInput))
 # the string to a list, random.shuffle(password_list) to shuffle it, and then ''.join(password_list) to 
 # turn it back into a string.
 
-low = 'abcdefghijklmnopqrstuvwxyz'
-ups = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-special = '0123456789!@#$%^&*()'
 
-def generatePassword(l,u,s):
-    i = 0
-    password = ''
-    while i < l:
-        password += random.choice(low)
-        i += 1
-    i = 0
-    while i < u:
-        password += random.choice(ups)
-        i += 1
-    i = 0
-    while i < s:
-        password += random.choice(special)
-        i += 1
-    password_list = list(password)
+low = string.ascii_lowercase
+ups = string.ascii_uppercase
+dig = string.digits
+special = string.punctuation
+
+def generatePassword(l,u,s,d):
+    password_list = []
+    for i in range(l):
+        password_list += random.choice(low)
+    for i in range(u):
+        password_list += random.choice(ups)
+    for i in range(d):
+        password_list += random.choice(dig)
+    for i in range(s):
+        password_list += random.choice(special)
     random.shuffle(password_list)
     return ''.join(password_list)
 
 
 lowers = int(input("Please enter how many lowercase characters in password: "))
 uppers = int(input("Please enter how many uppercase characters in password: "))
+digs = int(input("Please enter how many digits in password: "))
 specials = int(input("Please enter how many special characters in password: "))
-print(generatePassword(lowers,uppers,specials))
-
+print(generatePassword(lowers,uppers,specials,digs))

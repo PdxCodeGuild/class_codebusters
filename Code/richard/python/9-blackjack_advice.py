@@ -52,37 +52,5 @@ def adviseUser(one,two,three):
 print(adviseUser(one,two,three))
 
 # Version 2 (optional)
-# Aces can be worth 11 if they won't put the total point value of both cards over 21. Remember 
-# that you can have multiple aces in a hand. Try generating a list of all possible hand values 
-# by doubling the number of values in the output whenever you encounter an ace. For one half, 
-# add 1, for the other, add 11. This ensures if you have multiple aces that you account for the 
-# full range of possible values.
+# Aces can be worth 11 if they won't put the total point value of both cards over 21. Remember that you can have multiple aces in a hand. Try generating a list of all possible hand values by doubling the number of values in the output whenever you encounter an ace. For one half, add 1, for the other, add 11. This ensures if you have multiple aces that you account for the full range of possible values.
 
-# one = input("What's your first card? ").upper()
-# two = input("What's your second card? ").upper()
-# three = input("What's your third card? ").upper()
-
-# def adviseUser(one,two,three):
-#     sum = 0
-#     sumList = []
-#     cardList = [one,two,three]
-#     for i in range(len(cardList)):
-#         if cardList[i] == 'A':
-#             sumList.append(sum + 1)
-#             sumList.append(sum + 11)
-#         elif cardList[i] in ['J','Q','K']:
-#             sum += 10
-#         else:
-#             sum += int(cardList[i])
-#     if len(sumList) > 0:
-#         for 
-#     return sumList
-#         # if sumList[j] > 21:
-#         #     return f"{sumList[j]} Already Busted!"
-#         # elif sumList[j] == 21:
-#         #     return f"{sumList[j]} Blackjack!"9+
-#         # elif sumList[j] >= 17:
-#         #     return f"{sumList[j]} Stay"
-#         # else:
-#         #     return f"{sumList[j]} Hit"
-# print(adviseUser(one,two,three))
