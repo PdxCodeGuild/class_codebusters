@@ -16,7 +16,7 @@ def test_loud_text():
 # Get a string from the user, print out another string, doubling every letter.
 
 def double_letters(word):
-    return word*2
+    return split
 
 
 def test_double_letters():
