@@ -23,10 +23,12 @@ def test_even_even():
 
 def reverse(nums):
     reversedList = []
-    i = len(nums) - 1
-    while i >= 0:
+    # i = len(nums) - 1
+    # while i >= 0:
+    #     reversedList.append(nums[i])
+    #     i -= 1
+    for i in range(len(nums) - 1,-1,-1):
         reversedList.append(nums[i])
-        i -= 1
     return reversedList
 
 def test_reverse():
@@ -36,6 +38,7 @@ def test_reverse():
 # Write a function to find all common elements between two lists.
 
 def common_elements(nums1, nums2):
+    # return [x for x in nums1 if x in nums2]
     numsDict = {}
     commonElements = []
     for i in range(len(nums1)):
@@ -89,7 +92,7 @@ def find_pair_list(nums, target):
     pair = []
     i = 0
     while i < len(nums):
-        j = i
+        j = i + 1
         while j < len(nums):
             if nums[i] + nums[j] == target:
                 tup = (nums[i],nums[j])
@@ -100,6 +103,7 @@ def find_pair_list(nums, target):
 
 def test_find_pair_list():
     assert(find_pair_list([5, 6, 2, 3], 7)) == [(5, 2)]
+    assert(find_pair_list([5, 6, 2, 3, 4], 7)) == [(5, 2),(3, 4)]
 
 
 
@@ -135,10 +139,11 @@ def test_remove_empty():
 # list is a list containing two elements, one from each of the input lists.
 
 def merge(nums1, nums2):
-    pairedList = []
-    for i in range(len(nums1)):
-        pairedList.append([nums1[i],nums2[i]])
-    return pairedList
+    # pairedList = []
+    # for i in range(len(nums1)):
+    #     pairedList.append([nums1[i],nums2[i]])
+    # return pairedList
+    return [[nums1[i],nums2[i]] for i in range(len(nums1))]
 
 def test_merge():
     assert(merge([5,2,1], [6,8,2])) == [[5,6],[2,8],[1,2]]
@@ -165,7 +170,9 @@ def test_combine_all():
 # [Fibonacci Numbers](https://en.wikipedia.org/wiki/Fibonacci_number).
 
 def fibonacci(n):
-    fibList = [0,1]
+    fibList = [1, 1]
+    if n < 2:
+        return [fibList[x] for x in range(n)]
     i = 2
     while i < n:
         fibList.append(fibList[i-1] + fibList[i -2])
@@ -173,7 +180,7 @@ def fibonacci(n):
     return fibList
 
 def test_fibonacci():
-    assert(fibonacci(8)) == [0, 1, 1, 2, 3, 5, 8, 13]
+    assert(fibonacci(8)) == [1, 1, 2, 3, 5, 8, 13, 21]
 
 
 # Factorial

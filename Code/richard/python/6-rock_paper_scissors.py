@@ -16,30 +16,8 @@
 # scissors vs paper
 # scissors vs scissors (tie)
 import random
-
 '''
-print("Rock, Paper or Scissors!")
-playerChoice = input("Please enter your choice: ").lower()
-
-choices = ['rock','paper','scissor']
-compChoice = random.choice(choices)
-
-if playerChoice == compChoice:
-    winner = 'Tie'
-elif (playerChoice == 'rock' and compChoice == 'scissor') or (playerChoice == 'paper' and compChoice == 'rock') or (playerChoice == 'scissor' and compChoice == 'paper'):
-    winner = 'Player'
-else:
-    winner = 'Computer'
-
-print(f"Player chose {playerChoice} and the computer chose {compChoice}, so the winner is {winner}!")
-
-'''
-
-# Version 2 (optional)
-# After playing, ask them if they'd like to play again. If they say yes, restart the game, otherwise exit.
-'''
-playAgain = 'yes'
-while playAgain != 'no':
+def playRockPaperScissors():
     print("Rock, Paper or Scissors!")
     playerChoice = input("Please enter your choice: ").lower()
 
@@ -48,18 +26,34 @@ while playAgain != 'no':
 
     if playerChoice == compChoice:
         winner = 'Tie'
-    elif (playerChoice == 'rock' and compChoice == 'scissor') or (playerChoice == 'paper' and compChoice == 'rock') or (playerChoice == 'scissor' and compChoice == 'paper'):
+    elif (
+        playerChoice == 'rock' and compChoice == 'scissor') or (
+            playerChoice == 'paper' and compChoice == 'rock') or (
+                playerChoice == 'scissor' and compChoice == 'paper'):
         winner = 'Player'
     else:
         winner = 'Computer'
 
     print(f"Player chose {playerChoice} and the computer chose {compChoice}, so the winner is {winner}!")
+'''
+'''
+playRockPaperScissors()
+'''
+# Version 2 (optional)
+# After playing, ask them if they'd like to play again. If they say yes, restart the game, otherwise exit.
+
+'''
+playAgain = 'yes'
+while playAgain != 'no':
+    playRockPaperScissors()
     playAgain = input("Would you like to play again? ").lower()
 '''
+
 # Version 3 (optional)
 # Rock, paper, scissors, lizard, Spock! https://www.instructables.com/id/How-to-Play-Rock-Paper-Scissors-
 # Lizard-Spock/
 
+'''
 playAgain = 'yes'
 while playAgain != 'no':
     print("Rock, Paper, Scissors, Lizard, Spock!")
@@ -83,3 +77,4 @@ while playAgain != 'no':
 
     print(f"Player chose {playerChoice} and the computer chose {compChoice}, so the winner is {winner}!")
     playAgain = input("Would you like to play again? ").lower()
+'''

@@ -22,8 +22,8 @@
 # Valid!
 
 def getUserInput():
-    rawUserInput = input("Please enter 16 digits seperated by commas: ")
-    listUserInput = rawUserInput.split(',')
+    rawUserInput = input("Please enter 16 digits: ")
+    listUserInput = rawUserInput.split(' ')
     if len(listUserInput) < 16:
         return False
     for i in range(len(listUserInput)):
