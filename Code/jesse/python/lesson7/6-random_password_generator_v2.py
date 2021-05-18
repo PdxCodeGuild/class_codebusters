@@ -6,57 +6,24 @@ Ask the user for how many lowercase letters, uppercase letters, numbers, and spe
 import random
 from string import ascii_lowercase, ascii_uppercase, digits, punctuation
 
-# get password length from user and convert to int
-# keep asking until a valid number is entered.
-while True:
-    try:
-        pass_length = int(input('Enter a number for password length: '))
-    except:
-        print('Try again.')
-        continue
-    pass_length = int(pass_length)
-    break
 
-# get number of lower and uppercase letters, numbers, and special characters from user
-while True:
-    try:
-        num_lower_let = int(input('How many lowercase letters? '))
-    except:
-        print('Try again.')
-        continue
-    num_lower_let = int(num_lower_let)
-    break
+# function to keep asking for user input until a valid number is entered.
+# convert to int and return as int if valid
+def validate_int(message):
+    while True:
+        try:
+            length = int(input(f'How many {message}? '))
+            break
+        except ValueError:
+            print('Try again.')
+    return length
 
-while True:
-    try:
-        num_upper_let = int(input('How many uppercase letters? '))
-    except:
-        print('Try again.')
-        continue
-    num_upper_let = int(num_upper_let)
-    break
-
-while True:
-    try:
-        num_numbers = int(input('How many numbers? '))
-    except:
-        print('Try again.')
-        continue
-    num_numbers = int(num_numbers)
-    break
-
-while True:
-    try:
-        num_spec_char = int(input('How any special characters? '))
-    except:
-        print('Try again.')
-        continue
-    num_spec_char = int(num_spec_char)
-    break
-
-# num_upper_let = int(input('How many uppercase letters? '))
-# num_numbers = int(input('How many numbers? '))
-# num_spec_char = int(input('How any special characters? '))
+# get length of password and individual character lengths from user and run through function
+pass_length = validate_int('total characters')
+num_lower_let = validate_int('lowercase letters')
+num_upper_let = validate_int('uppercase letters')
+num_numbers = validate_int('numbers')
+num_spec_char = validate_int('special characters')
 
 password = ''
 
@@ -76,7 +43,7 @@ while count < pass_length:
         lower_count += 1
     elif upper_count < num_upper_let:
         password += random.choice(ascii_uppercase)
-        upper_count += 1
+        upper_count += 1 
     elif number_count < num_numbers:
         password += random.choice(digits)
         number_count += 1 
