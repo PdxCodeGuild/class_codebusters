@@ -1,7 +1,6 @@
 from random import choice
 import string
-characters = string.ascii_lowercase  # gets characters for the password
-characters += string.ascii_uppercase
+characters = string.letters  # gets characters for the password
 characters += string.digits
 characters += string.punctuation
 
