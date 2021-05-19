@@ -7,7 +7,7 @@
 
 
 # Even Even
-#   Write a function that takes a list of numbers, and 
+#   Write a function that takes a list of numbers, and
 # returns True if there is an even number of even numbers.
 
 
@@ -18,7 +18,7 @@ def even_even(nums):
     for num in nums:
         if num % 2 == 0:
             evens += 1
-    
+
     if evens % 2 == 0:
         return True
     else:
@@ -31,7 +31,7 @@ def test_even_even():
 
 
 # Reverse
-#   Write a function that takes a list and returns a new list with the 
+#   Write a function that takes a list and returns a new list with the
 # elements in reverse order
 
 def reverse(nums):
@@ -62,7 +62,7 @@ def common_elements(nums1, nums2):
         for num2 in nums2:
             if num1 == num2:
                 common_nums.append(num1)
-    
+
     return common_nums
 
 
@@ -80,21 +80,22 @@ def combine(nums1, nums2):
     # if len(nums1) == len(nums2):
     #     for letter, num in zip(nums1, nums2):
     #         combined_list.append([letter, num])
-    
+
     # return combined_list
 
     for i in range(len(nums1)):
         combined_list.extend(nums1[i], nums2[i])
-    
+
     return combined_list
+
 
 def test_combine():
     assert combine(['a', 'b', 'c'], [1, 2, 3]) == ['a', 1, 'b', 2, 'c', 3]
 
 
 # Find Pair
-# Given a list of numbers, and a target number, find a pair of numbers from 
-# the list that sum to a target number. Optional: return a list of all pairs 
+# Given a list of numbers, and a target number, find a pair of numbers from
+# the list that sum to a target number. Optional: return a list of all pairs
 # of numbers that sum to a target value.
 
 
@@ -116,7 +117,7 @@ def average(nums):
 
     for num in nums:
         sum += num
-        
+
     return sum / len(nums)
 
 
@@ -129,7 +130,7 @@ def test_average():
 
 
 def remove_empty(mylist):
-    ...
+    return [letter for letter in mylist if letter]
 
 
 def test_remove_empty():
@@ -156,14 +157,14 @@ def combine_all(nums):
 
 
 def test_combine_all():
-    assert combine_all([[5, 2, 3], [4, 5, 1], [7, 6, 3]]) == [5, 2, 3, 4, 5, 1, 7, 6, 3]
+    assert combine_all([[5, 2, 3], [4, 5, 1], [7, 6, 3]]) == [
+        5, 2, 3, 4, 5, 1, 7, 6, 3]
 
 
 # Fibonacci
 # Write a function that takes `n` as a parameter, and returns a list containing the first `n` [Fibonacci Numbers](https://en.wikipedia.org/wiki/Fibonacci_number).
 
 def fibonacci(n):
-    ...
 
 
 def test_fibonacci():
