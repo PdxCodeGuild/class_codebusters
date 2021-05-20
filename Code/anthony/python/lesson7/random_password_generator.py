@@ -4,11 +4,11 @@ Let's generate a password of length n using a while loop and random.choice, this
 """
 
 import random
-from string import ascii_lowercase, ascii_uppercase, digits as numbers, punctuation
+from string import ascii_letters, ascii_lowercase, ascii_uppercase, digits as numbers, punctuation
 
 
 def version1():
-    characters = string.ascii_letters + string.digits + string.punctuation
+    characters = ascii_letters + numbers + punctuation
     while True:
         try:
             pw_length = int(input("How long do you want you password to be? "))
