@@ -74,9 +74,12 @@ def peaks(data):
     peaks_list = []
 
     for index, item in enumerate(data):
+        # print(index, item)
 
-        if (item > data[item-1] and item > data[item+1]):
-            print(index, data[item])
+        if item > data[item-1] and item > data[item+1]:
+            print(type(item))
+            # print(index, item)
+
             peaks_list.append(index)
 
     return peaks_list
