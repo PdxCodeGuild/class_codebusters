@@ -33,7 +33,6 @@ def valleys(data):
 # print(valleys(data))
 
 # Uses the above two functions to compile a single list of the peaks and valleys in order of appearance in the original data.
-
 def peaks_and_valleys(data):
     peak_valley_indices = []
     for i in range(1, len(data) - 1):
@@ -45,22 +44,16 @@ def peaks_and_valleys(data):
 
 # print(peaks_and_valleys(data))
 
-# draw a graph from "data"
-# for num in data:
-#     print(num * 'x')
-
+# Draws a vertical graph from numbers in "data"
 max_count = 0
 max_numbers = []
 while max_count != max(data):
     vertical = ''
-    # print(data)
     for num in data:
         if num == max(data) - max_count or num in max_numbers:
-            vertical += 'x'
+            vertical += 'x '
             max_numbers.append(num)
         else:
-            vertical += ' '   
-            # data.remove(num)
+            vertical += '  '   
     max_count += 1
-    # print(data)
     print(vertical)
