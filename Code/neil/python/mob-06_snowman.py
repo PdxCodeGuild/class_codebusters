@@ -1,4 +1,7 @@
 '''
+Code Busters
+Mob Lab 06:
+Jared, Jorge, Neil, Richard, and Steve
 
 Snowman
 
