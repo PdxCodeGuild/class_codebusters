@@ -186,7 +186,7 @@ forward(100)
 right(45)
 forward(100)
 penup()
-setposition(4, -100) 
+setposition(4, -100)
 
 # Create the left leg
 
@@ -211,5 +211,5 @@ right(165)
 forward(90)
 
 # hide turtle aka arrow/pointer
-ht ()
+ht()
 done()

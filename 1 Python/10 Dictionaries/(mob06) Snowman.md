@@ -1,25 +1,16 @@
-
 # Snowman
 
-Let's write a program to play a game of [Snowman](https://en.wikipedia.org/wiki/Snowman_(game))! Snowman is a word game where a secret word is chosen, then players have to guess letters until they get the word correct or they run out of chances and lose.
-
+Let's write a program to play a game of [Snowman](<https://en.wikipedia.org/wiki/Snowman_(game)>)! Snowman is a word game where a secret word is chosen, then players have to guess letters until they get the word correct or they run out of chances and lose.
 
 ## Part 1
 
 ## Loading the Words
 
-We can use the `requests` library to retreive a list of words from the internet, then split it into a list of strings. Then remove any strings that have 5 characters or fewer and randomly choose a word to start the game.
+Let's load in words from a text file. One has been provided [here](<1 Python/10 Dictionaries/words.txt>). Or you can navigate to `1 Python > 10 Dictionaries > words.txt`. Copy the words from this file, create your own words.txt and paste in the words.
+Next we can load our file into python with the following:
 
 ```python
-import requests
-response = requests.get('https://raw.githubusercontent.com/PdxCodeGuild/class_mountain_goat/master/data/english.txt')
-print(response.text)
-```
-
-We can also download a file of english words and place it next our `.py` file and load it like so:
-
-```python
-with open('english.txt', 'r') as file:
+with open('words.txt', 'r') as file:
     text = file.read()
 print(text)
 ```
@@ -45,7 +36,6 @@ _ a _ _ _ _ a _ _
 Guesses remaining: 9
 Guess a letter:
 ```
-
 
 ## Part 2
 
@@ -78,17 +68,17 @@ snowman_pics = [r'''
 
 
 
- (   ) 
+ (   )
 ''', r'''
 
 
  (   )
- (   ) 
+ (   )
 ''', r'''
 
  (   )
  (   )
- (   ) 
+ (   )
 ''', r'''
 
  (   )
@@ -105,30 +95,29 @@ snowman_pics = [r'''
  ( : )
  ( : )
 ''', r'''
- _===_ 
+ _===_
  ( . )
  ( : )
  ( : )
 ''', r'''
- _===_ 
+ _===_
  ( .O)
  ( : )
  ( : )
 ''',r'''
- _===_ 
+ _===_
  (-.O)
  ( : )
  ( : )
 ''', r'''
- _===_ 
- (-.O) 
+ _===_
+ (-.O)
 <( : )
- ( : ) 
+ ( : )
 ''', r'''
- _===_ 
- (-.O) 
+ _===_
+ (-.O)
 <( : )\
- ( : ) 
+ ( : )
 ''']
 ```
-
