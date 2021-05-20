@@ -1,10 +1,6 @@
 
 # Practice 6: Regular Expressions
-
-
-
 import re
-
 
 
 # Validate an Email Address
@@ -13,11 +9,13 @@ import re
 def validate_email_address(email):
     ...
 
-# print(validate_email_address('test@gmail.com')) # True
-# print(validate_email_address('abc123@gmail.com')) # True
-# print(validate_email_address('test')) # False
-# print(validate_email_address('test@gmail')) # False
-# print(validate_email_address('test@gmail@com')) # False
+
+def test_validate_email_address():
+    assert validate_email_address('test@gmail.com') == True
+    assert validate_email_address('abc123@gmail.com') == True
+    assert validate_email_address('test') == False
+    assert validate_email_address('test@gmail') == False
+    assert validate_email_address('test@gmail@com') == False
 
 
 # Validate a Phone Number
@@ -26,11 +24,14 @@ def validate_email_address(email):
 # https://regex101.com/r/lCV6nR/1
 def validate_phone_number(phone_number):
     ...
-# print(validate_phone_number('0123456789')) # True
-# print(validate_phone_number('012-345-6789')) # True
-# print(validate_phone_number('(012) 345-6789')) # True
-# print(validate_phone_number('012-3A5-6789')) # False
-# print(validate_phone_number('1-1-1')) # False
+
+
+def test_validate_phone_number():
+    assert validate_phone_number('0123456789') == True
+    assert validate_phone_number('012-345-6789') == True
+    assert validate_phone_number('(012) 345-6789') == True
+    assert validate_phone_number('012-3A5-6789') == False
+    assert validate_phone_number('1-1-1') == False
 
 
 # Clean a Phone Number
@@ -39,35 +40,29 @@ def validate_phone_number(phone_number):
 def clean_phone_number(phone_number):
     regex = r'^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})'
     ...
-    
-# print(clean_phone_number('0123456789')) # 0123456789
-# print(clean_phone_number('012-345-6789')) # 0123456789
-# print(clean_phone_number('(012) 345-6789')) # 0123456789
-# print(clean_phone_number('012-3A5-6789')) # None
-# print(clean_phone_number('1-1-1')) # None
+
+
+def test_clean_phone_number():
+    assert clean_phone_number('0123456789') == '0123456789'
+    assert clean_phone_number('012-345-6789') == '0123456789'
+    assert clean_phone_number('(012) 345-6789') == '0123456789'
+    assert clean_phone_number('012-3A5-6789') == None
+    assert clean_phone_number('1-1-1') == None
 
 # Find All Numbers
 # Write a function `find_numbers` which returns a list of floats found in the given string.
 
+
 def find_numbers(text):
     ...
 
-text = '''
-name  favorite number
-joe   1.23
-jane  5.45
-julie -1.34
-bob   43.123
-'''
-print(find_numbers(text)) # [1.23, 5.45, -1.34, 43.123]
 
-
-
-
-
-
-
-
-
-
-
+def test_find_numbers():
+    text = '''
+    name  favorite number
+    joe   1.23
+    jane  5.45
+    julie -1.34
+    bob   43.123
+    '''
+    assert find_numbers(text) == [1.23, 5.45, -1.34, 43.123]
