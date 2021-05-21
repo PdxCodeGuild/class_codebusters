@@ -21,10 +21,9 @@ scissors vs scissors (tie)
 import random
 
 while True:
-
+    choices = ['rock', 'paper', 'scissors']
     user = input('Choose rock, paper or scissors: ')
     print(f'User chose: {user}')
-    choices = ['rock', 'paper', 'scissors']
     computer = random.choice(choices)
     print(f'Computer chose: {computer}')
 
@@ -47,6 +46,6 @@ while True:
     elif (user == 'scissors' and computer == 'paper'):
         print('User wins')
 
-    play_again = input('Would you like to play again?  yes/no ')
+    play_again = input('Would you like to play again?  yes or no? ')
     if play_again == 'no':
         break
