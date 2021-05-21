@@ -1,19 +1,25 @@
-try:
-    first = int(input("whats your first card? "))
-except:
-    first = a = 1
-    first = j = 10
-    first = q = 10
-    first = k = 10
-try:
-    second = int(input('whats your second card? '))
-except:
-    second = 10
-try:
-    third = int(input('whats your third card? '))
-except:
-    third = 10
+facecards = {'a': 1, 'j': 10, 'q': 10, 'k': 10}
+first = (input('whats your first card? '))
+if first in facecards:
+    first = (facecards[first])
+else:
+    first = int(first)
+
+second = (input('whats your second card? '))
+if second in facecards:
+    second = (facecards[second])
+else:
+    second = int(second)
+
+third = (input('whats your third card? '))
+if third in facecards:
+    third = (facecards[second])
+else:
+    third = int(third)
+
+
 score = first + second + third
+
 
 if score < 17:
     print(f'{score} "Hit"')
