@@ -2,8 +2,8 @@
 
 ### Rough Timeline
 
-- Weeks 1-4: Python
-- Weeks 5-7: Flask, HTML, CSS
+- Weeks 1-5: Python
+- Weeks 6-7: HTML, CSS
 - Weeks 8-10: Django
 - Weeks 11-14: JavaScript
 - Weeks 15-18: Capstone
