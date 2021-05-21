@@ -98,7 +98,7 @@ def test_average_values():
 
 def merge_dictionaries(d1, d2):
     for i in d2:
-        if i in d1.keys():
+        if i in d1:
             d1[i] += d2[i]
         else:
             d1[i] = d2[i]
@@ -117,14 +117,14 @@ def test_merge_dictionary():
 def count_votes(votes):
     voteDict = {}
     for i in votes:
-        if i in voteDict.keys():
+        if i in voteDict:
             voteDict[i] += 1
         else:
             voteDict[i] = 1
     return voteDict
 
 votes = ['john', 'johnny', 'john', 'jackie', 'jamie', 'jackie', 'jamie', 'jamie', 'john', 'johnny', 'jamie', 'johnny', 'john']
-
+w
 def test_count_votes():
     assert(count_votes(votes)) == {'john': 4, 'johnny': 3, 'jackie': 2, 'jamie': 4}
 
