@@ -7,7 +7,7 @@
 
 
 # Even Even
-#   Write a function that takes a list of numbers, and 
+#   Write a function that takes a list of numbers, and
 # returns True if there is an even number of even numbers.
 
 
@@ -18,7 +18,7 @@ def even_even(nums):
     for num in nums:
         if num % 2 == 0:
             evens += 1
-    
+
     if evens % 2 == 0:
         return True
     else:
@@ -31,7 +31,7 @@ def test_even_even():
 
 
 # Reverse
-#   Write a function that takes a list and returns a new list with the 
+#   Write a function that takes a list and returns a new list with the
 # elements in reverse order
 
 def reverse(nums):
@@ -55,13 +55,14 @@ def test_reverse():
 
 
 def common_elements(nums1, nums2):
+    # return [x for x in nums1 if x in nums2]
     common_nums = []
 
     for num1 in nums1:
         for num2 in nums2:
             if num1 == num2:
                 common_nums.append(num1)
-    
+
     return common_nums
 
 
@@ -74,7 +75,18 @@ def test_common_elements():
 
 
 def combine(nums1, nums2):
-    ...
+    combined_list = []
+
+    # if len(nums1) == len(nums2):
+    #     for letter, num in zip(nums1, nums2):
+    #         combined_list.append([letter, num])
+
+    # return combined_list
+
+    for i in range(len(nums1)):
+        combined_list.extend(nums1[i], nums2[i])
+
+    return combined_list
 
 
 def test_combine():
@@ -82,7 +94,9 @@ def test_combine():
 
 
 # Find Pair
-# Given a list of numbers, and a target number, find a pair of numbers from the list that sum to a target number. Optional: return a list of all pairs of numbers that sum to a target value.
+# Given a list of numbers, and a target number, find a pair of numbers from
+# the list that sum to a target number. Optional: return a list of all pairs
+# of numbers that sum to a target value.
 
 
 def find_pair(nums, target):
@@ -98,7 +112,13 @@ def test_find_pair():
 
 
 def average(nums):
-    ...
+
+    sum = 0
+
+    for num in nums:
+        sum += num
+
+    return sum / len(nums)
 
 
 def test_average():
@@ -110,7 +130,7 @@ def test_average():
 
 
 def remove_empty(mylist):
-    ...
+    return [letter for letter in mylist if letter]
 
 
 def test_remove_empty():
@@ -137,14 +157,14 @@ def combine_all(nums):
 
 
 def test_combine_all():
-    assert combine_all([[5, 2, 3], [4, 5, 1], [7, 6, 3]]) == [5, 2, 3, 4, 5, 1, 7, 6, 3]
+    assert combine_all([[5, 2, 3], [4, 5, 1], [7, 6, 3]]) == [
+        5, 2, 3, 4, 5, 1, 7, 6, 3]
 
 
 # Fibonacci
 # Write a function that takes `n` as a parameter, and returns a list containing the first `n` [Fibonacci Numbers](https://en.wikipedia.org/wiki/Fibonacci_number).
 
 def fibonacci(n):
-    ...
 
 
 def test_fibonacci():
