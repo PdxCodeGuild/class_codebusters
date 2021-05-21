@@ -46,8 +46,7 @@ def find_key(d, value):
     for key in d:
         if d[key] == value:
             return key
-        else:
-            return None
+    return None
 
 
 def test_find_key():
