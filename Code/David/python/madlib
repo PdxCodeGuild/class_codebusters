@@ -1,6 +1,0 @@
-color = input ('name a color ')
-beverage = input ('name a beverage ')
-location = input ('whats your favorite bar ')
-holiday = input ('name a holiday ')
-print ('Lets drink ' + color + " " + beverage  + ' at ' + location + ' on ' + holiday)
-
