@@ -68,40 +68,42 @@ data = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 5, 6, 7, 8, 9, 8, 7, 6, 7, 8, 9]
 
 
 def peaks(data):
-    # i = 0
-    # while i <= len(data):
-    #     i += 1
+
     peaks_list = []
-
-    for index, item in enumerate(data):
+    # Using range instead to limit loop through specific range
+    for i in range(1, len(data) - 1):
         # print(index, item)
-
-        if item > data[item-1] and item > data[item+1]:
-            print(type(item))
-            # print(index, item)
-
-            peaks_list.append(index)
+        item = data[i]
+        if item > data[i-1] and item > data[i+1]:
+            peaks_list.append(i)
 
     return peaks_list
-
-
-print(peaks(data))
 
 # returns indices of valleys
 
 
-# def valleys(data):
-#     for item in data:
-#         if item > item[-1] and item < item[+1]:
-#             return item
+def valleys(data):
+    valleys_list = []
+    for i in range(1, len(data) - 1):
+        item = data[i]
+        if item < data[i-1] and item < data[i+1]:
+            valleys_list.append(i)
+
+    return valleys_list
+
+# uses the above two functions to compile a single list
+# in order of the peaks and valleys in order of appearance
+# in original data
 
 
-# # uses the above two functions to compile a single list
-# # in order of the peaks and valleys in order of appearance
-# # in original data
-
-# def peaks_and_valleys(data):
-#     new_list = peaks(data) + valleys(data)
+def peaks_and_valleys(data):
+    new_list = peaks(data) + valleys(data)
+    return sorted(new_list)
 
 
-# peaks_and_valleys(data)
+print(peaks_and_valleys(data))
+
+# Version 2
+
+# for num in data:
+#     print('x' * num)
