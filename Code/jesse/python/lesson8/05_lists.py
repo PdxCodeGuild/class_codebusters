@@ -58,8 +58,7 @@ def test_common_elements():
 def combine(nums1, nums2):
     combined_list = []
     for let, num in zip(nums1, nums2):
-        combined_list.append(let)
-        combined_list.append(num)
+        combined_list.extend([let, num])
     return combined_list
 
 
@@ -77,8 +76,7 @@ def find_pair(nums, target):
         difference = target - num
         if difference in nums:
             if num not in pairs:
-                pairs.append(num)
-                pairs.append(difference)
+                pairs.extend([num, difference])
     return pairs
 
 print(find_pair([5, 6, 2, 3, 5, 2, 4], 7))
