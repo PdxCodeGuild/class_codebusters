@@ -84,10 +84,10 @@ elif pennies > 1:
     coins += (pennies * 10)
     pennies_output += f'{pennies} pennies'
 
-message = ''
+message = []
 
 if quarter_output:
-    message += f'{quarter_output}'
+    message.append({quarter_output})
 
 if dime_output:
     message += f'{dime_output}'
@@ -98,4 +98,4 @@ if nickels_output:
 if pennies_output:
     message += f'{pennies_output}'
 
-print(message)
+print(list(message))

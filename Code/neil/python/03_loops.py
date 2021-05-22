@@ -53,8 +53,6 @@ def test_double_numbers():
     assert double_numbers([1, 2, 3]) == [2, 4, 6]
 
 
-print(3+3)
-
 # Stars
 # Write a function that takes an integer and returns that number of asterisks in a string
 
