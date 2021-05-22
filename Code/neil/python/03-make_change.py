@@ -87,15 +87,17 @@ elif pennies > 1:
 message = []
 
 if quarter_output:
-    message.append({quarter_output})
+    message.append(quarter_output)
 
 if dime_output:
-    message += f'{dime_output}'
+    message.append(dime_output)
 
 if nickels_output:
-    message += f'{nickels_output}'
+    message.append(nickels_output)
 
 if pennies_output:
-    message += f'{pennies_output}'
+    message.append(pennies_output)
 
-print(list(message))
+message = ', '.join(message)
+
+print(message)
