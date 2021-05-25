@@ -26,18 +26,18 @@ def valleys(nums):
             data2.append("")  # adds space where no valley was identified
     for i in range(len(data2)-1):
         if data2[i] == 'v':
-            ind2.append(i)
+            ind2.append(i)  # adds the index of valleys to new list
     return(ind2)
 
 
 ind3 = []
 
 
-def peaksandvalleys(nums):
+def peaksandvalleys(nums):  # runs both functions
     peaks(nums)
     valleys(nums)
-    ind3 = ind + ind2
-    ind3 = sorted(ind3)
+    ind3 = ind + ind2  # combines returns from both functions to new list
+    ind3 = sorted(ind3)  # sorts list so the indexes are in order
     print(ind3)
 
 
