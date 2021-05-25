@@ -15,7 +15,7 @@ MORE...
 
 ## Part 1
 
-Go to http://or.water.usgs.gov/non-usgs/bes/ and select a data table. Copy the contents and save them into your own `rain_data.txt`. The two columns that are most important are the date and the daily total. The simplest representation of this data is a list of tuples, but you may also use a list of dictionaries.
+Go to http://or.water.usgs.gov/non-usgs/bes/ and select a data table. Copy the contents and save them into your own `rain_data.txt`. The two columns that are most important are the date and the daily total. The simplest representation of this data is a list of tuples, but you may also use a list of dictionaries. Hint: Use regular expressions to find relevant data.
 
 ```python
 with open('hayden_island.rain', 'r') as file:
