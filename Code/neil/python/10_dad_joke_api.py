@@ -20,6 +20,7 @@ response = requests.get('https://icanhazdadjoke.com/search', headers={'accept': 
 print(response.json())
 
 '''
+# Part 1
 import requests
 import time
 
@@ -29,7 +30,7 @@ response = requests.get('https://icanhazdadjoke.com/',
 
 random_dad_joke = response.json()
 
-input("Dad: Want to 'hear' a joke?... (Hit 'Enter' if yes. Oterwise, CTRL/CMD C you're way out of here!)\n")
+input("Dad: Want to 'hear' a joke?... (Hit 'Enter' if yes. Oterwise, CTRL/CMD C your way out of here!)\n")
 
 for joke in random_dad_joke:
     dad_joke = random_dad_joke['joke']
