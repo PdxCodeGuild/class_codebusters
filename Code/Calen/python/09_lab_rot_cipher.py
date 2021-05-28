@@ -36,7 +36,9 @@ while True:
         pass
 
     if type(user_input) == int:
-        index_adjustmnet += user_input # did not know if there was a version of .copy() used on lists, but for ints. so used += as by default index = 0 via line 24
+        index_adjustmnet += user_input 
+        # did not know if there was a version of .copy() used on lists, but for ints.
+        # so used += as by default index = 0 via line 24
         break
 
 # process input
@@ -52,3 +54,6 @@ for i in range(len(non_coded_text)-1):
             non_coded_text[i] = alph[temp_index_adjustment]
 
 print(non_coded_text)
+
+
+

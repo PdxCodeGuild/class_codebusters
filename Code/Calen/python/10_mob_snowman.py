@@ -1,7 +1,7 @@
 
 with open('words.txt', 'r') as file:
     text = file.read()
-print(text)
+
 
 word = 'testing'
 guesses = 10
