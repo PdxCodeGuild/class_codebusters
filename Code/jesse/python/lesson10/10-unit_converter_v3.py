@@ -32,11 +32,11 @@ def check_amount(amount):
         else:
             amount = input('Invalid entry. Enter a number with or without decimals: ')
 
-# get measurement from user
-measurement = check_measurement(input('Enter a measurement (ft, mi, m, km, yd, or in): '))
-
 # get amount of the measurement from user
 amount = check_amount(input('Enter an amount: '))
+
+# get measurement from user
+measurement = check_measurement(input('Enter a measurement (ft, mi, m, km, yd, or in): '))
 
 # convert measurment to meters
 in_meters = amount * units_in_meters[measurement]
