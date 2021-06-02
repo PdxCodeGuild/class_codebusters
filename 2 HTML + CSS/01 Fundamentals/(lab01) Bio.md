@@ -42,12 +42,11 @@ External style sheet:
 - Center the entire content of the body
 - Modify the padding and margins on your paragraphs to look better.
   - Here are docs on [margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin) and [padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
-- Use a custom font. [google fonts](https://fonts.google.com/) is a great place to find fonts.
 - Add a background image
   - Take a look at the [background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image) property.
 
-## Part 3
-
+## Part 3 - Optional
+- Use a custom font. [google fonts](https://fonts.google.com/) is a great place to find fonts.
 - Pick a color scheme and modify the background, body text, and link text color.
   - I personally like to use [coolors.co](https://coolors.co/8895b3-8e94f2-9fa0ff-bbadff-dab6fc) when trying to come up with a color scheme.
 - Change the typeface of the quote.
