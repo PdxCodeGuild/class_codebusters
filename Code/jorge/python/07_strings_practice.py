@@ -127,3 +127,4 @@ def test_alternating_case():
     assert alternating_case('Hello World!') == 'HeLlO WoRlD!'
     assert alternating_case(
         'This is another example.') == 'ThIs iS AnOtHeR ExAmPlE.'
+        
