@@ -1,0 +1,54 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+  /* text-align: center; */
+  background-image: url(https://i.pinimg.com/originals/b8/e1/95/b8e1959cc16823ae843dbc1eead44378.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: cornsilk;
+  padding: 0px;
+  margin: 100px;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+li 
+q{
+  text-align: center;
+}
+
+ul {
+  width: 100px;
+  padding-left: 560px;
+}
+
+h1,
+h2 {
+  color: whitesmoke;
+}
+p,
+q,
+li {
+  color: floralwhite;
+}
+a {
+  color: azure;
+}
+
+.pic {
+  border-radius: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+}
+
+li {
+  list-style-type: square;
+}
