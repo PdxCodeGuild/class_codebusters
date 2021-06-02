@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "cyberspace_racewayfront";
+  src: url("./cyberspace_raceway_front-webfont.woff2") format("woff2"),
+    url("./cyberspace_raceway_front-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  color: white;
+  font-size: 16px;
+  font-family: "Source Code Pro", monospace;
+}
+
+h1 {
+  font-family: cyberspace_racewayfront, "Source Code Pro", monospace;
+  text-align: center;
+  font-size: 60px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
+body {
+  background-image: url("./background.jpg");
+}
+
+p {
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+blockquote {
+  text-align: center;
+  font-style: italic;
+  font-family: "Roboto Mono";
+}
+
+ul {
+  text-align: center;
+  list-style: inside;
+  list-style-type: "🐑";
+  margin-bottom: 50px;
+}
+
+.cent_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  border-radius: 50% 20% / 10% 40%;
+}
+
+footer img {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  padding: 0;
+  margin: 0;
+}
