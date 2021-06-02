@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("https://s.wsj.net/public/resources/images/BN-XI437_3ozSw_M_20180205190748.jpg");
+    background-size: cover;
+    text-align: center;
+    margin: 10%;
+}
+h1{
+    color: #012a4a;
+}
+p{
+    color: #014f86;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+a{
+    color: #2a6f97;
+}
+ul{
+    color: #014f86;
+    display: inline-block; 
+	text-align: left; 
+    list-style-type: kannada;
+    margin: 3%;
+    vertical-align:middle;
+}
+q{
+    color: #013a63;
+    font-family: 'Odibee Sans', cursive;
+}
+img{
+    border: 1px white;
+    border-radius: 5%;
+    margin: 3%;
+    vertical-align:middle;
+}
+div.bottom{
+    margin-top: 5%;
+}
