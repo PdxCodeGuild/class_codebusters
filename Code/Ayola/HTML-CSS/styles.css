@@ -3,19 +3,22 @@ h1 {
     font-size: 32px;
     text-align: center;
 }
-body{
+/* body cover everything on the page (parent) */
+body {
     background-color: gray;
     font-size: 18px;
     color: #C0C0C0;
     text-align: center;
-
+    font-family: 'Cinzel Decorative', cursive;
     background-image:
         url("winetr.jpeg");
- 
 }
-
 
 ul {
     list-style: "🐺";
     display: inline-block
+}
+
+a {
+    color: inherit;
 }
