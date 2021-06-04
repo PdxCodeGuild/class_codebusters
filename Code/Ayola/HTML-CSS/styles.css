@@ -1,0 +1,21 @@
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+}
+body{
+    background-color: gray;
+    font-size: 18px;
+    color: #C0C0C0;
+    text-align: center;
+
+    background-image:
+        url("winetr.jpeg");
+ 
+}
+
+
+ul {
+    list-style: "🐺";
+    display: inline-block
+}
