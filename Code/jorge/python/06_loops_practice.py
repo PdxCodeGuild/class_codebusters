@@ -6,22 +6,30 @@
 # Double Numbers
 # Write a function that takes a list of numbers and returns a new list with every number doubled
 
-
 def double_numbers(nums):
-    for i in range(len(nums)):
-        nums[i] *= 2
-    return nums
+    double_nums = []
+    for num in nums:
+        double_nums.append(num * 2)
+    return double_nums
 
 
 def test_double_numbers():
     assert double_numbers([1, 2, 3]) == [2, 4, 6]
 
+
 # Stars
 # Write a function that takes an integer and returns that number of asterisks in a string
 
-
 def stars(n):
-    return '*' * n
+    star_string = ''
+    while n > 0:
+        n = n - 1
+        star_string = star_string + '*'
+        print(star_string)
+    return star_string
+
+
+stars(3)
 
 
 def test_stars():
@@ -30,16 +38,16 @@ def test_stars():
     assert stars(3) == '***'
     assert stars(4) == '****'
 
+
 # Extract Less Than Ten
 # Write a function to move all the elements of a list with value less than 10 to a new list and return it.
 
-
 def extract_less_than_ten(nums):
-    new_list = []
-    for n in nums:
-        if n < 10:
-            new_list.append(n)
-    return new_list
+    less_than_ten = []
+    for num in nums:
+        if num < 10:
+            less_than_ten.append(num)
+    return less_than_ten
 
 
 def test_extract_less_than_ten():
