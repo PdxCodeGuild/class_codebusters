@@ -8,9 +8,9 @@
 # game exits. You can get a random number using random.randint:
 
 import random
-'''
-theNumber = random.randint(0,10)
 
+theNumber = random.randint(0,10)
+'''
 i = 1
 
 while i < 11:
@@ -21,8 +21,8 @@ while i < 11:
     else:
         print('Try Again!')
     i += 1
-
 '''
+
 # Part 2
 # Allow the user to make an unlimited number of guesses using a while True and break. Keep track of how 
 # many guesses the user has made, and tell them at the end.
@@ -91,7 +91,7 @@ while True:
 # Part 5 (optional)
 # Swap the user with the computer: the user will pick a number, and the computer will make random 
 # guesses until they get it right.
-
+'''
 theNumber = int(input("Pick a number from 0 to 10: "))
 
 i = 1
@@ -115,3 +115,4 @@ while True:
             print(f'Computer guesses {guess} and it\'s Getting Further!')
     i += 1
     lastGuess = guess
+'''

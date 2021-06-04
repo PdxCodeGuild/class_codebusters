@@ -11,8 +11,8 @@
 def go_hiking(energy, weather):
     if list(energy)[0] == list(weather)[0]:
         return True
-    else:
-        return False
+
+    return False
 
 
 def test_go_hiking():
@@ -28,8 +28,8 @@ def test_go_hiking():
 def double_digit(num):
     if len(str(abs(num))) == 2:
         return True
-    else:
-        return False
+
+    return False
 
 
 def test_double_digit():
@@ -45,8 +45,8 @@ def test_double_digit():
 def opposite(a, b):
     if a == -b or b == -a:
         return True
-    else:
-        return False
+
+    return False
 
 
 def test_opposite():
@@ -62,8 +62,8 @@ def test_opposite():
 def near_100(num):
     if 89 < int(num) < 111:
         return True
-    else:
-        return False
+
+    return False
 
 
 def test_near_100():

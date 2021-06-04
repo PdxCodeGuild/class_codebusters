@@ -32,81 +32,72 @@ coins = [
 
 dollar_amount = input('Enter dollar amount: ')
 dollar_amount = float(dollar_amount)
-total_pennies = dollar_amount * 100
+total_pennies = int(dollar_amount * 100)
 
 # MAKE SURE TO DEDUCT!!!!!
 
 quarters = total_pennies // 25
+total_pennies %= 25
+
 dimes = total_pennies // 10
+total_pennies %= 10
+
 nickels = total_pennies // 5
+total_pennies %= 5
+
 pennies = total_pennies // 1
+total_pennies %= 1
+
 coins = 0
 
-# quarter_output =
-# dime_output =
-# nickels_output =
-# penny_output =
-# # message = ''
+quarter_output = ""
+dime_output = ""
+nickels_output = ""
+pennies_output = ""
 
-while coins <= total_pennies:
-    if quarters == 0:
-        continue  # check if only 1
-    elif quarters == 1:
-        coins += (quarters * 25)
-        total_pennies -= coins
-        quarter_output = f'{quarters} quarter,'
-    else:
-        coins += (quarters * 25)
-        total_pennies -= coins
-        quarter_output = f'{quarters} quarters,'
+# check if only 1
+if quarters == 1:
+    coins += (quarters * 25)
+    quarter_output += f'{quarters} quarter'
+elif quarters > 1:  # else if greater than 1,
+    coins += (quarters * 25)
+    quarter_output += f'{quarters} quarters'
 
-    if dimes == 0:
-        continue
-    elif dimes == 1:
-        coins += (dimes * 10)
-        total_pennies -= coins
-        dime_output = f'{dimes} dime,'
-    else:
-        coins += (dimes * 10)
-        total_pennies -= coins
-        dime_output = f'{dimes} dimes,'
+if dimes == 1:
+    coins += (dimes * 10)
+    dime_output += f'{dimes} dime'
+elif dimes > 1:
+    coins += (dimes * 10)
+    dime_output += f'{dimes} dimes'
 
-    if nickels == 0:
-        continue
-    elif nickels == 1:
-        coins += (nickels * 10)
-        total_pennies -= coins
-        nickels_output = f'{nickels} nickel'
-    else:
-        coins += (nickels * 10)
-        total_pennies -= coins
-        nickels_output = f'{nickels} nickels,'
+if nickels == 1:
+    coins += (nickels * 10)
+    nickels_output += f'{nickels} nickel'
+elif nickels > 1:
+    coins += (nickels * 10)
+    nickels_output += f'{nickels} nickels'
 
-    if pennies == 0:
-        continue
-    elif pennies == 1:
-        coins += (pennies * 10)
-        total_pennies -= coins
-        pennies_output = f'{pennies} penny'
-    else:
-        coins += (pennies * 10)
-        total_pennies -= coins
-        pennies_output = f'{pennies} pennies'
+if pennies == 1:
+    coins += (pennies * 10)
+    pennies_output += f'{pennies} penny'
+elif pennies > 1:
+    coins += (pennies * 10)
+    pennies_output += f'{pennies} pennies'
 
+message = []
 
-message = ''
-# 4 == True
-# 4
 if quarter_output:
-    message += f'{quarter_output} '
+    message.append(quarter_output)
 
 if dime_output:
-    message += f'{dime_output} '
+    message.append(dime_output)
 
 if nickels_output:
-    message += f'{nickels_output} '
+    message.append(nickels_output)
 
 if pennies_output:
-    message += f'{pennies_output}'
+    message.append(pennies_output)
+
+message = ', '.join(message)
 
 print(message)
