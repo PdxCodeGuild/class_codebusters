@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ebebeb;
+}
+
+body {
+  text-align: center;
+  color: #303030;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-family: "Press Start 2P", "Times New Roman", Times, serif;
+  margin: 32px;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  margin: 40px 60px 40px 60px;
+  font-size: 20px;
+}
+
+a {
+  color: #fb10ce;
+}
