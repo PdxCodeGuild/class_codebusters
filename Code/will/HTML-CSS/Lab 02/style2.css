@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background: grey;
+}
+
+.navbar {
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  background: cadetblue;
+  border-style: solid;
+}
+
+.sidebar {
+  /* float: left; */
+  height: 100%;
+  width: 150px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 300px;
+  font-size: 20px;
+  text-align: center;
+  background: cadetblue;
+  border-style: solid;
+}
+
+.sidebartext {
+  rotate: 270deg;
+  font-size: 20px;
+}
+
+.para {
+  padding: 10px;
+  margin: 200px;
+  border-style: solid;
+}

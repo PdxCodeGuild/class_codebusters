@@ -1,54 +1,58 @@
+
 * {
-  margin: 0px;
-  padding: 0px;
   box-sizing: border-box;
 }
 
+/* Add a gray background color with some padding */
 body {
-  background-color: gray;
-  /* text-align: center; */
-  background-image: url(https://i.pinimg.com/originals/b8/e1/95/b8e1959cc16823ae843dbc1eead44378.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: cornsilk;
-  padding: 0px;
-  margin: 100px;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
 }
 
-h1,
-h2,
-li 
-q{
+/* Header/Blog Title */
+.header {
+  padding: 5px;
+  font-size: 15px;
   text-align: center;
+  background: white;
 }
 
-ul {
-  width: 100px;
-  padding-left: 560px;
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
 }
 
-h1,
-h2 {
-  color: whitesmoke;
-}
-p,
-q,
-li {
-  color: floralwhite;
-}
-a {
-  color: azure;
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
 }
 
-.pic {
-  border-radius: 25%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 45%;
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
 }
 
-li {
-  list-style-type: square;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
 }
