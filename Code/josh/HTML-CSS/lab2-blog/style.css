@@ -1,0 +1,68 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+html{
+  background: url('https://media1.giphy.com/media/smzfl3E7a4iHK/giphy.gif?cid=ecf05e47lovjp8t4hy7u85he9vlxprpypqtdt5xk0vwohnma&rid=giphy.gif&ct=g')
+}
+
+img {
+  border-radius: 50%;
+}
+
+.grid-wrapper{
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 100px 90%;
+}
+
+.top-nav {
+  grid-column: 1/8;
+  background: radial-gradient(
+    at top left,
+    hsl(269, 100%, 49%) 0%,
+    hsl(0, 100%, 0%) 100%
+  );
+  display: flex;
+  justify-content: space-between;
+}
+.top-nav > h2 {
+  color: orange;
+}
+
+.top-nav > div > a {
+  margin-right: 10px;
+  color:rgb(47, 185, 47);
+}
+
+.side-nav{
+  background: url('https://media.nature.com/lw800/magazine-assets/d41586-021-00075-2/d41586-021-00075-2_18790032.jpg');
+  background-size: contain;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
+.posts {
+  background: radial-gradient(
+    at top,
+    hsl(120, 83%, 45%) 0%,
+    rgb(8, 20, 13) 100%
+  );
+  grid-column: 3/7;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.posts > div {
+  min-height: 100px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: darkslateblue;
+  color:rgb(89, 160, 89);
+}
