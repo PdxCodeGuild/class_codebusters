@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: hsl(224, 92%, 36%);
+  --color-secondary: hsl(327, 93%, 16%);
+}
+
+html {
+  background-color: var(--color-primary);
+}
+
+body {
+  height: 100vh;
+}
+
+nav {
+  display: grid;
+  grid-area: nav;
+  min-height: 75px;
+  text-align: center;
+}
+
+aside {
+  display: grid;
+}
+
+section {
+  display: grid;
+  text-align: center;
+  margin: 1em;
+}
