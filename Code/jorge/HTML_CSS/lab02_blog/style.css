@@ -1,35 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Hammersmith One";
 }
-
-:root {
-  --color-primary: hsl(224, 92%, 36%);
-  --color-secondary: hsl(327, 93%, 16%);
-}
-
 html {
-  background-color: var(--color-primary);
+  background: radial-gradient(
+    at top left,
+    rgb(113, 100, 236) 0%,
+    rgb(19, 8, 82) 100%
+  );
+}
+html,
+body {
+  min-height: 100%;
 }
 
-body {
-  height: 100vh;
+div#wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 nav {
-  display: grid;
-  grid-area: nav;
-  min-height: 75px;
+  grid-column: 1 / span 10;
+  grid-row: 1 / span 1;
+  background-color: aliceblue;
   text-align: center;
+  padding: 1em;
 }
 
-aside {
-  display: grid;
+sidebar {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 10;
+  background-color: chartreuse;
+  text-align: left;
+  writing-mode: vertical-rl;
 }
 
-section {
-  display: grid;
+#section {
+  grid-column: 4 / span 6;
+  grid-row: 2 / span 1;
+  background-color: red;
+  border-radius: 10px;
   text-align: center;
-  margin: 1em;
 }
