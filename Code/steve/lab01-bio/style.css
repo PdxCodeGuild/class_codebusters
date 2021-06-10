@@ -1,0 +1,152 @@
+/* clear html settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* set anchor color */
+a {
+  color: hsl(226, 70%, 32%);
+}
+
+/* set the html page background and direction */
+.page {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(222, 22%, 62%);
+  /* border: 2px solid red; */
+}
+
+/* set the header, border intentional */
+.head {
+  border: 2px solid black;
+  width: 100%;
+  height: 35%;
+  text-align: center;
+  font-size: 28px;
+  padding: 1.5em;
+}
+
+/* set bio space and location */
+.blurb_one {
+  /* border: 2px solid black; */
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  font-size: 1.25em;
+  padding: 1em;
+}
+
+/* set personal story space and location */
+.blurb_two {
+  /* border: 2px solid green; */
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  font-size: 1.25em;
+  padding: 1em;
+}
+
+/* create a section to hold album cover and quote */
+.tier4 {
+  /* border: 2px solid yellow; */
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+/* set the album cover/image space and location */
+.album_cover {
+  position: relative;
+  /* border: 2px solid blue; */
+  font-size: 20px;
+  text-align: right;
+  width: 66%;
+  height: 40%;
+}
+
+/* animate the images, overlay with fade */
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* set the top image location and size, make dynamic */
+.top {
+  position: absolute;
+  left: 15%;
+  top: 4.9%;
+  width: 85%;
+  height: 94%;
+}
+
+/* set the bottom image location and size, make dynamic */
+.bottom {
+  position: relative;
+  width: 85%;
+  height: 94%;
+}
+
+/* set top image to fade to reveal bottom */
+#fading .top {
+  animation-name: fadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 20s;
+  animation-direction: alternate;
+}
+
+/* set quote location and size */
+.quote {
+  /* border: 2px solid yellow; */
+  font-size: 24px;
+  width: 33%;
+  height: 60%;
+  padding: 4em 1em;
+}
+
+/* set quote fonts */
+.the_quote {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+  margin: 2em;
+}
+
+/* set size and location for discography section */
+.disc {
+  /* border: 2px solid blue; */
+  width: 100%;
+  height: 70vh;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 900;
+  padding-top: 2em;
+}
+
+/* create list with little records as bullets */
+.disc_list {
+  list-style-image: url(img.icons8.com.png);
+  /* border: 2px solid yellow; */
+  width: 100%;
+  text-align: left;
+  font-size: 18;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+  font-weight: 200;
+  padding-left: 10em;
+  margin: 1em 1em 3em 1em;
+}

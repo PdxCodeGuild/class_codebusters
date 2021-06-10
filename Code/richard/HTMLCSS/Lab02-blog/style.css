@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 5% 1fr;
+    grid-template-areas:
+        "header header header header header header"
+        "sidebar section section section section section";
+    }
+header {
+    grid-area: header;
+    background: #aaa;
+    }
+header > span{
+    padding: 6%;
+}
+aside {
+    grid-area: sidebar;
+    background: #ccc;
+    height: 100vh;
+    }
+aside > div{
+    padding: 10%;
+}
+section {
+        grid-area: section;
+        display: flex;
+        flex-direction: column;
+    }
+section > p, h1{
+        min-height: 6%;
+        background: #eee;
+        margin: 1%;
+    }

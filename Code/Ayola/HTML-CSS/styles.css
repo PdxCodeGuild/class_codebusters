@@ -1,0 +1,55 @@
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+q {
+    font-size: 1.2em;
+}
+
+/*****************************************************************/
+
+/* body cover everything on the page (parent) */
+body {
+     /* grey color under img is displayed when refreshing the page */
+    background-color: gray;
+    font-size: 1em;
+    color: #C0C0C0; 
+    text-align: center;
+    /* sans-serif is a (web-safe) generic, fall-back font incase Cinzel is unavailable*/
+    /* quotes recommended on fonts that contain space except on generic fonts */
+    font-family: 'Cinzel Decorative',cursive ,sans-serif;
+    /* function */
+    background-image:
+        url("winetr.jpeg");
+    background-size: cover;
+    margin: 40px;
+    /* spacing between sentences/ value does not require unit */
+    line-height: 3;
+}
+/**********************************************************************/
+
+ul {
+    list-style: " 🐺  ";
+    display: inline-block;
+    /* space between the lines; should be larger than font size so they don`t overlap */
+    line-height: 1.9;
+    /* line throught all the people who are dead on the list */
+    text-decoration: line-through;
+    /* aligns list items to the left, still centered */
+    text-align: left;
+}
+
+a {
+    /* parent font color must be used (urllist) */
+    color: inherit;
+}
+
+img{
+    /* helps with image resolution/retina */
+    width: 700px;
+    /* rounds off the corners of the images */
+    border-radius: 12px;
+    /* float:right; */
+}
