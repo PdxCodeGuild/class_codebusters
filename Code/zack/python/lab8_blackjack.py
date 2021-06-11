@@ -39,9 +39,9 @@ def advice(h):
 # cards
 cards = ['A', 'a', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'j', 'Q', 'q',
  'K', 'k',]
-
 tens = ['J', 'j', 'Q', 'q', 'K', 'k']
 aces = ['A', 'a'] 
+
 # generate player hand
 first_card = input("What's your first card?")
 if first_card not in cards:
@@ -56,7 +56,7 @@ if third_card not in cards:
 # convert hand
 hand = make_card(first_card) + make_card(second_card) + make_card(third_card)
 
-
+#output
 print(f'{hand} {advice(hand)}')
 
 
