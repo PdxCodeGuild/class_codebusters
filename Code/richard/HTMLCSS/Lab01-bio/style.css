@@ -5,6 +5,8 @@
 body{
     background-image: url("https://s.wsj.net/public/resources/images/BN-XI437_3ozSw_M_20180205190748.jpg");
     background-size: cover;
+    background-position: center;
+    height: 100vh;
     text-align: center;
     margin: 10%;
 }
