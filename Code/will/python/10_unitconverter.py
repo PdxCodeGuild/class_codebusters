@@ -4,7 +4,7 @@ Ask the user for the number of feet, and print out the equivalent distance in me
 Hint: 1 ft is 0.3048 m. So we can get the output in meters by multiplying the input distance by 0.3048. 
 '''
 
-input number of feet
+#input number of feet
 user_input = int(input("What is the distance in feet? "))
 #print out distance in meters
 input_meters = user_input * 0.3048

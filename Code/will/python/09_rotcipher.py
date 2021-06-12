@@ -6,26 +6,21 @@ Notice that there are 26 letters in the English language, so encryption is the s
 
 # Version 1
 # input statement  letters
-# import string
-# letters = string.ascii_lowercase
+import string
+letters = string.ascii_lowercase
 
-# # user input statement
-# user_input = input('Enter a string: ')
+# user input statement
+user_input = input('Enter a string: ')
 
+# function that moves each letter 13 positions in the alphabet
+def rot13(user_input):
+    encrypted = " "
 
-# # function that moves each letter 13 positions in the alphabet
+    for char in user_input:
+        encrypted += letters[(letters.find(char)+13) % 26]
+    return encrypted
 
-
-# def rot13(user_input):
-#     encrypted = " "
-
-#     for char in user_input:
-#         encrypted += letters[(letters.find(char)+13) % 26]
-#     return encrypted
-
-
-# print(rot13(user_input))
-
+print(rot13(user_input))
 
 # Version 2
 # input statement  letters
@@ -37,14 +32,11 @@ user_input = input('Enter a string: ')
 rotations = int(input('Enter rotations: '))
 
 # function that moves each letter 13 positions in the alphabet
-
-
 def rot13(user_input):
     encrypted = " "
 
     for char in user_input:
         encrypted += letters[(letters.find(char)+rotations) % 26]
     return encrypted
-
 
 print(rot13(user_input))

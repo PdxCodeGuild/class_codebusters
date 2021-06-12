@@ -9,7 +9,8 @@ import requests
 import json
 response = requests.get('https://icanhazdadjoke.com/',
                         headers={'accept': 'application/json'})
-# print(response.json())
+# print(response.text)
+# print(json.loads(response.text))
 
 raw_data = json.loads(response.text)
 joke = raw_data['joke']
