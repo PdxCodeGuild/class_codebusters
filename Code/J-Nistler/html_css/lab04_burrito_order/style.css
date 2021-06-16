@@ -1,0 +1,8 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.accordion-item,
+.btn-primary {
+  margin-top: 1.5rem;
+}
