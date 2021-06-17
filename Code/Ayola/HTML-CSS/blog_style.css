@@ -24,6 +24,7 @@ h1 {
     grid-template-columns: 2;
     /* spacing between to and h1 */
     padding-top: 16px;
+    text-decoration: none;
 }
 
 body {
@@ -98,7 +99,17 @@ a {
     /* creates space between the links */
     padding-left: 16px;
 }
-
+button {
+    padding: 5px;
+    background-color: #91583B;
+}
+input {
+    background-color:#c2947c;
+    padding: 2px;
+    margin: 6px;
+    display: flex;
+    flex-direction: inherit;
+}
 /***************Footer************/
 .foot {
     display: flex;
