@@ -9,9 +9,10 @@
 # Write a function that takes a list of numbers and returns a new list with every number doubled
 
 def double_numbers(nums):
-    for i in range(len(nums)):
-        nums[i] = nums[i] * 2
-    return nums
+    # for i in range(len(nums)):
+    #     nums[i] *= 2
+    # return nums
+    return [i * 2 for i in nums]
 
 def test_double_numbers():
     assert double_numbers([1, 2, 3]) == [2, 4, 6]
@@ -25,6 +26,7 @@ def stars(n):
     for i in range(n):
         starStr += '*'
     return starStr
+    # return '*' * n
 
 def test_stars():
     assert stars(1) == '*'
@@ -38,11 +40,16 @@ def test_stars():
 
 def extract_less_than_ten(nums):
     lessThanTen = []
-    for i in range(len(nums)):
-        if nums[i] < 10:
-            lessThanTen.append(nums[i])
+    for i in nums:
+        if i < 10:
+            lessThanTen.append(i)
+    # # i = 0
+    # # while i < len(nums):
+    # #     if nums[i] < 10:
+    # #         lessThanTen.append(nums[i])
+    # #     i += 1
     return lessThanTen
-
+    # # return [i for i in nums if i < 10]
 
 def test_extract_less_than_ten():
     assert extract_less_than_ten([2, 8, 12, 18]) == [2, 8]

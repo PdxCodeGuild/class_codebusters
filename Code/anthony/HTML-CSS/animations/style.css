@@ -1,0 +1,145 @@
+/*
+.box {
+  height: 400px;
+  width: 400px;
+  transition: 1s;
+  animation-name: rainbow;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: cubic-bezier(0.48,-0.4, 0.27, 1.55);
+  animation-delay: 4s;
+  animation-fill-mode: both;
+}
+*/
+/* .box:hover{
+  transform: translateX(400px);
+} */
+
+/* @keyframes square-go-right{
+  0% {transform: translateX(0);}
+  50% {transform: translateX(400px);}
+  100% {transform: translateX(0);}
+} */
+
+/* @keyframes rainbow {
+  0% {
+    background-color: red;
+    border-radius: 50%;
+    transform: translateX(400px);
+  }
+  20% {background-color: orange;}
+  40% {
+    background-color: yellow;
+    transform: translateY(400px);
+  }
+  60% {background-color: green;}
+  80% {
+    background-color: blue;
+    transform: translateX(-400px);
+  }
+  100% {background-color: violet;}
+} */
+
+.btn {
+  font-size: 4em;
+  background: none;
+  border: none;
+  background-color: aquamarine;
+  padding: 1em 1.5em;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, .5);
+  transition: .5s;
+  display: inline;
+}
+
+.btn:hover{
+  cursor: pointer;
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+  color: gray;
+}
+
+a{
+  font-size: 4em;
+  text-decoration: none;
+  transition: .5s;
+  position: relative;
+}
+a::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: none;
+  transition: 2s;
+}
+
+a:hover::before{
+  background: purple;
+}
+
+a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: none;
+  transition: 1s;
+}
+
+a:hover::after{
+  background: blue;
+}
+
+
+ul {
+  font-size: 3em;
+  list-style: none;
+}
+
+li::before{
+  content: "👾";
+}
+
+body{
+  position: relative;
+}
+.slider {
+  border: 1px solid red;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: orange;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.cover:hover{
+  transform: translateY(-400px);
+}
+
+.whatever:checked{
+
+}
+
+/* .cover{
+  transform: translateY(-400px);
+} */

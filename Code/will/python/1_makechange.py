@@ -2,17 +2,19 @@
 Let's convert a dollar amount into a number of coins. 
 The input will be the total amount, the output will be the number of quarters, dimes, nickles, and pennies. 
 Always break the total into the highest coin value first, resulting in the fewest amount of coins. 
-First convert the dollar amount (1.36) into the total number of pennies (136), then use floor division //, which throws away the remainder. 
-10/3 is 3.333333, 10//3 is 3
+First convert the dollar amount (1.36) into the total number of pennies (136),
+then use floor division //, which throws away the remainder. 10/3 is 3.333333, 10//3 is 3
 '''
 
-
+#import math
 import math
 
+# input function and convert string to a float
 dollars = float(input("Enter a dollar amount: "))
+
 # convert dollars to cents
 cents = (dollars / .01)
-
+# con
 quarter_count = cents / 25
 
 floor_quartercount = math.floor(quarter_count)

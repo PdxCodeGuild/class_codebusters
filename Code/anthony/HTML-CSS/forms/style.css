@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form > div {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+form > div + div{
+  margin-top: 2rem;
+}
+
+input {
+  height: 40px;
+}
+
+input[name="quantity"] {
+  width: 100%;
+}
+
+.col {
+  flex-wrap: wrap;
+}
+
+.col > *{
+  width: 25%;
+}

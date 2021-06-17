@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+  color:rgb(29, 28, 28);
+  text-align: center;
+  margin: 20px;
+
+  /* background image */
+  background-image:
+  url(https://wallpaperaccess.com/full/624987.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p {
+  margin: 20px;
+}
+
+img {
+  margin: 20px;
+  margin-bottom: 0px
+}
+
+ul {
+  
+  width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+
+li {
+  margin-left: 20px;
+  margin: 5px;
+}
+
+blockquote {
+  margin: 10px
+}

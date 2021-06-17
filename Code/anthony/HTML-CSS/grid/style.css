@@ -1,0 +1,44 @@
+body {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 200px 400px 300px;
+}
+
+div {
+  background-color: cornflowerblue;
+  /* border: 1px solid red; */
+}
+
+.one {
+  grid-column: 1/3;
+  background-color: coral;
+}
+
+.two {
+  grid-column: 3/5;
+  background-color: cyan;
+}
+
+.three {
+  grid-column: 1/5;
+  grid-row: 2/3;
+  background-color: deeppink;
+}
+
+.four {
+  grid-row: 2/4;
+  grid-column: 1/2;
+  background-color: greenyellow;
+  display: flex;
+  flex-direction: column;
+}
+
+.five {
+  grid-column: 2/4;
+}
+
+.six {
+  background-color: yellow;
+  grid-column: 4/5;
+}

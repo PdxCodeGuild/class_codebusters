@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: coral;
+  margin: 16px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  width: 300px;
+  text-align: center;
+}
+li {
+  font-size: 16px;
+  color: red;
+}
+ul {
+  color: powderblue;
+  padding-left: 20px;
+  list-style-type: "☀️";
+}
+
+li {
+  color: green;
+}
+
+h1.bottom-header {
+  color: bisque;
+  background-color: black;
+}
+
+.extra-large {
+  font-size: 64px;
+}

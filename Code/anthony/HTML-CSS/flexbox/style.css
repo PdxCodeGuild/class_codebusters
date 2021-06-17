@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* border: 1px solid red; */
+}
+
+header {
+  height: 10%;
+  background-color: aqua;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  /* border: 1px solid red; */
+}
+
+aside {
+  width: 20vw;
+  background-color: coral;
+}
+
+.posts {
+  width: 80vw;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+
+.posts > div {
+  min-height: 100px;
+  height: 20%;
+  background-color: chartreuse;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}

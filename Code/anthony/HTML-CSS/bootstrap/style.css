@@ -1,0 +1,28 @@
+.fancy {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  color: purple;
+  font-size: 2em;
+  position: relative;
+  transition: 1s;
+}
+
+.fancy:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 0%;
+  background: purple;
+  transition: 1s;
+}
+.fancy:hover {
+  color: lightcoral;
+}
+.fancy:hover:before {
+  width: 80%;
+  background: lightcoral;
+}
