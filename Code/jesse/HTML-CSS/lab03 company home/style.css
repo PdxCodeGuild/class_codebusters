@@ -1,0 +1,66 @@
+html {
+  margin: 0px 150px;
+}
+
+.fancy {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.fancy:hover {
+  color: hsl(44, 0%, 14%);
+  border-bottom: 1px solid hsl(44, 0%, 14%);
+}
+
+.atopleft {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  color: hsl(44, 0%, 14%);
+}
+
+.atopright{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  color: hsl(44, 0%, 14%);
+}
+
+.middle {
+  width: 100%;
+  color: hsl(44, 0%, 14%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+.dropbtn {
+  color: hsl(44, 0%, 14%);
+  padding: 0px;
+  margin-right: 50px;
+  font-size: 13px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.overlay {
+  width: 600px;
+  margin: 80px;
+}
+
+.overlay-link {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: hsl(44, 0%, 14%);
+  margin-left: 50px;
+}
+
+.footer div {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1500px) {
+  .atopleft {
+    display: none;
+  }
+  html {
+    margin: 0px;
+  }
+}
