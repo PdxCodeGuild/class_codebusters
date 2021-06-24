@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billy Bob's Bodacious Burritos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Billy Bob's Bodacious Burritos</h1>
+        <img src="burrito.jpg" alt="burrito">
+    </header>
+    <>
+        <h2>Order Online:</h2>
+        
+        <form action="https://webhook.site/543a84db-11d8-48de-add6-d60f4a51a68d" method="POST">
+            <div class="main">
+                <div class="user_info">
+                    <!-- enter name -->
+                    <input type="text" name="first-name" placeholder="First Name" required><br>
+                    <input type="text" name="last-name" placeholder="Last Name" required><br>
+                    <!-- enter email -->
+                    <input type="email" name="email" placeholder="Email" required><br>
+                    <!-- enter password -->
+                    <input type="password" name="password" placeholder="Password" required><br>
+                </div>
+                <div class="order_info">
+                    <p>Select your Tortilla</p>
+                    <label for="white_flour">White Flour</label>
+                    <input type="radio" id="white_flour" name="tortilla" value="white flour"></input>
+                    <label for="wheat_flour">Wheat Flour</label>
+                    <input type="radio" id="wheat_flour" name="tortilla" value="wheat flour"></input>
+                    <label for="spinich">Spinich</label>
+                    <input type="radio" id="spinich" name="tortilla" value="spinich"></input>
+                    <label for="corn">Corn</label>
+                    <input type="radio" id="corn" name="tortilla" value="corn"></input>
+                    <p>Select your Rice</p>
+                    <label for="white_rice">White Rice</label>
+                    <input type="radio" id="white_rice" name="rice" value="white_rice">
+                    <label for="brown_rice">Brown Rice</label>
+                    <input type="radio" id="brown_rice" name="rice" value="brown_rice">
+                    <p>Your choice of Bodacious Beans</p>
+                    <label for="black_beans">Black Beans</label>
+                    <input type="radio" id="black_beans" name="beans" value="black_beans">
+                    <label for="pinto_beans">Pinto Beans</label>
+                    <input type="radio" id="pinto_beans" name="beans" value="pinto_beans">
+                    <p>Pick your Protein</p>
+                    <label for="carnitas">Carnitas</label>
+                    <input type="radio" id="carnitas" name="protein" value="carnitas"></input>
+                    <label for="chicken">Chicken</label>
+                    <input type="radio" id="chicken" name="protein" value="chicken"></input>
+                    <label for="barbacoa">Barbacoa</label>
+                    <input type="radio" id="barbacoa" name="protein" value="barbacoa"></input>
+                    <label for="sofritas">Sofritas</label>
+                    <input type="radio" id="sofritas" name="protein" value="sofritas"></input>
+                    <label for="none">None</label>
+                    <input type="radio" id="none" name="protein" value="none"></input>
+                    <p>Add on the Extras</p>
+                    <label for="guac">Guacamole</label>
+                    <input type="checkbox" id="guac" name="guac">
+                    <label for="sour_cream">Sour Cream</label>
+                    <input type="checkbox" id="sour_cream" name="sour_cream">
+                    <label for="cheese">Cheese</label>
+                    <input type="checkbox" id="cheese" name="cheese">
+                    <p>Additional comments or instructions</p>
+                    <textarea name="add_instr" id="" cols="40" rows="5"></textarea>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form> 
+        
+
+
+    </div>
+    
+</body>
+</html>
