@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content:space-between;
+}
+
+nav i {
+  font-size: 1.5rem;
+}
+
+.links {
+  color: gray;
+  font-size: 1.25rem;
+}
+
+.links > a {
+  color: gray;
+  margin-left: .5rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+form > input,
+form > label {
+  font-size: 1.5em;
+}
+
+.cool-not-cool {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cool {
+  border: 2px solid green;
+  border-radius: 8px;
+  padding: 1em;
+}
+
+.not-cool {
+  border: 2px solid red;
+  border-radius: 8px;
+  padding: 1em;
+}

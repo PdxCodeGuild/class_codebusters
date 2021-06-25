@@ -1,17 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacts-All</title>
-  </head>
-  <body>
-    <h1>All Contacts</h1>
-    {% for contact in contacts %}
+{% extends 'contacts/base.html' %}
+{% block title %}All Contacts{% endblock %}
+
+
+{% block content %}
+<h1>All Contacts</h1>
+<!-- Form to add new Contact  -->
+<form action={% url 'contacts:save_contact' %} method="POST">
+  {% csrf_token %}
+  <input type="text" name="first_name" placeholder="First Name" />
+  <input type="text" name="last_name" placeholder="Last Name" />
+  <input type="text" name="phone_number" placeholder="Phone #" />
+  <input type="text" name="email" placeholder="Email Address" />
+  <input type="text" name="address" placeholder="Address" />
+  <label for="cool">
+    Is Cool:
+    <input type="checkbox" name="is_cool" />
+  </label>
+  <input type="submit" value="Submit" />
+</form>
+<div class="cool-not-cool">
+  <div class="cool">
+    <!-- Loop over all cool contacts  -->
+    {% for contact in cool_contacts %}
     <div>
-    <h2>{{contact.full_name}} is {{contact.coolness}}</h2>
+      <h2><a href="{% url 'contacts:details' contact.id %}">
+          {{contact.full_name}} is {{contact.coolness}}</h2>
+      </a>
     </div>
     {% endfor %}
-  </body>
-</html>
+  </div>
+  <div class="not-cool">
+    <!-- Loop over all not cool contacts  -->
+    {% for contact in not_cool_contacts %}
+    <div>
+      <h2><a href="{% url 'contacts:details' contact.id %}">
+          {{contact.full_name}} is {{contact.coolness}}</h2>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
