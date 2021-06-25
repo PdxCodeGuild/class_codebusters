@@ -2,10 +2,24 @@
 {% block title %} Homepage {% endblock %}
 {% block content %}
 <div class="container">
-    <div class="row">
+    <div class="row text-center m-5">
         <div class="col"></div>
         <div class="col"><h1>Yellow Pages</h1></div>
         <div class="col"></div>
     </div>
+    <div class="row text-center">
+        <div class="col"></div>
+        <div class="col-3 border-bottom border-dark"><h5>Company Name</h5></div>
+        <div class="col-3 border-bottom border-dark"><h5>Phone Number</h5></div>
+        <div class="col"></div>
+    </div>
+        {% for ad in ads %}
+        <div class="row text-center">
+            <div class="col"></div>
+            <div class="col-3">{{ad.company_name}}</div>
+            <div class="col-3">{{ad.phone_number}}</div>
+            <div class="col"></div>
+        </div>
+        {% endfor %}
 </div>
 {% endblock %}

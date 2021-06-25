@@ -8,5 +8,4 @@ urlpatterns = [
     path('save_contact/', views.save_contact, name='save_contact'),
     path('search_contact', views.search_contact, name='search_contact'),
     path('detail/<int:contact_id>/', views.contact_detail, name='detail'),
-
 ]

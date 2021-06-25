@@ -1,6 +1,10 @@
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
-# from .models import Yellowpages
+from .models import Ad
 
 def home_page(request):
-    return render(request, 'yellowpages/index.html')
+    ads = Ad.objects.all()
+    context = {
+        'ads' : ads
+    }
+    return render(request,'yellowpages/index.html', context)
