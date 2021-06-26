@@ -10,11 +10,12 @@ body {
 
 nav {
   display: flex;
-  justify-content:space-between;
+  justify-content:space-around;
 }
 
 nav i {
   font-size: 1.5rem;
+  color: black;
 }
 
 .links {
@@ -53,4 +54,53 @@ form > label {
   border: 2px solid red;
   border-radius: 8px;
   padding: 1em;
+}
+
+.yellow-pages {
+  background-color: hsl(55, 94%, 83%);
+  padding: 1rem 2rem;
+}
+
+.yellow-pages > h1 {
+  background-color: hsl(0, 0%, 10%);
+  display: inline-block;
+  padding: .5rem 1rem;
+  color: hsl(55, 94%, 83%);
+  border-radius: 6px;
+}
+
+.premium {
+  font-size: 1.1rem;
+  border: 2px dashed black;
+  position: relative;
+}
+
+.premium:after{
+  position: absolute;
+  content: "✨";
+  top: 4px;
+  right: 4px;
+}
+
+.ad {
+  background-color: hsla(0, 100%, 100%, .5); 
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+
+.ad > h2 {
+  margin-bottom: .5rem;
+}
+
+.ad h2 + p {
+  margin-bottom: .4rem;
+}
+
+footer {
+  width: 100%;
+  margin: 20px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
 }
