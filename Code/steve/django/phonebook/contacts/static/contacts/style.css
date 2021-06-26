@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+  color: rgb(24, 9, 9);
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+nav > a > i {
+  font-size: 2rem;
+  color: purple;
+}
+
+.links {
+  font-size: 1.25rem;
+}
+
+.links > a {
+  margin-left: 0.5rem;
+  color: gray;
+}
+
+.links > a:hover {
+  color: blue;
+}
+
+form {
+  padding: 0 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+form > input,
+label {
+  font-size: 1.5em;
+}
+
+.cool-not-cool {
+  display: flex;
+  justify-content: space-around;
+  margin: 2em 0;
+}
+
+.cool {
+  border: 2px solid green;
+  border-radius: 8px;
+  padding: 1em;
+}
+
+.not-cool {
+  border: 2px solid red;
+  border-radius: 8px;
+  padding: 1em;
+}
