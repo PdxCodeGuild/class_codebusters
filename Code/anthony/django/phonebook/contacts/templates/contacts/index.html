@@ -10,6 +10,5 @@ Contacts
     {% csrf_token %}
     <input type="text" name="first_name" placeholder="Look up by first name">
     <button type="submit">Search</button>
-    <a href="{% url 'contacts:all_contacts' %}">View All</a>
   </form>
 {% endblock %}

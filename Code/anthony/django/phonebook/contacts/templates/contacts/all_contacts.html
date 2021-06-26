@@ -6,7 +6,6 @@ All Contacts
 
 {% block content %}
 <h1>All Contacts</h1>
-<a href="{% url 'contacts:home' %}">Home</a>
 
 <!-- Form to add new contact -->
 <form action="{% url 'contacts:save_contact' %}" method="POST">
@@ -23,13 +22,27 @@ All Contacts
   <input type="submit" value="Submit">
 </form>
 
-<!-- Loop over all contacts -->
-{% for contact in contacts %}
-<div>
-  <h2>
-    <a href="{% url 'contacts:details' contact.id %}">{{ contact.full_name }} is {{ contact.coolness }}</a>
-  </h2>
+<div class="cool-not-cool">
+  <div class="cool">
+    <!-- Loop over all contacts -->
+    {% for contact in cool_contacts %}
+    <div>
+      <h2>
+        <a href="{% url 'contacts:details' contact.id %}">{{ contact.full_name }} is {{ contact.coolness }}</a>
+      </h2>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="not-cool">
+    {% for contact in not_cool_contacts %}
+    <div>
+      <h2>
+        <a href="{% url 'contacts:details' contact.id %}">{{ contact.full_name }} is {{ contact.coolness }}</a>
+      </h2>
+    </div>
+    {% endfor %}
+  </div>
 </div>
-{% endfor %}
 
 {% endblock %}

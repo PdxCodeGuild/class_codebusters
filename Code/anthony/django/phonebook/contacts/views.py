@@ -8,10 +8,14 @@ def home_page(request):
 
 
 def all_contacts(request):
-    contacts = Contact.objects.all()
+    cool_contacts = Contact.objects.filter(is_cool=True).order_by('first_name')
+
+    not_cool_contacts = Contact.objects.filter(
+        is_cool=False).order_by('first_name')
 
     context = {
-        "contacts": contacts
+        "cool_contacts": cool_contacts,
+        "not_cool_contacts": not_cool_contacts
     }
 
     return render(request, 'contacts/all_contacts.html', context)
@@ -25,8 +29,8 @@ def save_contact(request):
     form = request.POST
 
     # Assign contact attributes from form data
-    contact.first_name = form['first_name']
-    contact.last_name = form['last_name']
+    contact.first_name = form['first_name'].title()
+    contact.last_name = form['last_name'].title()
     contact.phone_number = form['phone_number']
     contact.email = form['email']
     contact.address = form['address']

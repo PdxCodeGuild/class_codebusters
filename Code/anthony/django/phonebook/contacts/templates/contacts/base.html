@@ -7,17 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}{% endblock %}</title>
   <link rel="stylesheet" href="{% static 'contacts/style.css' %}">
+
+  <!-- Bootstrap icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <nav>
-    <h1>Logo</h1>
-    <div class="links">
-      <a href="">Home</a>
-      <a href="">About</a>
-      <a href="">Contact</a>
-    </div>
-  </nav>
+
+  {% include 'contacts/_navbar.html' %}
+
   {% block content %}
   {% endblock %}
+
+  {% include 'contacts/_footer.html' %}
 </body>
 </html>
