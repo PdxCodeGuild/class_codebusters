@@ -5,7 +5,8 @@
 }
 
 body {
-
+  color: hsl(0, 0%, 15%);
+  background-color: hsl(0, 0%, 95%);
 }
 
 nav {
@@ -16,7 +17,7 @@ nav {
 
 nav i {
   font-size: 2rem;
-  color: orange;
+  color: hsl(39, 100%, 50%);
 }
 
 .links{
@@ -24,12 +25,12 @@ nav i {
 }
 
 .links > a{
-  color: gray;
+  color: hsl(0, 0%, 50%);
   margin-left: .5rem;
 }
 
 .links > a:hover{
-  color: orange;
+  color: hsl(39, 100%, 50%);
 }
 
 form {
@@ -50,12 +51,64 @@ form > input, label {
 }
 
 .cool{
-  border: 2px solid green;
+  border: 2px solid hsl(120, 100%, 25%);
   border-radius: 8px;
   padding: 1em;
 }
 .not-cool {
-  border: 2px solid red;
+  border: 2px solid hsl(0, 100%, 50%);
   border-radius: 8px;
   padding: 1em;
+}
+
+/* Yellow Pages */
+.yellow-pages {
+  background-color: hsl(55, 94%, 90%);
+  padding: 1rem 2rem;
+}
+
+.yellow-pages > h1 {
+  background-color: hsl(0, 0%, 8%);
+  display: inline-block;
+  color: hsl(55, 94%, 50%);
+  padding: .5rem 1rem;
+  border-radius: 9px;
+}
+
+.premium {
+  font-size: 1.1rem;
+  border: 2px dashed hsl(0, 0%, 5%);
+  position: relative;
+}
+
+.premium::after{
+  position: absolute;
+  content: "✨";
+  top: 4px;
+  right: 4px;
+}
+
+.ad {
+  margin-top: 1rem;
+  background-color: hsla(0, 100%, 100%, .5);
+  padding-left: 1rem;
+}
+
+.ad > h2 {
+  margin-bottom: .5rem;
+}
+
+.ad h2 + p {
+  margin-bottom: .4rem;
+}
+
+footer {
+  width: 100%;
+  margin: 20px 0;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+
+.copy {
 }

@@ -10,6 +10,7 @@ class Ad(models.Model):
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=200)
     url = models.URLField(null=True, blank=True)
+    premium = models.BooleanField(default=False)
 
     def __str__(self):
         return self.company_name
