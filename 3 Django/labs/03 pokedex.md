@@ -1,6 +1,6 @@
 
 
-# Lab 4: Pokedex
+# Pokedex
 
 Let's build a searchable pokedex! First we'll load the data from a `json` file into our own database. Then we'll list those pokemon in the page and add search and pagination.
 

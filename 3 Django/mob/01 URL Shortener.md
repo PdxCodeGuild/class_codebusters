@@ -1,5 +1,5 @@
 
-# Lab 3: URL Shortener
+# URL Shortener
 
 ## Part 1
 
@@ -9,10 +9,10 @@ When the short url is accessed, the view will take the code associated with that
 
 Your app should contain the following:
 
-- **Model**: a model `ShortenedURL` which has the following fields `code` (CharField), `url` (URLField) 
+- **Model**: a model `ShortenedURL` which has the following fields `code` (CharField), `url` (URLField)
 - **View 1** returns a page for entering in a url to be shortened, and a list of urls that have been shortened (`localhost:8000/shortener/`)
 - **View 2** for receiving the form submission containing the long url, generating a random string, and saving it to the database (`localhost:8000/shortener/save/`)
-- **View 3** performs the redirecting, which takes a `code` as a parameter (`localhost:8000/shortener/pEc4vt/`). Be sure to include the protocol ("https://") in the urls or redirecting will not work properly.
+- **View 3** performs the redirecting (HttpResponseRedirect), which takes a `code` as a parameter (`localhost:8000/shortener/pEc4vt/`). Be sure to include the protocol ("https://") in the urls or redirecting will not work properly.
 
 
 
