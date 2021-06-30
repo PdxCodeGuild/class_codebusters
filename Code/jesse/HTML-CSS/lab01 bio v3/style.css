@@ -18,6 +18,17 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+/* 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-flow: row nowrap;
+
+  justify-content: flex-start;
+
+  align-items: stretch; */
+
+  border: 1px solid red;
 }
 
 h3 {
