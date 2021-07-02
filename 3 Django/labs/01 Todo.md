@@ -2,7 +2,7 @@
 
 ## Part 1
 
-Let's create a simple todo app. This can be done creating a model for representing a `TodoItem`. Newly created `TodoItem`s should have a `null` completed date. The index page should have a list of all the todo items (showing only the name). There should also be a text field and a button (in a form), When the user clicks the button it should save a new todo item to the database and show the newly-added item in the list. Use one view to render the template, and another view to receive the form submission and redirect back to the first view.
+Let's create a simple todo app. This can be done creating a model for representing a `TodoItem`. The index page should have a list of all the todo items (showing only the name). There should also be a text field and a button (in a form), When the user clicks the button it should save a new todo item to the database and show the newly-added item in the list. Use one view to render the template, and another view to receive the form submission and redirect back to the first view.
 
 
 ### Steps
