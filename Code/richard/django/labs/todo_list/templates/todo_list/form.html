@@ -1,0 +1,22 @@
+{% extends 'todo_list/base.html' %}
+{% block title %} Add Tasks {% endblock %}
+
+{% block content %}
+<form action="{% url 'todo_list:add' %}" method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <div class="row m-5 text-center">
+            <div class="col"></div>
+            <div class="col"><label for="text">Add a Task: </label></div>
+            <div class="col"><input type="text" name="text"></div>
+            <div class="col"><button class="btn btn-primary">Add Task</button></div>
+            <div class="col"></div>
+        </div>
+        <div class="row m-5 text-center">
+            <div class="col"></div>
+            <div class="col"><a href="{% url 'todo_list:home' %}"><h5>Go back to list!</h5></a></div>
+            <div class="col"></div>
+        </div>
+    </div>
+</form>
+{% endblock %}

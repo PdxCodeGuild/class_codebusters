@@ -1,0 +1,46 @@
+{% extends 'todo_list/base.html' %}
+{% block title %} To Do List {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row m-2">
+        <div class="col"></div>
+        <div class="col text-center"><h1>To Do List</h1></div>
+        <div class="col"></div>
+    </div>
+    <div class="row m-2">
+        <div class="col"></div>
+        <div class="col text-center"><a href="{% url 'todo_list:add_form' %}"><h5>Add a task!</h5></a></div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col text-center"><h4>To Do</h4></div>
+        <div class="col text-center"><h4>Completed</h4></div>
+    </div>
+    <div class="row">
+        <div class="col-7">
+            {% for task in NC_tasks %}
+            <div class="row m-1">
+                <div class="col"><ul>
+                    <li><a href="{% url 'todo_list:completed' task.id %}">{{task.text}}</a></li>
+                </ul></div>
+                <div class="col">{{task.created_date}}</div>
+                <div class="col"><a href="{% url 'todo_list:delete_task' task.id %}"><button class="btn btn-primary">Delete</button></a></div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col">
+            {% for task in C_tasks %}
+            <div class="row m-1">
+                <div class="col text-secondary text-decoration-line-through"><ul>
+                    <li>{{task.text}}</li>
+                </ul></div>
+                <div class="col text-secondary text-decoration-line-through">{{task.created_date}}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -8,6 +8,7 @@ def home_page(request):
 def all_contacts(request):
     cool_contacts = Contact.objects.filter(is_cool=True).order_by('first_name')
     not_cool_contacts = Contact.objects.filter(is_cool=False).order_by('first_name')
+    
 
 
     context = {
