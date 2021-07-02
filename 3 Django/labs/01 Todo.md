@@ -2,7 +2,7 @@
 
 ## Part 1
 
-Let's create a simple todo app. This can be done with a two models for representing a `TodoItem` and `Priority`. Newly created `TodoItem`s should have a `null` completed date. The index page should have a list of all the todo items (showing only the name). There should also be a text field and a button (in a form), When the clicks the button it should saves a new todo item to the database and shows the newly-added item in the list. The form for creating a todo item should also have a dropdown list for selecting the priority. Use one view to render the template, and another view to receive the form submission and redirect back to the first view.
+Let's create a simple todo app. This can be done creating a model for representing a `TodoItem`. Newly created `TodoItem`s should have a `null` completed date. The index page should have a list of all the todo items (showing only the name). There should also be a text field and a button (in a form), When the user clicks the button it should save a new todo item to the database and show the newly-added item in the list. Use one view to render the template, and another view to receive the form submission and redirect back to the first view.
 
 
 ### Steps
@@ -15,21 +15,18 @@ Let's create a simple todo app. This can be done with a two models for represent
 6. Using the form data, create an instance of your TodoItem model, save it, and redirect back to the index page
 
 
-### Models
-
-- Priority
-  - name - CharField (high, medium, low)
+### Model
 
 - TodoItem
   - text - CharField
-  - priority - ForeignKey to Priority
-  - created_date - DateTimeField
+  - created_date - DateTimeField(auto_now_add=True)
+    - auto_now_add=True will automatically add the date when the TodoItem is created.
 
 
 ### Views
 
 - Index Page
-  - List of the uncompleted todo items including text, priority, and created date
+  - List of the uncompleted todo items including text, and created date
 - Save Todo Item
   - Receive the form submission and create a new todo item, then redirect back to the first view
 
