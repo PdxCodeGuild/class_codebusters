@@ -41,4 +41,26 @@ Add a `complete` button next to each todo item, these can be `a` tags which link
 
 Add a `delete` button next to each todo item, which can also be an `a` tag that links to another view which deletes the item and redirects back to the first view.
 
+### Model
+
+- TodoItem
+  - text - CharField
+  - created_date - DateTimeField(auto_now_add=True)
+    - auto_now_add=True will automatically add the date when the TodoItem is created.
+  - completed - BooleanField
+
+### Views
+
+- Index Page
+  - List of the uncompleted todo items including text, and created date
+- Save Todo Item
+  - Receive the form submission and create a new todo item, then redirect back to the first view
+- Complete Todo Item
+  - Toggle complete property on the TodoItem True/False
+- Delete Todo Item
+  - Remove TodoItem from the database
+```python
+  todo = TodoItem.objects.get(id=todo_id)
+  todo.delete()
+```
 
