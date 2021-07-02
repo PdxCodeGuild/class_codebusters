@@ -1,0 +1,20 @@
+{% extends 'todo/base.html' %}
+
+{% block title %}
+Task Results
+{% endblock %}
+
+{% block content %}
+<div class="mytasks">
+  <p><a href="{% url 'todo:home' %}">Home</a></p>
+  <h3><u>Tasks to Complete</u></h3>
+  {% for task in tasks %}
+    <div>
+      {{ task }}
+    </div>
+  {% endfor %}
+
+</div>
+
+
+{% endblock %}
