@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask CodeBusters</title>
+</head>
+<body>
+  <h1>Ask CodeBusters</h1>
+  <form action="{% url 'polls:generate_choices' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" placeholder="Enter Poll:" name="question_text">
+    <input type="number" step="1" min="2" max="8" name="num_choices">
+    <button type="submit">Add Poll</button>
+  </form>
+  <h3>Current Polls:</h3>
+  {% for question in questions %}
+    <h4>{{ question.question_text }}</h4>
+    <ul>
+      {% for choice in question.choices.all %}
+        <li>
+          <a href="{% url 'polls:vote' choice.id %}">{{ choice.choice_text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</body>
+</html>
