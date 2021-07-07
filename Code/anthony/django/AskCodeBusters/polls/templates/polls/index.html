@@ -7,13 +7,19 @@
   <title>Ask CodeBusters</title>
 </head>
 <body>
-  <h1>Ask CodeBusters</h1>
+  {% include 'polls/_navbar.html' %}
+
+  {% if request.user.is_anonymous %}
+  Please login to create a poll.
+  {% else %}
+  <h2>Hello {{request.user}}</h2>
   <form action="{% url 'polls:generate_choices' %}" method="POST">
     {% csrf_token %}
     <input type="text" placeholder="Enter Poll:" name="question_text">
     <input type="number" step="1" min="2" max="8" name="num_choices">
     <button type="submit">Add Poll</button>
   </form>
+  {% endif %}
   <h3>Current Polls:</h3>
   {% for question in questions %}
     <h4>{{ question.question_text }}</h4>
