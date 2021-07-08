@@ -23,6 +23,7 @@
   <h3>Current Polls:</h3>
   {% for question in questions %}
     <h4>{{ question.question_text }}</h4>
+    <blockquote>{{ question.user }}</blockquote>
     <ul>
       {% for choice in question.choices.all %}
         <li>

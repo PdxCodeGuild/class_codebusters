@@ -1,11 +1,22 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
+
+
+# models.CASCADE = delete
+# models.PROTECT = prevent deletion
+
+# q = Question()
+# q.user
+
+# user = User()
+# user.questions
 
 
 # Question
 class Question(models.Model):
     question_text = models.CharField(max_length=150)
+    user = models.ForeignKey(User, on_delete=models.PROTECT, related_name="questions")
 
     def __str__(self):
         return self.question_text
