@@ -7,6 +7,7 @@ from .models import TodoItem
 # Create your views here.
 def home(request):
     items = TodoItem.objects.all()
+
     context = {
         'items': items
     }

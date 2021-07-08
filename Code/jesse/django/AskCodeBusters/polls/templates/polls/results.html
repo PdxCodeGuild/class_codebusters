@@ -7,6 +7,7 @@
   <title>{{question.question_text}}</title>
 </head>
 <body>
+  {% include 'polls/_navbar.html' %}
   {% for choice in question.choices.all %}
     <p>{{choice.choice_text}} -- {{choice.votes}}</p>
   {% endfor %}
