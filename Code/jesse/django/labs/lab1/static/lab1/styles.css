@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+div {
+  width: 300px;
+  border: 1px solid green;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+li:first-child {
+  text-align: center;
+}
+
+li:nth-child(2) {
+  text-align: right;
+}

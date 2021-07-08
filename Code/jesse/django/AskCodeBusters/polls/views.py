@@ -34,6 +34,7 @@ def generate_choices(request):
     
     question = Question()
     question.question_text = text
+    question.user = request.user
     question.save()
 
     num_choice = list(range(int(num_choice)))
@@ -104,3 +105,12 @@ def login_user(request):
 def logout_user(request):
     logout(request)
     return HttpResponseRedirect(reverse('polls:home'))
+
+def user_polls(request, username):
+
+    user = get_object_or_404(User, username=username)
+
+    context = {
+        'user': user
+    }
+    return render(request, 'polls/user_polls.html', context)
