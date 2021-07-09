@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .models import BlogPost
 
 
 def home(request):
@@ -42,4 +43,19 @@ def login_user(request):
             login(request, user)
             return HttpResponseRedirect(reverse('blog:profile'))
         return HttpResponseRedirect(reverse('blog:home'))
+
+def create(request):
+    if request.method == 'GET':
+        return render(request, 'blog/create.html')
+    elif request.method == 'POST':
+        form = request.POST
+        print('=============================================')
+        print(request.POST)
+        post = BlogPost()
+        post.title = form['title']
+        post.body = form['body']
+        post.user = request.user
+        post.public = form['public']
+        post.save()
+        return HttpResponseRedirect(reverse('blog:profile'))
 
