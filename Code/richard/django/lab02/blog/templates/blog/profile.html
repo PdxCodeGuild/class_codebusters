@@ -16,7 +16,7 @@
         {% for post in request.user.blogposts.all %}
         <div class="row m-2">
             <div class="col-5"></div>
-            <li class="col">{{post.title}}</li>
+            <li class="col"><a href="{% url 'blog:edit' post.id %}">{{post.title}}</a></li>
             <div class="col-5"></div>
         </div>
         {% endfor %}

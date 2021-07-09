@@ -1,13 +1,13 @@
 {% extends 'blog/base.html' %}
-{% block title %} Create Post {% endblock %}
+{% block title %} Edit Post {% endblock %}
 {% block content %}
 <div class="container">
     <div class="row m-2">
         <div class="col"></div>
-        <div class="col"><h1> Create Post </h1></div>
+        <div class="col"><h1> Edit Post </h1></div>
         <div class="col"></div>
     </div>
-    <form action="{% url 'blog:create' %}" method="POST">
+    <form action="{% url 'blog:edit' post.id%}" method="POST">
         {% csrf_token %}
         <div class="row m-2">
             <div class="col"></div>
@@ -15,7 +15,7 @@
                 <label for="title">Title:</label>
             </div>
             <div class="col">
-                <input type="text" name="title">
+                <input type="text" name="title" value="{{post.title}}">
             </div>
             <div class="col"></div>
         </div>
@@ -25,7 +25,7 @@
                 <label for="body">Body:</label>
             </div>
             <div class="col">
-                <input type="text" name="body">
+                <input type="text" name="body" value="{{post.body}}">
             </div>
             <div class="col"></div>
         </div>
@@ -43,7 +43,7 @@
         </div>
         <div class="row m-2">
             <div class="col"></div>
-            <div class="col"><button class="btn btn-primary">Create</button></div>
+            <div class="col"><button class="btn btn-primary">Edit</button></div>
         </div>
     </form>
 </div>

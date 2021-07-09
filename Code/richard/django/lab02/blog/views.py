@@ -49,8 +49,6 @@ def create(request):
         return render(request, 'blog/create.html')
     elif request.method == 'POST':
         form = request.POST
-        print('=============================================')
-        print(request.POST)
         post = BlogPost()
         post.title = form['title']
         post.body = form['body']
@@ -58,4 +56,23 @@ def create(request):
         post.public = form['public']
         post.save()
         return HttpResponseRedirect(reverse('blog:profile'))
+
+def edit(request, blogpost_id):
+    post = BlogPost.objects.get(id=blogpost_id)
+    if request.method == 'GET':
+        context = {
+            'post':post
+        }
+        return render(request, 'blog/edit.html',context)
+    elif request.method == 'POST':
+        if request.user == post.user:
+            form = request.POST
+            post.title = form['title']
+            post.body = form['body']
+            post.user = request.user
+            post.public = form['public']
+            post.save()
+            return HttpResponseRedirect(reverse('blog:profile'))
+        else:
+            return HttpResponseRedirect(reverse('blog:profile'))
 
