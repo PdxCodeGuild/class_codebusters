@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: hsl(219, 76%, 81%);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.main h3 {
+  padding-top: 3rem;
+}
+
+form input,
+button {
+  font-size: 1.5rem;
+}
+
+.main div {
+  padding-top: 2rem;
+}
+
+.mytasks {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.mytasks p,
+h3 {
+  padding: 1rem 0;
+}

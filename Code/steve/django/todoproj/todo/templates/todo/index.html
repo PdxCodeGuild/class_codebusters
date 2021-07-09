@@ -1,0 +1,19 @@
+{% extends 'todo/base.html' %}
+
+{% block title %}
+Todo 
+{% endblock %}
+
+{% block content %}
+<div class="main">
+  <div>
+    <a href="{% url 'todo:task_results' %}">Tasks</a>
+  </div>
+  <h3><u>Add Task</u></h3>
+  <form action="{% url 'todo:save' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="task" placeholder="Task">
+    <button type="submit">Save Task</button>
+  </form>
+</div>
+{% endblock %}
