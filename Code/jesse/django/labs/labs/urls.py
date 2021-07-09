@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('lab0/', include('lab0.urls')),
     path('shortener/', include('mob1.urls')),
-    path('todo/', include('lab1.urls'))
+    path('todo/', include('lab1.urls')),
+    path('blog/', include('lab2.urls')),
 ]

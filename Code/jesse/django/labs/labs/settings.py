@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'lab0',
     'mob1',
-    'lab1'
+    'lab1',
+    'lab2',
 ]
 
 MIDDLEWARE = [
