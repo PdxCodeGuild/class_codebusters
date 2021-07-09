@@ -76,3 +76,17 @@ def edit(request, blogpost_id):
         else:
             return HttpResponseRedirect(reverse('blog:profile'))
 
+def posts(request):
+    posts = BlogPost.objects.all()
+    context = {
+        'posts':posts
+    }
+    return render(request, 'blog/posts.html',context)
+
+def details(request,blogpost_id):
+    post = BlogPost.objects.get(id=blogpost_id)
+    context = {
+        'post':post
+    }
+    return render(request, 'blog/details.html',context)
+
