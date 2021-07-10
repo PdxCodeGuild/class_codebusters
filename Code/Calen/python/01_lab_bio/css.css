@@ -1,0 +1,24 @@
+body{
+    text-align: center;
+    font-family: 'Newsreader', serif;
+    background-image: url("https://i.redd.it/8zcd8mchbzc11.png");
+     
+ }
+
+ ol{
+    list-style: 👌🏻;
+    margin: 50px 50px 50px;
+    color: #293241;
+    /* background-color: #E0FBFC; */
+    /* border-radius: 99%; */
+
+ }
+ img{
+     border-radius: 80%;
+     
+ }
+ h1{
+     color: rgb(41, 37, 37);
+     background-color: rgba(0, 140, 255, 0.863);
+     border-radius: 99%;
+ }
