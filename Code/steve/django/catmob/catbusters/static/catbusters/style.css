@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-height: 500px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  color: blueviolet;
+  text-align: center;
+}
+
+.main {
+  margin: 0 auto;
+}
+
+.user_input {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
