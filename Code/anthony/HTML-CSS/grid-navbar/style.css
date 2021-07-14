@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Montserrat";
+  background: radial-gradient(
+    at top left,
+    hsl(0, 100%, 0%) 0%,
+    hsl(269, 100%, 49%) 100%
+  );
+}
+
+.navbar h1 {
+  color: hsl(295, 100%, 49%);
+}
+
+.navbar > .links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* text-align: right;
+  margin-top: 25px; */
+}
+
+.links > a {
+  color: white;
+  margin-right: 10px;
+}

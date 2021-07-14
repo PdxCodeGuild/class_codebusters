@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form action="https://webhook.site/4ec7db75-b940-4dae-9798-51dab21f38df" method="POST">
+    <!-- Input Text -->
+    <div>
+      <input name="first-name" placeholder="First Name" type="text" required>
+      <input name="last-name" placeholder="Last Name" type="text" required>
+    </div>
+
+    <div>
+      <!-- <input name="email" type="text" placeholder="email" pattern="[a-zA-Z0-9]+\.com" title="Enter a valid email."> -->
+      <input type="email" placeholder="Email" name="email">
+    </div>
+
+    <!-- Input Password -->
+    <div>
+      <input name="password" type="password" placeholder="Password" required>
+    </div>
+
+    <!-- Input Number -->
+    <div>
+      <input name="quantity" type="number" min=0 max=99 step="1" placeholder="Age">
+    </div>
+
+    <!-- Input Color -->
+    <div>
+      <input name="color" type="color">
+    </div>
+
+    <!-- Input Radio -->
+    <div class="col">
+      <label for="small">Small</label>
+      <input value="small" id="small" name="size" type="radio">
+
+      <label for="medium">Medium</label>
+      <input value="medium" id="medium" name="size" type="radio">
+
+      <label for="large">Large</label>
+      <input value="large" id="large" name="size" type="radio">
+
+      <label for="x-large">X-Large</label>
+      <input value="x-large" id="x-large" name="size" type="radio">
+    </div>
+
+    <!-- Input Checkbox -->
+    <div class="col">
+      <h5>Coding Langs</h5>
+      <label for="python">Python</label>
+      <input id="python" name="python" type="checkbox">
+
+      <label for="javascript">JavaScript</label>
+      <input id="javascript" name="javascript" type="checkbox">
+
+      <label for="html">HTML</label>
+      <input id="html" name="html" type="checkbox">
+
+      <label for="css">CSS</label>
+      <input id="css" name="css" type="checkbox">
+    </div>
+
+    <!-- Input Range -->
+    <div>
+      <label for="prevexp">Previous Experience</label>
+      <input id="prevexp" name="amount" type="range" min=0 max=10>
+    </div>
+
+    <!-- Input Date -->
+    <div>
+      <label for="date">Select Start Date</label>
+      <input id="date" name="date" type="date" required>
+    </div>
+
+    <!-- Text Area -->
+    <textarea name="security-question" placeholder="Enter security question"></textarea>
+
+    <!-- Select -->
+    <label for="mood">Excited to start?</label>
+    <select name="choose-1" id="mood">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

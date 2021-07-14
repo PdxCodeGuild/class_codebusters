@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{question.question_text}}</title>
+</head>
+<body>
+  {% include 'polls/_navbar.html' %}
+  <h1>{{question.question_text}}</h1>
+  <form action="{% url 'polls:add_choices' %}" method="post">
+    {% csrf_token %}
+    {% for x in choices %}
+    <input
+      type="text"
+      name="choice{{forloop.counter}}"
+      placeholder="Choice {{forloop.counter}}">
+    {% endfor %}
+    <input
+      type="hidden"
+      name="question_id"
+      value="{{question.id}}">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

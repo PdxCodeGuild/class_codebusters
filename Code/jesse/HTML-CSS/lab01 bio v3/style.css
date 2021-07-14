@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Limelight', cursive;
+  color: #C3BEF7;
+  text-align: center;
+  margin: 20px;
+
+  background-color: #331E36;
+  /* background image */
+  background-image:
+  url(https://mcdn.wallpapersafari.com/medium/22/32/RWg5f1.png);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h3 {
+  color: #E88873;
+}
+
+a {
+  color: #29E7CD;
+}
+
+p {
+  margin: 20px;
+}
+
+img {
+  margin: 20px;
+  margin-bottom: 0px;
+  border: 2px solid #E2E2E2;
+  border-radius: 10px;
+}
+
+ul {
+  color: #D4AA7D;
+  width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  list-style-type: georgian;
+}
+
+li {
+  margin: 5px;
+  padding-left: 5px;
+}
+
+q {
+  color: #C73E1D;
+  font-family: "Lucida Handwriting", cursive
+}
+
+blockquote {
+  color: #C73E1D;
+  margin: 10px
+}

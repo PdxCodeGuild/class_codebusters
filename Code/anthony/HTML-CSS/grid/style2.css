@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: hsl(220, 75%, 75%);
+  --color-secondary: hsl(300, 75%, 75%);
+}
+
+html {
+  background-color: var(--color-primary);
+}
+
+body {
+  height: 100vh;
+}
+
+.wrapper {
+  display: grid;
+  height: 100%;
+  /* grid-template-columns: repeat(6, 1fr); */
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 75px 1fr;
+  grid-template-areas:
+    "header header header header header header header header header header header header"
+    "sidebar sidebar . section section section section section section section section .";
+}
+
+header {
+  background-color: var(--color-primary);
+  grid-area: header;
+  /* border: 1px solid red; */
+}
+
+aside {
+  background-color: var(--color-primary);
+  grid-area: sidebar;
+}
+
+/* Grid */
+/* section {
+  background-color: white;
+  grid-column: 3/13;
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+section > p {
+  grid-column: 2/10;
+  height: 100px;
+  background-color: var(--color-secondary);
+} */
+
+/* Flex */
+section {
+  grid-area: section;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 4rem;
+  overflow: scroll;
+}
+
+section > p {
+  background-color: var(--color-secondary);
+  min-height: 100px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
