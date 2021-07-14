@@ -1,0 +1,56 @@
+{% extends 'todo/base.html' %}
+
+{% block title %}
+Or not todo
+{% endblock %}
+
+
+{% block content %}
+  <h1>Todo</h1>
+  <form action="{% url 'todo:save_todo' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="todo_text" placeholder="Enter new todo:">
+    <select name="priority">
+      {% for priority in priorities %}
+        <option value="{{priority.id}}">{{priority.text}}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">Add</button>
+  </form>
+  <form id="edit-form" action="{% url 'todo:edit_todo' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="todo_text">
+    <input type="hidden" name="todo_id">
+    <label>Completed
+      <input name="completed" type="checkbox">
+    </label>
+    <button type="submit">Save</button>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Date Created</th>
+        <th>Priority</th>
+        <th>Completed</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      {% for todo in todos %}
+        <tr style="
+        {% if todo.completed_date %}
+        background-color: #58eb34
+        {% else %}
+        background-color: {{todo.priority.color}}
+        {% endif %}
+        " id="{{todo.id}}"
+        >
+          <td>{{todo.title}}</td>
+          <td>{{todo.created_date}}</td>
+          <td>{{todo.priority.text}}</td>
+          <td>{{todo.completed_date}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

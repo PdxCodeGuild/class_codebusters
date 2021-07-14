@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kintter</title>
+  <link rel="stylesheet" href="{% static 'kats/style.css' %}">
+</head>
+<body>
+  <form action="{% url 'kats:get_cat' %}" method="POST">
+    {% csrf_token %}
+    <select name="category">
+      <option value="" selected disabled>Select a KATegorie</option>
+      {% for cat in cat_egories %}
+        <option value="{{cat.id}}">{{cat.name}}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">Random Cat</button>
+  </form>
+  <img src="{{ cat_image }}" alt="cats">
+</body>
+</html>
