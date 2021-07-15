@@ -1,0 +1,38 @@
+body {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 125px 400px 200px;
+  background-color: teal;
+  color: mintcream;
+}
+
+.navbar {
+  grid-column: 2/4;
+  text-align: center;
+  padding: 50px;
+}
+.sidebar {
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 25px; */
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+.sidebar > a {
+  margin: 15px;
+}
+
+/* a{
+    margin: 25px;
+} */
+
+.para {
+  grid-column: 2/4;
+  grid-row: 2/4;
+  padding: 75px;
+  font-size: 19px;
+  line-height: 1.6;
+}

@@ -34,7 +34,7 @@ Below 65 F
 # grade = int(user_input)
 
 # # comparison statements for letter grades
-# if grade > 90:
+# if grade >=90:
 #     print('A')
 # elif grade >= 80 and grade <= 89:
 #     print('B')
@@ -75,3 +75,7 @@ elif grade >= 65 and grade <= 66:
     print('D')
 else:
     print('F')
+
+
+
+

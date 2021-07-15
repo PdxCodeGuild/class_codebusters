@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="{% static 'list/style.css' %}">
+</head>
+
+<body>
+    <form action="{% url 'list:mycreate' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="myfield" />
+        <button type="submit">submit</button>
+    </form>
+
+
+    {% for myinstance in myinstances %}
+    <div class='container'>
+        {{ myinstance.created_date }}
+    </div>
+
+    <div class='items'>
+        {{ myinstance.myfield }}
+    </div>
+    {% endfor %}
+
+
+
+</body>
+
+</html>
