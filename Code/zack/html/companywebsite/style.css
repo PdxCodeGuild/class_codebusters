@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+/* page */
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: hsl(174, 9%, 22%);
+  color: hsl(143, 40%, 77%);
+}
+
+/* link color */
+a:link {
+  color: hsl(161, 76%, 56%);
+}
+
+/* box controller */
+.overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px 100vh;
+}
+
+/* website display */
+.title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+/* top right */
+.FAQ {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* visual pitch */
+.main_content {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
