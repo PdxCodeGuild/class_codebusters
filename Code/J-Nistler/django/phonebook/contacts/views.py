@@ -9,10 +9,12 @@ def home_page(request):
     return render(request, 'contacts/index.html')
 
 def all_contacts(request):
-    contacts = Contact.objects.all
+    cool_contacts = Contact.objects.filter(is_cool=True).order_by('first_name')
+    not_cool_contacts = Contact.objects.filter(is_cool=False).order_by('first_name')
 
     context = {
-        "contacts": contacts
+        "cool_contacts": cool_contacts,
+        "not_cool_contacts": not_cool_contacts
     }
 
     return render(request, 'contacts/all.html', context)
@@ -36,3 +38,25 @@ def save_contact(request):
     contact.save()
     
     return HttpResponseRedirect(reverse('contacts:all_contacts'))
+
+def search_contact(request):
+    name = request.POST['first_name'].title()
+    if name:
+        contacts = Contact.objects.filter(first_name = name)
+    else:
+        contacts = ""
+
+    context = {
+        'contacts': contacts
+    }
+    return render(request, 'contacts/search_results.html', context)
+
+def contact_detail(request, contact_id):
+
+    contact = Contact.objects.get(id=contact_id)
+
+    context = {
+        'contact': contact
+    }
+    
+    return render(request, 'contacts/details.html', context)

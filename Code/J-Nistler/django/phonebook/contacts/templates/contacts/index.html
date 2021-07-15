@@ -1,25 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacts</title>
-  </head>
-  <body>
-    <h1>Welcome to Contacts!</h1>
-    <form action="save_contact/" method="POST">
-    {% csrf_token %}
-    <input type="text" name="first_name" placeholder="First Name">
-    <input type="text" name="last_name" placeholder="Last Name">   
-    <input type="text" name="phone_number" placeholder="Phone #">
-    <input type="text" name="email" placeholder="Email Address">
-    <input type="text" name="address" placeholder="Address">
-    <label for="cool">
-    Is Cool:
-    <input type="checkbox" name="is_cool">
-    </label>
-    <input type="submit" value="Submit"/>
-    </form>
-  </body>
-</html>
+{% extends 'contacts/base.html' %} {% block title %}Welcome! {% endblock %} 
+{% block content %}
+<h1>Welcome to Contacts!</h1>
+<form action="{% url 'contacts:search_contact' %}" method="POST">
+  {% csrf_token %}
+  <input type="text" name="first_name" placeholder="Look up by first name" />
+
+  <button type="submit">Search</button>
+  <a href="{% url 'contacts:all_contacts' %}">View All</a>
+</form>
+{% endblock %}

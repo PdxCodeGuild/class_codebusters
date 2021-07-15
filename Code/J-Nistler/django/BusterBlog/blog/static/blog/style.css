@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "krinkes";
+  src: url("./krinkesdecor-webfont.woff2") format("woff2"),
+    url("./krinkesdecor-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --blog-white: aliceblue;
+  --blog-blue: cornflowerblue;
+  --blog-slate: slategrey;
+  --blog-grey: grey;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: var(--blog-white);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: var(--blog-grey);
+  height: 150px;
+  justify-content: space-between;
+}
+
+.nav-logo > a {
+  color: var(--blog-white);
+  font-size: 3.5rem;
+  font-family: "krinkes", sans-serif;
+  padding-left: 30px;
+}
+
+.nav-logo > a:hover {
+  color: var(--blog-blue);
+  text-shadow: 2px 2px black;
+}
+
+.nav-links > a {
+  font-size: 1.125rem;
+  padding-right: 20px;
+  color: var(--blog-white);
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+aside {
+  width: 20vw;
+  background-color: var(--blog-blue);
+}
+
+.sidenav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.sidenav-links > a {
+  color: var(--blog-white);
+  margin: 1rem;
+}
+
+.post-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  width: 80vw;
+  padding: 20px;
+}
+
+.post-field > div {
+  min-height: 150px;
+  word-wrap: break-word;
+  width: 90%;
+  background-color: var(--blog-slate);
+  margin: 20px;
+  padding: 1rem;
+}

@@ -1,0 +1,7 @@
+{% extends 'contacts/base.html' %} {% block title %}Search{% endblock %} 
+{% block content %}
+<h1>Search Results</h1>
+{% if contacts %} {% for contact in contacts %} {{contact.full_name}} --
+{{contact.coolness}} {% endfor %} {% else %}
+<h2>There are no contacts with that name</h2>
+{% endif %} {% endblock %}
