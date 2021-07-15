@@ -51,9 +51,8 @@ sidebar {
   grid-row: 2 / span 6;
   background-color: transparent;
   border-radius: 10px;
-  text-align: center;
   font-size: 28px;
-  text-align: justify;
+  text-align: left;
   padding: 1.5em;
   margin-top: 0.5em;
   color: #db39bb;
