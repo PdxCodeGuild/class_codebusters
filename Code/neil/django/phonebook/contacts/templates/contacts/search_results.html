@@ -1,0 +1,17 @@
+{% extends 'contacts/base.html' %}
+
+{% block title %}
+Search Results
+{% endblock %}
+
+{% block content %}
+
+  {% if contacts %}
+    {% for contact in contacts %}
+      {{ contact.full_name }} -- {{ contact.coolness }}
+    {% endfor %}
+  {% else %}
+  <h2>No contacts with that name!</h2>
+  {% endif %}
+
+{% endblock %}

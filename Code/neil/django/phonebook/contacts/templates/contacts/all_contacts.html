@@ -1,0 +1,50 @@
+{% extends 'contacts/base.html' %}
+
+{% block title %}
+All Contacts
+{% endblock %}
+
+{% block content %}
+<h1>All Contacts</h1>
+
+<!-- Form to add new contact -->
+<form action="{% url 'contacts:save_contact' %}"" method="POST">
+  {% csrf_token %}
+  <input type="text" name="first_name" placeholder="First Name">
+  <input type="text" name="last_name" placeholder="Last Name">
+  <input type="text" name="phone_number" placeholder="Phone #">
+  <input type="text" name="email" placeholder="Email">
+  <input type="text" name="address" placeholder="Address">
+  <label for="cool">
+    Is Cool:
+    <input name="is_cool" type="checkbox">
+  </label>
+  <input type="submit" value="Submit">
+</form>
+
+<div class="cool-not-cool">
+  <div class="cool">
+    <!-- Loop over all contacts -->
+    {% for contact in cool_contacts %}
+    <div>
+      <h2>
+        <a href="{% url 'contacts:details' contact.id %}">{{ contact.full_name }} is {{ contact.coolness }}</a>
+      </h2>
+    </div>
+    {% endfor %}
+  </div>
+  
+  <div class="not-cool">
+    <!-- Loop over all contacts -->
+    {% for contact in not_cool_contacts %}
+    <div>
+      <h2>
+        <a href="{% url 'contacts:details' contact.id %}">{{ contact.full_name }} is {{ contact.coolness }}</a>
+      </h2>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+  
+  
+{% endblock %}

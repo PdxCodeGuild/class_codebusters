@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+nav i {
+  font-size: 2rem;
+  color: orange;
+}
+
+.links {
+  color: gray;
+  font-size: 1.25rem;
+}
+
+.links > a {
+  color: gray;
+  margin-left: 0.5rem;
+}
+
+.links > a:hover {
+  color: orange;
+}
+
+form {
+  padding: 0 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+form > input,
+label {
+  font-size: 1.5em;
+}
+
+.cool-not-cool {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cool {
+  border: 2px solid green;
+  border-radius: 8px;
+  padding: 1em;
+}
+
+.not-cool {
+  border: 2px solid red;
+  border-radius: 8px;
+  padding: 1em;
+}
