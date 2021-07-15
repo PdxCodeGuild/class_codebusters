@@ -1,0 +1,21 @@
+{% extends 'catbusters/base.html' %}
+
+{% block title %}
+CATS
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>All Cats</h1>
+
+  {% for cat in cats %}
+    <div class="cat-image">
+      <img src="{{cat.url}}" alt="cat">
+      <a href="{% url 'catbusters:up_vote' cat.id %}" class="btn">⬆ {{cat.up_votes}}</a>
+      <a href="{% url 'catbusters:down_vote' cat.id %}" class="btn">⬇ {{cat.down_votes}}</a>
+      <p>Diff: {{cat.total_votes}}</p>
+    </div>
+  {% endfor %}
+
+</div>
+{% endblock %}
