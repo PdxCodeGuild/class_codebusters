@@ -9,14 +9,14 @@
     </div>
     <div class="row m-2">
         <div class="col"></div>
-        <div class="col text-center"><h3>Your Post Titles</h3></div>
+        <div class="col text-center"><h3>All Post Titles</h3></div>
         <div class="col"></div>
     </div>
     <ul>
-        {% for post in request.user.blogposts.all %}
+        {% for post in posts %}
         <div class="row m-2">
             <div class="col-5"></div>
-            <li class="col"><a href="{% url 'blog:edit' post.id %}">{{post.title}}</a></li>
+            <li class="col"><a href="{% url 'blog:details' post.id %}">{{post.title}}</a></li>
             <div class="col-5"></div>
         </div>
         {% endfor %}

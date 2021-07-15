@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from .models import BlogPost
 
 
 def home(request):
@@ -42,4 +43,50 @@ def login_user(request):
             login(request, user)
             return HttpResponseRedirect(reverse('blog:profile'))
         return HttpResponseRedirect(reverse('blog:home'))
+
+def create(request):
+    if request.method == 'GET':
+        return render(request, 'blog/create.html')
+    elif request.method == 'POST':
+        form = request.POST
+        post = BlogPost()
+        post.title = form['title']
+        post.body = form['body']
+        post.user = request.user
+        post.public = form['public']
+        post.save()
+        return HttpResponseRedirect(reverse('blog:profile'))
+
+def edit(request, blogpost_id):
+    post = BlogPost.objects.get(id=blogpost_id)
+    if request.method == 'GET':
+        context = {
+            'post':post
+        }
+        return render(request, 'blog/edit.html',context)
+    elif request.method == 'POST':
+        if request.user == post.user:
+            form = request.POST
+            post.title = form['title']
+            post.body = form['body']
+            post.user = request.user
+            post.public = form['public']
+            post.save()
+            return HttpResponseRedirect(reverse('blog:profile'))
+        else:
+            return HttpResponseRedirect(reverse('blog:profile'))
+
+def posts(request):
+    posts = BlogPost.objects.all()
+    context = {
+        'posts':posts
+    }
+    return render(request, 'blog/posts.html',context)
+
+def details(request,blogpost_id):
+    post = BlogPost.objects.get(id=blogpost_id)
+    context = {
+        'post':post
+    }
+    return render(request, 'blog/details.html',context)
 
