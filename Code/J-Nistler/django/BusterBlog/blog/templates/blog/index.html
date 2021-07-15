@@ -1,16 +1,11 @@
 {% extends 'blog/base.html' %} 
 {% block content %}
+{% for post in posts %}
 <div>
-  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum consectetur
-  esse magnam nam totam fugit, voluptates quos excepturi molestias culpa.
+  <h3>{{post.title}}</h3>
+  <h4>Posted By: {{post.user}}</h4>
+  <h4>{{post.date_created}}</h4>
+  <p>{{post.body}}</p>
 </div>
-<div>
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, ex iste
-  ut eaque quas quam odit molestiae distinctio sequi officia?
-</div>
-<div>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet voluptatem
-  voluptatibus, nesciunt sequi a placeat obcaecati sint! Doloremque,
-  voluptatibus quos.
-</div>
+{% endfor %}
 {% endblock %}

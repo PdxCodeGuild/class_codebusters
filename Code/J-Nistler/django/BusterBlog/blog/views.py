@@ -4,10 +4,17 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render
+from .models import BlogPost
 
 # Create your views here.
 def home(request):
-    return render(request, 'blog/index.html')
+    posts = BlogPost.objects.all()
+
+    context = {
+        'posts' : posts
+    }
+
+    return render(request, 'blog/index.html', context)
 
 def register(request):
     if request.method == "GET":
@@ -64,3 +71,7 @@ def profile(request, username):
     }
     return render(request, 'blog/profile.html', context)
 
+
+@login_required
+def create (request):
+    return render(request, 'blog/index.html')
