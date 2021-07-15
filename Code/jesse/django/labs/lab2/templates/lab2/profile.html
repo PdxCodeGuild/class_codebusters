@@ -1,12 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'lab2/styles.css' %}">
   <title>Profile</title>
 </head>
 <body>
-  <h2>Welcome!</h2>
+  <h2>Blog List</h2>
+  <ul>
+    {% for blogpost in blogposts %}
+    <li><h3>{{ blogpost.title }}</h3></li>
+    {% endfor %}
+  </ul>
+  <div>
+    <h2>New Blog</h2>
+    <form action="{% url 'blog:create' %}" method="POST">
+      {% csrf_token %}
+      <input type="text" name="title" placeholder="Title" class="text_entry">
+      <textarea name="body" placeholder="Body" cols="30" rows="10" class="text_entry"></textarea>
+      <div>
+        <label for="public">Public?</label>
+        <input type="checkbox" name="public" id="public">
+      </div>
+      <button type="submit">Post</button>
+    </form>
+  </div>
 </body>
 </html>

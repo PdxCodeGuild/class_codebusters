@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+  background-color: #002047;
+  color: #eaeaea;
+}
+
+body * {
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #00a2ed
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.text_entry {
+  background-color: #eaeaea;
+}
+
+div {
+  width: 500px;
+}
+
+div h2 {
+  margin-top: 1em;
+}
+
+button {
+  width: 80px;
+  height: 30px;
+}
