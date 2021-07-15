@@ -11,8 +11,11 @@ to get the ones-digit to set another string to '+', '-', or ' '.
 Then you can concatenate that string with your grade string.
 '''
 
+import utils
+
+
 # Getting user input
-num = int(input('Enter your score: '))
+num = utils.get_int("Enter your score: ")
 
 # Determining if the Grade is +, - or neither
 if num % 10 > 6:
