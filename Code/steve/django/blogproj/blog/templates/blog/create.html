@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+{{request.user}}'s Blog
+{% endblock %}
+
+{% block content %}
+<h3>{{request.user}}'s Blog</h3>
+<form action="{% url 'blog:create_blog' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" placeholder="Enter Title" name="title">
+    <input type="text" placeholder="Enter Text" name="body">
+    <button type="submit">Add to Blog</button>
+</form>
+{% endblock %}
