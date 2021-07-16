@@ -1,0 +1,39 @@
+{% extends 'catbusters/base.html' %}
+
+{% block title %}
+CatBusters v 2.0 new and improved with javascript
+{% endblock %}
+
+{% block content %}
+
+<header>
+<h1>Welcome to CatBusters!</h1>
+</header>
+
+<div class="main">
+<img id="cat_img" src="{{ cat_url }}" alt="Cat, meow">
+
+<div class="user_input">
+<select name="cat_drop" id="cat_select">
+    {% for cats in cat_egories %}
+    <option value="{{ cats.id }}">{{ cats.name }}</option>
+    {% endfor %}
+</select>
+<button type="submit" onclick="return cat_search()">Generate Cat</button>
+</div>
+
+<script type="text/javascript">
+function cat_search() {
+    let cat_select = document.getElementById('cat_select').value;
+    let cat_base = 'https://api.thecatapi.com/v1/images/search?category_ids='
+    let cat_url = cat_base + cat_select
+    let cat_img = document.getElementById("cat_img")
+
+    fetch(cat_url)
+    .then(response => response.json())
+    .then(data => cat_img.src = data[0].url)
+}
+</script>
+</div>
+
+{% endblock %}
