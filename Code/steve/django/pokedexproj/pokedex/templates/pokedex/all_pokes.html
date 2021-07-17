@@ -1,0 +1,27 @@
+{% extends 'pokedex/base.html' %}
+
+{% block title %}
+{{ poke.name }}
+{% endblock %}
+ 
+{% block content %}
+<h1>{{ poke.name }}</h1>
+<nav>
+    <a href="{% url 'pokedex:home' %}">Home</a>
+</nav>
+<div class="details">
+    <div>
+        <p>Number: {{ poke.number }}</p>
+        <p>Height: {{ poke.height }}</p>
+        <p>Weight: {{ poke.weight }}</p>
+        {% for type in poke.types.all %}
+        <p>Type: {{ type }}</p>
+        {% endfor %}
+    </div>
+    <div class="img">
+        <img src="{{ poke.image_front }}" alt="{{ poke.name }}">
+        <img src="{{ poke.image_back }}" alt="{{ poke.name }}">
+    </div>
+</div>
+
+{% endblock %}
