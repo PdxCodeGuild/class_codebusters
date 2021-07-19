@@ -1,4 +1,4 @@
-# Class 20210426
+# Class CodeBusters - 20210426
 
 ### Rough Timeline
 
@@ -63,14 +63,36 @@
 
 ### Week 9-12 / Django
 
-| Section                               | Docs                                                                                                                                                                                                                                                                              | Labs                                                                                                                                                           | Solutions                |
-| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| 01 Django Overview                       | [Django Overview](<3 Django/docs/01 Django Overview.md>)                                                                      |                                                                                                       | [](Code/anthony/python/) |
-| 02 Routes                       | [Routes](<3 Django/docs/02 Routes.md>)                                                                      |                                                                                                       | [](Code/anthony/python/) |
-| 03 Views                       | [Views](<3 Django/docs/03 Views.md>)                                                                      |                                                                                                       | [](Code/anthony/python/) |
-| 04 Templates                       | [Templates](<3 Django/docs/04 Templates.md>)                                                                      |                                                                                                       | [](Code/anthony/python/) |
-| 05 Forms                       | [Forms](<3 Django/docs/05 Forms.md>)                                                                      |                                                                                                       | [](Code/anthony/python/) |
-| 06 Models                       | [Models](<3 Django/docs/06 Models.md>)                                                                      |                                                                                                       | [](Code/anthony/python/) |
-| 07 User Management                       | [User Management](<3 Django/docs/07 User Management.md>)                                                                      |                                                                                                       | [](Code/anthony/python/) |
-| 08 Uploading Files                       | [Uploading Files](<3 Django/docs/08 Uploading Files.md>)                                                                      |                                                                                                       | [](Code/anthony/python/) |
-| 09 Advanced Topics                       | [Advanced Topics](<3 Django/docs/09 Advanced Topics.md>)                                                                      |                                                                                                       | [](Code/anthony/python/) |
+| Section            | Docs                                                     | Labs | Solutions |
+| ------------------ | -------------------------------------------------------- | ---- | --------- |
+| 01 Django Overview | [Django Overview](<3 Django/docs/01 Django Overview.md>) |      |           |
+| 02 Routes          | [Routes](<3 Django/docs/02 Routes.md>)                   |      |           |
+| 03 Views           | [Views](<3 Django/docs/03 Views.md>)                     |      |           |
+| 04 Templates       | [Templates](<3 Django/docs/04 Templates.md>)             |      |           |
+| 05 Forms           | [Forms](<3 Django/docs/05 Forms.md>)                     |      |           |
+| 06 Models          | [Models](<3 Django/docs/06 Models.md>)                   |      |           |
+| 07 User Management | [User Management](<3 Django/docs/07 User Management.md>) |      |           |
+| 08 Uploading Files | [Uploading Files](<3 Django/docs/08 Uploading Files.md>) |      |           |
+| 09 Advanced Topics | [Advanced Topics](<3 Django/docs/09 Advanced Topics.md>) |      |           |
+
+
+### JavaScript
+| Section                                   | Docs                                                                                                    | Labs | Solutions |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------- | ---- | --------- |
+| 01 Overview                               | [Overview](<4 JavaScript/docs/01 - Overview.md>)                                                             |      |           |
+| 02 JavaScript Fundamentals                | [JavaScript Fundamentals](<4 JavaScript/docs/02 - JavaScript Fundamentals.md>)                               |      |           |
+| 03 Numbers and Arithmetic                 | [Numbers and Arithmetic](<4 JavaScript/docs/03 - Numbers and Arithmetic.md>)                                 |      |           |
+| 04 Booleans, Comparisons and Conditionals | [Booleans, Comparisons and Conditionals](<4 JavaScript/docs/04 - Booleans, Comparisons and Conditionals.md>) |      |           |
+| 05 Strings                                | [Strings](<4 JavaScript/docs/05 - Strings.md>)                                                               |      |           |
+| 06 Objects                                | [Objects](<4 JavaScript/docs/06 - Objects.md>)                                                               |      |           |
+| 07 Loops                                  | [Loops](<4 JavaScript/docs/07 - Loops.md>)                                                                   |      |           |
+| 08 Arrays                                 | [Arrays](<4 JavaScript/docs/08 - Arrays.md>)                                                                 |      |           |
+| 09 Functions                              | [Functions](<4 JavaScript/docs/09 - Functions.md>)                                                           | [01-03 JavaScript Redo](<4 JavaScript/labs/01-03 JavaScript Redo.md>)     |           |
+| 10 Classes                                | [Classes](<4 JavaScript/docs/10 - Classes.md>)                                                               |      |           |
+| 11 Editing HTML                           | [Editing HTML](<4 JavaScript/docs/11 - Editing HTML.md>)                                                     |      |           |
+| 12 Events                                 | [Events](<4 JavaScript/docs/12 - Events.md>)                                                                 | [04 Todo](<4 JavaScript/labs/04 Todo.md>)     |           |
+| 13 Ajax                                   | [Ajax](<4 JavaScript/docs/13 - Ajax.md>)                                                                     | [05 Quote API](<4 JavaScript/labs/05 Quote API.md>), [06 Pokedex](<4 JavaScript/labs/06 Pokedex.md>)     |           |
+| Python vs JavaScript                      | [Python vs JavaScript](<4 JavaScript/docs/Python vs JavaScript.md>)                                     |      |           |
+| Timing                                    | [Timing](<4 JavaScript/docs/Timing.md>)                                                                 |      |           |
+
+### Django + JavaScript
