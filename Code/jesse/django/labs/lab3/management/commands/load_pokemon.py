@@ -23,8 +23,8 @@ class Command(BaseCommand):
             pokemon = Pokemon()
             pokemon.number = entry['number']
             pokemon.name = entry['name']
-            pokemon.height = entry['height']
-            pokemon.weight = entry['weight']
+            pokemon.height = entry['height'] / 10
+            pokemon.weight = entry['weight'] / 10
             pokemon.image_front = entry['image_front']
             pokemon.image_back = entry['image_back']
             pokemon.save()
