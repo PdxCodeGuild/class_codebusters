@@ -9,7 +9,6 @@ Choose three of the following Python labs and re-do them in JavaScript. You shou
 - Unit Converter
 - Credit Card Validation
 - Rot13
-- Number to Phrase
 
 ## Version 2 (optional)
 
