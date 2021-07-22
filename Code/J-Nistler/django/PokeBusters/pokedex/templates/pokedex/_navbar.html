@@ -1,0 +1,21 @@
+<!-- Navigation -->
+<nav>
+  <div class="logo"><h4>Pokebusters</h4></div>
+  <ul class="nav-links">
+    <li><a href="#work">All Pokemon</a></li>
+    {% if request.user.is_anonymous %}
+    <li><a href="#">Register</a></li>
+    <li><a href="#">Log In</a></li>
+    {% else %}
+    <li><a href="#">{{request.user}}</a></li>   
+    <li><a href="#">Log Out</a></li>
+    {% endif %}
+
+  </ul>
+  <!-- Mobile Navigation -->
+  <div class="nav-burger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</nav>
