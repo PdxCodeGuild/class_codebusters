@@ -6,6 +6,25 @@
 //-----------------------------------------------
 
 //-----------------------------------------------#
+// Utilities
+//-----------------------------------------------#
+
+function randChoice(obj) {
+  let rand_int = Math.random();
+  rand_int *= obj.length;
+  rand_int = Math.floor(rand_int);
+  return obj[rand_int];
+}
+
+function shufArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return(array)
+}
+
+//-----------------------------------------------#
 // Rock, Paper, Scissors
 //-----------------------------------------------#
 
@@ -34,13 +53,6 @@ function throwChoice(user_input, comp_input) {
   }
 }
 
-function randChoice(array) {
-  let rand_int = Math.random();
-  rand_int *= array.length;
-  rand_int = Math.floor(rand_int);
-  return array[rand_int];
-}
-
 function endMessage(user, comp, result) {
   return "You threw " + user + ". The computer threw " + comp + ". " + result;
 }
@@ -61,3 +73,49 @@ function rockPaperScissors() {
 // Random Password Generator
 //-----------------------------------------------#
 
+let lower_bank = "abcdefghijklmnopqrstuvwxyz";
+let upper_bank = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let digit_bank = "0123456789";
+let symbol_bank = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ \t\n\r\x0b\x0c";
+let pass = "";
+
+function genPass(char_source, num) {
+  let counter = 0;
+  pass_seg = "";
+  while (counter < num) {
+    pass_seg += randChoice(char_source);
+    counter++;
+  }
+  return pass_seg;
+}
+
+function randPassGen() {
+  let num_upper = prompt("How many upper-case letters?");
+  let num_lower = prompt("How many lower-case letters?");
+  let num_digit = prompt("How many digits?");
+  let num_sym = prompt("How many symbols?");
+
+  pass =
+    genPass(upper_bank, num_upper) +
+    genPass(lower_bank, num_lower) +
+    genPass(digit_bank, num_digit) +
+    genPass(symbol_bank, num_sym);
+  console.log(pass)
+  let passList = pass.split("");
+  pass = shufArray(passList);
+  let pass_final = pass.join('')
+  alert("Your password is: " + pass_final)
+}
+
+//-----------------------------------------------#
+// Rot13
+//-----------------------------------------------#
+
+
+function encryptStr(text, num) {
+
+}
+
+function decryptStr(text, num) {
+
+}
