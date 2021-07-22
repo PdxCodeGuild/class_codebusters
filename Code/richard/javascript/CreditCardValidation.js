@@ -22,83 +22,96 @@
 // # Valid!
 
 function getUserInput(){
-    rawUserInput = prompt("Please enter 16 digits: ")
-    listUserInput = rawUserInput.Split(' ')
+    let rawUserInput = prompt("Please enter 16 digits: ")
+    let listUserInput = rawUserInput.split(',')
     if (listUserInput.length < 16){
         return False
     }
-    for(let i = 0;i < listUserInput.length; i++){
-        listUserInput[i] = parseInt(listUserInput[i].trim())
+    for(let i = 0; i < listUserInput.length; i++){
+        listUserInput[i] = parseInt(listUserInput[i])
         if ((listUserInput[i] > 9) || (listUserInput[i] < 0)){
             return False
         }
     }
     return listUserInput
 }
+function getCheckDigit(listInput){
+    let checkDigit = listInput[listInput.length - 1]
+    return checkDigit
+}
 
-// def getCheckDigit(listInput):
-//     checkDigit = listInput[len(listInput) - 1]
-//     return checkDigit
+function removeCheckDigit(listInput){
+    listInput.pop()
+    return listInput
+}
 
-// def removeCheckDigit(listInput):
-//     listInput.pop()
-//     return listInput
+function reverseDigits(listInput){
+    let reversed = []
+    let i = listInput.length - 1
+    while (i >= 0){    
+        reversed.push(listInput[i])
+        i--
+    }
+    return reversed
+}
 
-// def reverseDigits(listInput):
-//     reversed = []
-//     i = len(listInput) - 1
-//     while i >= 0:
-//         reversed.append(listInput[i])
-//         i -= 1
-//     return reversed
+function doubleEOE(listInput){
+    for(let i = 0; i < listInput.length; i += 2){
+        listInput[i] *= 2
+    }
+    return listInput
+}
 
-// def doubleEOE(listInput):
-//     for i in range(0, len(listInput), 2):
-//         listInput[i] *= 2
-//     return listInput
+function subtractNine(listInput){
+    for(let i = 0; i < listInput.length; i++){
+        if (listInput[i] > 9){
+            listInput[i] -= 9
+        }
+    }
+    return listInput
+}
 
-// def subtractNine(listInput):
-//     for i in range(len(listInput)):
-//         if listInput[i] > 9:
-//             listInput[i] -= 9
-//     return listInput
+function sumValues(listInput){
+    sum = 0
+    for(let i = 0; i < listInput.length; i++){
+        sum += listInput[i]
+    }
+    return sum
+}
 
-// def sumValues(listInput):
-//     sum = 0
-//     for i in listInput:
-//         sum += i
-//     return sum
-
-// def getSecondDigit(sum):
-//     sum
-//     while sum > 99:
-//         sum //= 10
-//     return sum % 10
+function getSecondDigit(sum){
+    sum
+    while(sum > 99){
+        sum = Math.floor(sum / 10)
+    }
+    return sum %= 10
+}
 
 function main(){
     let userInput = getUserInput()
-    console.log(userInput)
     // # print(userInput)
-    // checkDigit = getCheckDigit(userInput)
-    // // # print(checkDigit)
-    // newList = removeCheckDigit(userInput)
-    // // # print(newList)
-    // reversedList = reverseDigits(newList)
-    // // # print(reversedList)
-    // doubleEONum = doubleEOE(reversedList)
-    // // # print(doubleEONum)
-    // subNine = subtractNine(doubleEONum)
-    // // # print(subNine)
-    // sum = sumValues(subNine)
-    // // # print(sum)
-    // single = getSecondDigit(sum)
-    // // # print(single)
-    // if single == checkDigit:
-    //     return True
-    //     // # return("Your Card is Valid!")
-    // else:
-    //     return False
-        // # return("Sorry, Your Card is Not Valid!")
+    let checkDigit = getCheckDigit(userInput)
+    // # print(checkDigit)
+    let newList = removeCheckDigit(userInput)
+    // # print(newList)
+    let reversedList = reverseDigits(newList)
+    // # print(reversedList)
+    let doubleEONum = doubleEOE(reversedList)
+    // # print(doubleEONum)
+    let subNine = subtractNine(doubleEONum)
+    // # print(subNine)
+    let sum = sumValues(subNine)
+    // # print(sum)
+    let single = getSecondDigit(sum)
+    // # print(single)
+    if(single == checkDigit){
+        // return True
+        return("Your Card is Valid!")
+    }
+    else{
+        // return False
+        return("Sorry, Your Card is Not Valid!")
+    }
 }
 
 alert(main())
