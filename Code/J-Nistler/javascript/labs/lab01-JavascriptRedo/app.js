@@ -113,9 +113,24 @@ function randPassGen() {
 
 
 function encryptStr(text, num) {
-
+  let encrypted = "" 
+  for (char of text) {
+    encrypted += lower_bank[((lower_bank.indexOf(char)) + num) % 26]
+  }
+  return encrypted
 }
 
 function decryptStr(text, num) {
+  let decrypted = "" 
+  for (char of text) {
+    decrypted += lower_bank[((lower_bank.indexOf(char)) - num) % 26]
+  }
+  return decrypted
+}
+
+function rotCypher() {
+  let user_text = prompt("Provide text to encrypt"); 
+  let rot_num = parseInt(prompt("Select a cypher level (number)"));
+  alert(encryptStr(user_text, rot_num))
 
 }
