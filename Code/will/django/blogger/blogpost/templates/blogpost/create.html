@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+</head>
+
+<body>
+    {% include 'blogpost/_navbar.html' %}
+
+    <form action="{% url 'blogpost:create' %}" method="POST">
+        {% csrf_token %}
+        <input type="title" name="title" placeholder="Title" required>
+        <input type="text" name="body" placeholder="Body" required>
+        <!-- <input type="radio" name="public" placeholder="Public" required> -->
+        <input type="datetime-local" name="datetime-local" placeholder="Date Created">
+        <input type="datetime-local" name="datetime-local" placeholder="Date Edited">
+        <button type="submit">Create post</button>
+    </form>
+
+{% for post in posts %}
+<h2>{{post.title}}</h2>
+            {% endfor %}
+
+</body>
+
+</html>

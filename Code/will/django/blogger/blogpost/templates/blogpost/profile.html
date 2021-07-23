@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
 </head>
-<body>
-    {% if request.user.is.annoymous %}
-   
-    {% else %}
-    <h1> Welcome {{request.user}} </h1>
-    {% endif %}
-</body>
-</html>
 
+<body>
+    {% include 'blogpost/_navbar.html' %}
+
+    <!-- {% if user.is_authenticated %} -->
+    <h1> Welcome {{user.username}} </h1>
+    {{user.username}} created the following posts:
+    <!-- {% else %}
+    
+    {% endif %} -->
+
+    <!-- {% if user.blogpost.all %} -->
+    Showing posts for {{user.username}}
+    <!-- {% endif %}
+    {% for blogpost in user.blogpost.all %}
+    <h3>{{ blogpost.title }}</h3>
+    <ul>
+        {% for blogpost in blogpost.all %}
+        <li>{{blogpost.title }}</li>
+        {% endfor %}
+    </ul>
+    {% empty %}
+    No posts created.
+    {% endfor %} -->
+</body>
+
+</html>

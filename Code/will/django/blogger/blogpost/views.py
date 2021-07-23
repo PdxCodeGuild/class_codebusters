@@ -2,6 +2,7 @@ from django.http.response import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, reverse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from .models import Blogpost
 
 
 def home(request):
@@ -30,7 +31,7 @@ def register(request):
 
         login(request, user)
 
-        return HttpResponseRedirect(reverse('blogpost:home'))
+        return HttpResponseRedirect(reverse('blogpost:profile'))
 
 
 def login_user(request):
@@ -40,7 +41,7 @@ def login_user(request):
 
     elif request.method == "POST":
         print('FORM', request.POST)
-        form = request.post
+        form = request.POST
         username = form['username']
         password = form['password']
 
@@ -48,12 +49,28 @@ def login_user(request):
         if user != None:
             login(request, user)
 
-        return HttpResponseRedirect(reverse('blogpost:home'))
+        return HttpResponseRedirect(reverse('blogpost:profile'))
 
 
 def logout_user(request):
     logout(request)
     return HttpResponseRedirect(reverse('blogpost:home'))
 
+
 def profile(request):
     return render(request, 'blogpost/profile.html')
+
+
+def create(request):
+    posts = Blogpost()
+    print(request.POST)
+    print(request.POST['title'])
+
+    form = request.POST
+    # print(form)
+    posts.title = form['title']
+    context = {
+        'posts': posts
+    }
+    posts.save()
+    return render(request, 'blogpost/create.html', context)

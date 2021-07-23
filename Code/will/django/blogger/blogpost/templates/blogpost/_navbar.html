@@ -1,8 +1,9 @@
 <nav>
-    <h1><a href="{% url 'blogpost:home' %}">Blog</a></h1>
+    <h1><a href="{% url 'blogpost:home' %}">Home</a></h1>
     <div>
-        <a href="{% url 'blogpost:register' %}">Register</a>
         <a href="{% url 'blogpost:login' %}">Login</a>
+        <a href="{% url 'blogpost:register' %}">Register</a>
+        <a href="{% url 'blogpost:create' %}">Create post</a>
         <a href="{% url 'blogpost:logout' %}">Logout</a>
     </div>
 </nav>
