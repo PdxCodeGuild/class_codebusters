@@ -1,0 +1,38 @@
+{% extends 'lab3/base.html' %}
+
+{% block title %}Details{% endblock %}
+
+{% block content %}
+
+<main class="details">
+  <table>
+    <tr>
+      <td colspan="2">#{{ pokemon.number }} {{ pokemon.name | capfirst }}</td>
+    </tr>
+    <tr>
+      <td><img src="{{ pokemon.image_front }}" alt=""></td>
+      <td><img src="{{ pokemon.image_back }}" alt=""></td>
+    </tr>
+    <tr>
+      <td colspan="2">Height: {{ pokemon.height }} m</td>
+    </tr>
+    <tr>
+      <td colspan="2">Weight: {{ pokemon.weight }} kg</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        Type:
+        {% comment %}
+        {% for type in pokemon.types.all %}
+        {{ type }}
+        {% endfor %}
+        {% endcomment %}
+
+        {{ pokemon.types.all | join:', '}}
+
+      </td>
+    </tr>
+  </table>
+<main/>
+
+{% endblock %}

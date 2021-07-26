@@ -22,4 +22,5 @@ urlpatterns = [
     path('shortener/', include('mob1.urls')),
     path('todo/', include('lab1.urls')),
     path('blog/', include('lab2.urls')),
+    path('pokedex/', include('lab3.urls')),
 ]
