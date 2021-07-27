@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+{% block content %}
+<h3>{{request.user}}'s Profile</h3>
+{% for blog in blogs %}
+    <p>{{blog}}</p>
+{% endfor %}
+{% endblock %}
