@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: green;
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+header {
+  background-color: red;
+  color: #ededed;
+  text-align: center;
+  font-size: 4em;
+}
+
+main {
+  margin-top: 10px;
+}
+
+.pokedex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details{
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: darkblue;
+  margin: 10px;
+}
+
+.pokemon_link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: large;
+  width: 7em;
+}
+
+/* table, th, td {
+  border: 1px solid red;
+} */

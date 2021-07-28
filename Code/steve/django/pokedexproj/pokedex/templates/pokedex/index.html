@@ -1,0 +1,21 @@
+{% extends 'pokedex/base.html' %}
+
+{% block title %}
+Pokedex
+{% endblock %}
+
+{% block content %}
+
+<header>
+<h1>Welcome to Pokedex!</h1>
+    <div class="all_pokemon">
+        {% for poke in pokes %}
+            <h2>
+                <a href="{% url 'pokedex:all_pokes' poke.name %}">
+                {{poke.name}}</a>
+            </h2>
+        {% endfor %}
+    </div>
+</header>
+
+{% endblock %}
