@@ -1,0 +1,28 @@
+{% extends 'contacts/base.html' %}
+{% block title %} Contacts {% endblock %}
+
+{% block content %}
+<div class="container">
+    <form action="{% url 'contacts:search_contact' %}" method="POST">
+        <div class="row m-3">
+            <div class="col"></div>
+            <div class="col"><h3>Search For Person</h3></div>
+            <div class="col"></div>
+        </div>
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-6 text-center">
+                <div class="row">
+                    <div class="col m-2"><label for="first_name">Look up by first name: </label></div>
+                    <div class="col m-2"><input type="text" name="first_name">
+                    
+                </div>
+                <div class="row">
+                    <div class="col mt-2"><button class="btn btn-primary" type="submit">Search</button></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

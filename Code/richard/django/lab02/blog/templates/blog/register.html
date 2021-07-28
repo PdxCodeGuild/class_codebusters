@@ -1,0 +1,68 @@
+{% extends 'blog/base.html' %}
+{% block title %} Register {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row m-2">
+        <div class="col"></div>
+        <div class="col"><h1>Register</h1></div>
+        <div class="col"></div>
+    </div>
+    <form action="{% url 'blog:register' %}" method="POST">
+        {% csrf_token %}
+        <div class="row m-2">
+            <div class="col"></div>
+            <div class="col">
+                <label for="username">Username:</label>
+            </div>
+            <div class="col">
+                <input type="text" name="username">
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row m-2">
+            <div class="col"></div>
+            <div class="col">
+                <label for="email">Email:</label>
+            </div>
+            <div class="col">
+                <input type="text" name="email">
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row m-2">
+            <div class="col"></div>
+            <div class="col">
+                <label for="password">Password:</label>
+            </div>
+            <div class="col">
+                <input type="password" name="password">
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row m-2">
+            <div class="col"></div>
+            <div class="col">
+                <label for="first_name">First Name:</label>
+            </div>
+            <div class="col">
+                <input type="text" name="first_name">
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row m-2">
+            <div class="col"></div>
+            <div class="col">
+                <label for="last_name">Last Name:</label>
+            </div>
+            <div class="col">
+                <input type="text" name="last_name">
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row m-2">
+            <div class="col"></div>
+            <div class="col"><button class="btn btn-primary">Register</button></div>
+        </div>
+    </form>
+</div>
+{% endblock %}

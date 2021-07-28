@@ -1,0 +1,17 @@
+{% extends 'contacts/base.html' %}
+{% block title %} Search Result {% endblock %}
+{% block content %}
+<div class="container">
+    {% if contacts %}
+    {% for contact in contacts %}
+    <div class="row">
+        <div class="col">{{contact.first_name}} {{contact.last_name}} {{contact.email}}</div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="row">
+        <div class="col">No Contacts with that name!</div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

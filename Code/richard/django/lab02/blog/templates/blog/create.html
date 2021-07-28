@@ -1,0 +1,50 @@
+{% extends 'blog/base.html' %}
+{% block title %} Create Post {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row m-2">
+        <div class="col"></div>
+        <div class="col"><h1> Create Post </h1></div>
+        <div class="col"></div>
+    </div>
+    <form action="{% url 'blog:create' %}" method="POST">
+        {% csrf_token %}
+        <div class="row m-2">
+            <div class="col"></div>
+            <div class="col">
+                <label for="title">Title:</label>
+            </div>
+            <div class="col">
+                <input type="text" name="title">
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row m-2">
+            <div class="col"></div>
+            <div class="col">
+                <label for="body">Body:</label>
+            </div>
+            <div class="col">
+                <input type="text" name="body">
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row m-2">
+            <div class="col"></div>
+            <div class="col">
+                <label for="public">Public:</label>
+                <input type="radio" name="public" value="True">
+            </div>
+            <div class="col">
+                <label for="public">Private:</label>
+                <input type="radio" name="public" value="False">
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row m-2">
+            <div class="col"></div>
+            <div class="col"><button class="btn btn-primary">Create</button></div>
+        </div>
+    </form>
+</div>
+{% endblock %}
