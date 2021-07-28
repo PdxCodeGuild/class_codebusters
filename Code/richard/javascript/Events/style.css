@@ -1,0 +1,17 @@
+#box{
+    background-color: purple;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: beige;
+}
+.scale-larger{
+    transform: scale(1.2);
+}
+
+.hidden{
+    visibility:hidden;
+}
