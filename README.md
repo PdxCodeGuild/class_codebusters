@@ -93,6 +93,4 @@
 | 12 Events                                 | [Events](<4 JavaScript/docs/12 - Events.md>)                                                                 | [04 Todo](<4 JavaScript/labs/04 Todo.md>)     |           |
 | 13 Ajax                                   | [Ajax](<4 JavaScript/docs/13 - Ajax.md>)                                                                     | [05 Quote API](<4 JavaScript/labs/05 Quote API.md>), [06 Pokedex](<4 JavaScript/labs/06 Pokedex.md>)     |           |
 | Python vs JavaScript                      | [Python vs JavaScript](<4 JavaScript/docs/Python vs JavaScript.md>)                                     |      |           |
-| Timing                                    | [Timing](<4 JavaScript/docs/Timing.md>)                                                                 |      |           |
-
-### Django + JavaScript
+| Timing                                    | [Timing](<4 JavaScript/docs/Timing.md>)                                                                 | [(Optional) Clock](<4 JavaScript/labs/Clock (optional).md>)     |           |
