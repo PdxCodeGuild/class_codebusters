@@ -90,7 +90,7 @@
 | 09 Functions                              | [Functions](<4 JavaScript/docs/09 - Functions.md>)                                                           | [01-03 JavaScript Redo](<4 JavaScript/labs/01-03 JavaScript Redo.md>)     |           |
 | 10 Classes                                | [Classes](<4 JavaScript/docs/10 - Classes.md>)                                                               |      |           |
 | 11 Editing HTML                           | [Editing HTML](<4 JavaScript/docs/11 - Editing HTML.md>)                                                     |      |           |
-| 12 Events                                 | [Events](<4 JavaScript/docs/12 - Events.md>)                                                                 | [04 Todo](<4 JavaScript/labs/04 Todo.md>)     |           |
+| 12 Events                                 | [Events](<4 JavaScript/docs/12 - Events.md>)                                                                 | [04 Todo](<4 JavaScript/labs/04 Todo.md>)  [Mob Calculator](<4 JavaScript/mob/Calculator.md>)   |           |
 | 13 Ajax                                   | [Ajax](<4 JavaScript/docs/13 - Ajax.md>)                                                                     | [05 Quote API](<4 JavaScript/labs/05 Quote API.md>), [06 Pokedex](<4 JavaScript/labs/06 Pokedex.md>)     |           |
 | Python vs JavaScript                      | [Python vs JavaScript](<4 JavaScript/docs/Python vs JavaScript.md>)                                     |      |           |
 | Timing                                    | [Timing](<4 JavaScript/docs/Timing.md>)                                                                 | [(Optional) Clock](<4 JavaScript/labs/Clock (optional).md>)     |           |
