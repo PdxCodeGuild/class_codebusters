@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(209, 15%, 61%);
+  min-height: 100vh;
+}
+
+h1 {
+  color: hsl(209, 76%, 22%);
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+h2 {
+  padding-bottom: 1rem;
+  color: hsl(209, 76%, 22%);
+}
+
+.task-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 20%;
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
+}
+
+#task-done {
+  text-decoration: line-through red;
+}
