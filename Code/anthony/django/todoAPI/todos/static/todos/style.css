@@ -1,0 +1,13 @@
+.High{
+  color: orangered;
+}
+.Medium{
+  color: lightsalmon;
+}
+.Low{
+  color: lightblue;
+}
+.completed {
+  color: lightgreen;
+  text-decoration: line-through;
+}
