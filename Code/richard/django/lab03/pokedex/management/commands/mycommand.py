@@ -20,11 +20,13 @@ class Command(BaseCommand):
             poketypes = []
             for typ in poke['types']:
                 try:
-                    PokemonType.objects.get(name = typ)
+                    typ2 = PokemonType.objects.get(name = typ)
+                    poketypes.append(typ2)
                 except:
                     typ1 = PokemonType(name = typ)
                     typ1.save()
                 poketypes.append(typ1)
+                
 
             pokemon.number = poke['number']
             pokemon.name = poke['name']

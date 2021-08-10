@@ -80,9 +80,9 @@
 // # units you're converting from, and the columns will be the units you're converting to. Along the 
 // # horizontal, the values will be 1 (1 meter is 1 meter, 1 foot is 1 foot, etc).
 
-// userUnits = prompt("What unit will you input? feet, miles, meters, kilometers, yards or inches ").toLowerCase()
-// userDistance = parseInt(prompt("What is the distance? "))
-// userConvert = prompt("What unit will you want output? feet, miles, meters, kilometers, yards or inches ").toLowerCase()
+let userUnits = prompt("What unit will you input? feet, miles, meters, kilometers, yards or inches ").toLowerCase()
+let userDistance = parseInt(prompt("What is the distance? "))
+let userConvert = prompt("What unit will you want output? feet, miles, meters, kilometers, yards or inches ").toLowerCase()
 
 
 function convert_to_meters(units,dist,conv){
