@@ -8,27 +8,28 @@ import pytest
 # Double Numbers
 # Write a function that takes a list of numbers and returns a new list with every number doubled
 
-#nums_list = [1, 2, 3]
-
-# def double_numbers(nums):
-#     x = []
-#     for i in nums:
-#         nums = 2 * i
-#         x.append(nums)
-#     return x
-
-# print(double_numbers(nums_list))
-
 nums_list = [1, 2, 3]
 
 def double_numbers(nums):
     x = []
-    for i in range(len(nums)):
-        nums[i] *= 2
-        x += [nums[i]]
+    for i in range(len(nums), 2):
+        nums = 2 * nums
+        x.append(nums)
     return x
 
 print(double_numbers(nums_list))
+
+# #create a list variable
+# nums_list = [1, 2, 3]
+
+# def double_numbers(nums):
+#     x = []
+#     for i in range(len(nums)):
+#         nums[i] *= 2
+#         x += [nums[i]]
+#     return x
+
+# print(double_numbers(nums_list))
 
 
 # def test_double_numbers():

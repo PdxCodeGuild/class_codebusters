@@ -8,143 +8,120 @@
     
     <title>Order</title>
 </head>
-<body>
-    <!-- 
-    radio
-    Frango à passarinho in Brazil
-    Senegalese chicken yassa
-    Pica pollo
-    Frango assado com piri piri
-    Braai chicken
-    Jerk chicken
-    extra serving?
-    =============
-    radio
-    pita
-    chipati
-    steamed bread
-    =============
-    check (2)
-    Hot peri peri
-    Sweet jerk 
-    Chutney
-    BBQ
-    ==============
-    check ($2 surchages on mango salso and chakalaka)
-    salad
-    Chakalaka
-    Mango salsa
-    Pico de gallo
-    Plantain
-    Fries
-    hummus
-    -->
-    <!-- <form action="https://webhook.site/4d06ac74-6ab5-4f89-adc9-f4bcc1a60684" method="POST"></form> -->
-<!-- <h1>INTERNATIONAL SHISA NYAMA</h1> -->
-<form id "Order" action="form action="https://webhook.site/4d06ac74-6ab5-4f89-adc9-f4bcc1a60684" method="POST">
-<nav class="navbar">
-    <img src="Screen Shot 2021-06-16 at 7.15.07 PM.png" alt="Logo">
-    <a href="#">Home</a>
-    <a href="#">Menu</a>
-    <a href="#">Location</a>
-    <a href="#">About us</a>
-</nav>
-<div class="information">
-    <label for="name on order">What`s your name?</label> <input name= "name on the order" type="text" id="name on order" placeholder="Name" required> <br>
+    <body>
+        <form id "Order" action="form action="https://webhook.site/4d06ac74-6ab5-4f89-adc9-f4bcc1a60684" method="POST">
+            <nav class="navbar">
+                <img src="Screen Shot 2021-06-16 at 7.15.07 PM.png" alt="Logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Menu</a>
+                            <ul>
+                                <li><a href="#">Breakfast</a></li>
+                                <li><a href="#">Lunch</a></li>
+                                <li><a href="#">Dinner</a></li>
+                                <li><a href="#">Specials</a></li>
+                            </ul>
+                        </li>
+                            
+                        <li><a href="#">Location</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+            </nav>
+            <div class="information">
+                <label for="name on order">What`s your name?</label> <input name= "name on the order" type="text" id="name on order" placeholder="Name" required> <br>
 
-    <label for="password">Enter your password</label> <input name= "password" type="password" id="password" placeholder="Password" required> <br>
+                <label for="password">Enter your password</label> <input name= "password" type="password" id="password" placeholder="Password" required> <br>
 
-    <label for="pick up"> Pick up time and date</label> <input type="date" name="pick up date" id=" pick up date"> <input type="time" name="pick up time"  id="pick up time"> <br>
+                <label for="pick up"> Pick up date and time</label> <input type="date" name="pick up date" id=" pick up date"> <input type="time" name="pick up time"  id="pick up time"> <br>
 
-    <label for="phone">Phone number (Optional)</label> <input type="tel" name= "Phone number" id="Phone number" placeholder="Phone number"> <br>
-</div>
+                <label for="phone">Phone number (Optional)</label> <input type="tel" name= "Phone number" id="Phone number" placeholder="Phone number"> <br>
+            </div>
 
 
-<h1>CREATE YOUR CHICKEN PLATTER</h1>
+            <h1>CREATE YOUR CHICKEN PLATTER</h1>
 
-<Fieldset>
-        
-        <legend>SELECT YOUR CHICKEN </legend>
-        
-        <input type="radio" for="Frango à passarinho in Brazil" name="chicken" id="Frango à passarinho in Brazil"> 
-        <label for="Frango à passarinho in Brazil">Frango à passarinho in Brazil</label><br>
-        
-        <input type="radio" for="Senegalese chicken yassa" name="chicken" id="Senegalese chicken yassa">
-        <label for="Senegalese chicken yassa">Senegalese chicken yassa</label> <br>
-        
-        <input type="radio" for="Braai chicken" name="chicken" id="Braai chicken">
-        <label for="Braai chicken">Braai chicken</label>  <br>
-        
-        <input type="radio" for="Jerk chicken" name="chicken" id="Jerk chicken"> 
-        <label for="Jerk chicken"> Jerk chicken</label> <br>
-        
-        <input type="radio" for="Frango assado com piri piri" name="chicken" id="Frango assado com piri piri"> 
-        <label for="Frango assado com piri piri">Frango assado com piri piri</label> <br>
-        
-        <input type="radio" for="Pica pollo" name="chicken" id="Pica pollo"> 
-        <label for="Pica pollo">Pica pollo</label><br>
+            <Fieldset>
+                    
+                    <legend>SELECT YOUR CHICKEN </legend>
+                    
+                    <input type="radio" for="Frango à passarinho in Brazil" name="chicken" id="Frango à passarinho in Brazil"> 
+                    <label for="Frango à passarinho in Brazil">Frango à passarinho in Brazil</label><br>
+                    
+                    <input type="radio" for="Senegalese chicken yassa" name="chicken" id="Senegalese chicken yassa">
+                    <label for="Senegalese chicken yassa">Senegalese chicken yassa</label> <br>
+                    
+                    <input type="radio" for="Braai chicken" name="chicken" id="Braai chicken">
+                    <label for="Braai chicken">Braai chicken</label>  <br>
+                    
+                    <input type="radio" for="Jerk chicken" name="chicken" id="Jerk chicken"> 
+                    <label for="Jerk chicken"> Jerk chicken</label> <br>
+                    
+                    <input type="radio" for="Frango assado com piri piri" name="chicken" id="Frango assado com piri piri"> 
+                    <label for="Frango assado com piri piri">Frango assado com piri piri</label> <br>
+                    
+                    <input type="radio" for="Pica pollo" name="chicken" id="Pica pollo"> 
+                    <label for="Pica pollo">Pica pollo</label><br>
 
-        <label for="extra">Extra serving?</label> <input min= "1" max= "3" type="number" id="extra serving" name="extra serving">
-</Fieldset>
+                    <label for="extra">Extra serving?</label> <input min= "1" max= "3" type="number" id="extra serving" name="extra serving">
+            </Fieldset>
 
 
-<Fieldset>
-        
-    <legend>SELECT YOUR BREAD </legend>
-    
-    <input type="radio" for="Pita" name="bread" id="Pita"><label for="Pita">Pita</label> <br>
-    
-    <input type="radio" for="Naan" name="bread" id="Naan"> <label for="Naan">Naan</label><br>
-    
-    <input type="radio" for="Chipati" name="bread" id="Chipati"> <label for="Chipati">Chipati</label> <br>
-    
-    <label for="extra">Extra bread?</label> <input min= "1" max= "5" type="number" id="extra serving" name="extra serving">
-</Fieldset>
+            <Fieldset>
+                    
+                <legend>SELECT YOUR BREAD </legend>
+                
+                <input type="radio" for="Pita" name="bread" id="Pita"><label for="Pita">Pita</label> <br>
+                
+                <input type="radio" for="Naan" name="bread" id="Naan"> <label for="Naan">Naan</label><br>
+                
+                <input type="radio" for="Chipati" name="bread" id="Chipati"> <label for="Chipati">Chipati</label> <br>
+                
+                <label for="extra">Extra bread?</label> <input min= "1" max= "5" type="number" id="extra serving" name="extra serving">
+            </Fieldset>
 
-<Fieldset>
-        
-    <legend>SELECT YOUR SIDES ($2 surchage on mango salsa and chakalaka)</legend>
-    
-     <input type="checkbox" for="salad" name="sides" id="Frango à passarinho in Brazil"> <label for="salad">Salad</label><br>
-    
-    <input type="checkbox" for="Chakalaka" name="sides" id="Chakalaka"> <label for="Chakalaka">Chakalaka</label> <br>
-    
-     <input type="checkbox" for="Mango salsa" name="sides" id="Mango salsa"> <label for="Mango salsa">Mango salsa</label><br>
-    
-     <input type="checkbox" for="Pico de gallo" name="sides" id="Pico de gallo">  <label for="Pico de gallo"> Pico de gallo</label><br>
-    
-    <input type="checkbox" for="Plantain" name="sides" id="Plantain"> <label for="Plantain">Plantain</label> <br>
-    
-    <input type="checkbox" for="Fries" name="sides" id="Fries"> <label for="Fries">Fries</label> <br>
+            <Fieldset>
+                    
+                <legend>SELECT YOUR SIDES ($2 surchage on mango salsa and chakalaka)</legend>
+                
+                <input type="checkbox" for="salad" name="sides" id="Frango à passarinho in Brazil"> <label for="salad">Salad</label><br>
+                
+                <input type="checkbox" for="Chakalaka" name="sides" id="Chakalaka"> <label for="Chakalaka">Chakalaka</label> <br>
+                
+                <input type="checkbox" for="Mango salsa" name="sides" id="Mango salsa"> <label for="Mango salsa">Mango salsa</label><br>
+                
+                <input type="checkbox" for="Pico de gallo" name="sides" id="Pico de gallo">  <label for="Pico de gallo"> Pico de gallo</label><br>
+                
+                <input type="checkbox" for="Plantain" name="sides" id="Plantain"> <label for="Plantain">Plantain</label> <br>
+                
+                <input type="checkbox" for="Fries" name="sides" id="Fries"> <label for="Fries">Fries</label> <br>
 
-</Fieldset>
+            </Fieldset>
 
-<Fieldset>
-        
-    <legend>SAUCES </legend>
-    
-    <input type="checkbox" for="Hot peri peri" name="Sauces" id="Hot peri peri"> <label for="Hot peri peri">Hot peri peri</label> <br>
-    
-    <input type="checkbox" for="BBQ" name="Sauces" id="BBQ"> <label for="BBQ">BBQ</label> <br>
-    
-    <input type="checkbox" for="Chutney" name="Sauces" id="Chutney"><label for="Chutney">Chutney</label> <br>
+            <Fieldset>
+                    
+                <legend>SAUCES </legend>
+                
+                <input type="checkbox" for="Hot peri peri" name="Sauces" id="Hot peri peri"> <label for="Hot peri peri">Hot peri peri</label> <br>
+                
+                <input type="checkbox" for="BBQ" name="Sauces" id="BBQ"> <label for="BBQ">BBQ</label> <br>
+                
+                <input type="checkbox" for="Chutney" name="Sauces" id="Chutney"><label for="Chutney">Chutney</label> <br>
 
- <input type="checkbox" for="Sweet jerk " name="Sauces" id="Sweet jerk "> <label for="Sweet jerk ">Sweet jerk </label>  <br>
-    
-</Fieldset>
+            <input type="checkbox" for="Sweet jerk " name="Sauces" id="Sweet jerk "> <label for="Sweet jerk ">Sweet jerk </label>  <br>
+                
+            </Fieldset>
 
-<fieldset>
-    <legend>ADDITIONAL INSTRUCTIONS</legend>
-    <input name= "instructions" type="textarea" id="instructions" placeholder="instructions"> <br>
-</fieldset>
+            <fieldset>
+                <legend>ADDITIONAL INSTRUCTIONS</legend>
+                <input name= "instructions" type="textarea" id="instructions" placeholder="instructions"> <br>
+            </fieldset>
 
-<input type="submit" name="submit" id="submit">
+            <input type="submit" name="submit" id="submit">
 
 
 
 
 
-</form>
-    
-</body>
+            </form>
+    </body>
 </html>

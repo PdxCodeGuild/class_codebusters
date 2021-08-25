@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5dfbb;
+    color: #141115;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1 fr 1fr;
+    height: 100%;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    padding-left: 12px;
+    margin-left: 12px;
+}
+
+.nav_bar {
+    display: flex;
+    text-align: justify;
+    /* flex-direction: column; */
+    list-style: none;
+    background-color: #a97c73;
+    width: 100%;
+}
+
+
+ul :hover {
+    background-color: rgba(	245, 223, 187, .6);
+}
+
+ul :visited {
+    color: bisque;
+}
+
+
+footer {
+    background-color: #a97c73;
+}
+
+#contain {
+    min-height: 100%;
+}
+
+#navbar {
+    /* allows scroll bar when page full */
+    overflow: auto;
+}
