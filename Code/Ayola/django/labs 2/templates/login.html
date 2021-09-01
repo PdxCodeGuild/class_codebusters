@@ -1,0 +1,135 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Login</title>
+
+    <style>
+        body{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: #800080;
+
+        }
+
+     
+
+      .positive{
+
+        background: greenyellow;
+        background-color:greenyellow ;
+
+      }
+      .negative{
+        background: red;
+        background-color:red ;
+      }
+
+      .question-list{
+
+        position: absolute;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-radius: 30px 30px 30px 30px;
+        left: 50%;
+        width: auto;
+        height: auto;
+        border: 30px solid white;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+        background: #FFFFFF;
+
+      }
+      .form-check{
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+      }
+
+      .button-div{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding-top: 10px;
+      }
+      a{
+        text-decoration: none;
+      }
+
+      .submit{
+        background: #800080;
+        color: white;
+        height: 30%;
+        width: 30%;
+        border-color: transparent;
+        border-radius: 5px 5px 5px 5px;
+        text-align: center;
+
+      }
+      .items{
+        display: flex;
+        flex-direction: column;
+      }
+
+    </style>
+
+</head>
+<body>
+
+   
+
+    <form class="question-list" method="POST" action = "{%url 'profile'%}" >
+      {% csrf_token %}
+      <h2>Log In</h2>
+
+
+      <div class="main">
+
+      
+        <div class="form-check">
+          
+          <label class="form-check-label" for="flexCheckChecked">
+              Email: &ensp; &nbsp;
+          </label>
+
+          <input class="form-check-input" type="text" value="" name="email">
+        </div>
+
+        <div class="form-check">
+          
+            <label class="form-check-label" for="flexCheckChecked">
+                Password:
+            </label>
+  
+            <input class="form-check-input" type="text" value="" name="password">
+          </div>
+        
+
+        <div class = "button-div">
+            <button type="submit" class="submit" >Login</button>
+        </div>
+
+        <div class = "button-div">
+          <a class="submit" href="{%url 'add_user'%}">Sign Up</a>
+      </div>
+
+
+      </div>
+
+    </form>
+    
+
+
+    
+</body>
+</html>

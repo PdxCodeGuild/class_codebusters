@@ -1,0 +1,111 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Pokemons</title>
+
+    <style>
+        body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: #800080;
+
+        }
+
+     
+
+      .positive{
+
+        background: greenyellow;
+        background-color:greenyellow ;
+
+      }
+      .negative{
+        background: red;
+        background-color:red ;
+      }
+
+      .question-list{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px 30px 30px 30px;
+        width: auto;
+        height: auto;
+        border: 30px solid white;
+        /* bring your own prefixes */
+        background: #FFFFFF;
+        margin: 10px;
+
+      }
+      .form-check{
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+      }
+
+      .button-div{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding-top: 10px;
+      }
+
+      .submit{
+        background: #800080;
+        color: white;
+        height: 30%;
+        width: 30%;
+        border-color: transparent;
+        border-radius: 5px 5px 5px 5px;
+
+      }
+      .items{
+        display: flex;
+        flex-direction: column;
+      }
+      a{
+          text-decoration: none;
+      }
+
+      button{
+          background: #FFFFFF;
+          text-decoration: black;
+          border: #FFFFFF;
+          font-size: medium;
+          cursor: pointer;
+
+      }
+
+    </style>
+
+</head>
+<body>
+    <h1 >Pokemon List</h1>
+   
+    {% for pokemon in pokemons %}
+
+    <form class="question-list" method="POST" action="{%url 'details'%}" >
+      {% csrf_token %}
+
+        <button type="submit" name="number" value = "{{ pokemon.number }}"><b>{{ pokemon.number }}.{{ pokemon.name }} </b></button>
+        <img class="form-check" src = "{{ pokemon.image_front }}" alt="NO IMAGE AVAILABLE">
+     
+    </form>
+
+    {% endfor %}
+    
+
+
+    
+</body>
+</html>

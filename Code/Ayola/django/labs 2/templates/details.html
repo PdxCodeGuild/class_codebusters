@@ -1,0 +1,116 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Details</title>
+
+    <style>
+        body{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: #800080;
+
+        }
+
+     
+
+      .positive{
+
+        background: greenyellow;
+        background-color:greenyellow ;
+
+      }
+      .negative{
+        background: red;
+        background-color:red ;
+      }
+
+      .question-list{
+
+        position: absolute;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-radius: 30px 30px 30px 30px;
+        left: 50%;
+        width: auto;
+        height: auto;
+        border: 30px solid white;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+        background: #FFFFFF;
+
+      }
+      .form-check{
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+      }
+
+      .button-div{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding-top: 10px;
+      }
+
+      .submit{
+        background: #800080;
+        color: white;
+        height: 30%;
+        width: 30%;
+        border-color: transparent;
+        border-radius: 5px 5px 5px 5px;
+
+      }
+      .items{
+        display: flex;
+        flex-direction: column;
+      }
+
+    </style>
+
+</head>
+<body>
+
+   
+
+    <div class="question-list"  >
+      
+
+      <div class="main">
+      
+        <h2> {{poke.number}} . {{ poke.name }}</h2>
+        <img src="{{ poke.image_front }}">
+        <img src="{{ poke.image_back }}">
+        <h3>Height: {{poke.height }}</h3>
+        <h3>Weight: {{poke.weight }}</h3>
+        <h3>Types: </h3>
+        <ul>
+            {% for type in poke.types.all %}
+            <li>{{ type.name }}</li>
+            {% endfor %}
+        </ul>
+        
+
+        
+
+    
+      </div>
+
+    </form>
+    
+
+
+    
+</body>
+</html>

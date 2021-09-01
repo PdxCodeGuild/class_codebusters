@@ -1,0 +1,161 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Login</title>
+
+    <style>
+        body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: #800080;
+
+        }
+
+     
+
+      .positive{
+
+        background: greenyellow;
+        background-color:greenyellow ;
+
+      }
+      .negative{
+        background: red;
+        background-color:red ;
+      }
+
+      .question-list{
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-radius: 0px 0px 0px 0px;
+        width: auto;
+        height: auto;
+        border: 30px solid white;
+        /* bring your own prefixes */
+        background: #FFFFFF;
+        margin-bottom: 15px;
+
+      }
+
+      textarea{
+          width: 500px;
+          height: 100px;
+      }
+      .post{
+        border-radius: 20px 20px 20px 20px;
+        width: 500px;
+
+      }
+
+
+      .form-check{
+        display: flex;
+        flex-direction: column;
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+      }
+
+      .button-div{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding-top: 10px;
+      }
+
+      .submit{
+        background: #800080;
+        color: white;
+        height: 30%;
+        width: 30%;
+        border-color: transparent;
+        border-radius: 5px 5px 5px 5px;
+        text-align: center;
+
+      }
+      .items{
+        display: flex;
+        flex-direction: column;
+      }
+
+    </style>
+
+</head>
+<body>
+
+   
+
+    <form class="question-list" method="POST" action = "{%url 'add_post'%}" >
+      {% csrf_token %}
+      <h2>Add Post</h2>
+
+
+      <div class="main">
+
+      
+        <div class="form-check">
+            <label class="form-check-label" for="flexCheckChecked">
+                Text:
+            </label>
+          <textarea name="text"></textarea>
+
+        </div>
+
+
+
+        <div class="form-check">
+          
+            <label class="form-check-label" for="flexCheckChecked">
+                Title:
+            </label>
+  
+            <input class="form-check-input" type="title"  name="title">
+        </div>
+
+
+
+        <div class="form-check">
+          
+            <label class="form-check-label" for="flexCheckChecked">
+                Public:
+            </label>
+  
+            <input class="form-check-input" type="checkbox"  name="public">
+        </div>
+
+        <div class = "button-div">
+            <button type="submit" class="submit" >Post</button>
+        </div>
+
+      </div>
+
+    </form>
+    {% for post in posts %}
+
+    <div class = "question-list post">
+        <h2> {{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+        
+    </div>
+
+    {% endfor %}
+  
+        
+    </div>
+    
+
+
+    
+</body>
+</html>
