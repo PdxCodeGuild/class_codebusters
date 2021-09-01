@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+  <!-- Custom CodeBuster JS -->
+  <link rel="stylesheet" href="{% static 'api/style.css' %}">
+  <script defer src="{% static 'api/main.js' %}"></script>
+  <title>Only-Mons</title>
+</head>
+<body class="primary">
+  <h1 class="container">Only-Mons</h1>
+  <div class="row container">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">search</i>
+          <input type="text" id="autocomplete-input" class="autocomplete">
+          <label for="autocomplete-input">Search Digimon</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="search-result"></div>
+</body>
+</html>

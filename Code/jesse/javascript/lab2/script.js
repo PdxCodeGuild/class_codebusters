@@ -9,8 +9,6 @@ const completeItems = []
 // Generate todo items with 'complete' and 'remove' buttons 
 function displayTodoItems() {
 
-   
-
     // remove all previously displayed todo items
     while (listItems.firstChild) {
         listItems.removeChild(listItems.firstChild)
