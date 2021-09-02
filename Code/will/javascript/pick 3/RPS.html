@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <script>
+
+        let computer = ['rock', 'paper', 'scissors'];
+        console.log(computer);
+
+        let computerchoice = computer[Math.floor(Math.random() * computer.length)];
+        console.log(computerchoice);
+
+        let user = prompt("Enter rock, paper, scissors").toLowerCase().trim();
+        alert("You entered: " + user + " " + "Computer chose: " + computerchoice + " ");
+
+        if (computerchoice === user) {
+            alert('Its a Tie')
+        }
+        else if (computerchoice === 'rock' && user === 'paper') {
+            alert('User wins ')
+        }
+        else if (computerchoice === 'rock' && user === 'scissors') {
+            alert('Computer wins ')
+        }
+        else if (computerchoice === 'paper' && user === 'rock') {
+            alert('Computer wins ')
+        }
+        else if (computerchoice === 'paper' && user === 'scissors') {
+            alert('User wins ')
+        }
+        else if (computerchoice === 'scissors' && user === 'rock') {
+            alert('User wins ')
+        }
+        else if (computerchoice === 'scissors' && user === 'paper') {
+            alert('Computer wins ')
+        }
+
+
+    </script>
+</body>
+
+</html>

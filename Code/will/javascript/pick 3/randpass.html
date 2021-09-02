@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Random Password Generator</title>
+</head>
+
+<body>
+    <script>
+
+
+
+        function generatepass() {
+            let pwlength = parseInt(prompt('Enter the length of the password: '))
+            let pass = '';
+            let str = 'abcdefghijklmnopqrstuvwxyz0123456789@#$';
+
+            for (i = 1; i <= pwlength; i++) {
+                let char = Math.floor(Math.random() * str.length + 1);
+
+                pass += str.charAt(char)
+            }
+            console.log(pass)
+            alert("Your password is: " + pass)
+            return pass;
+
+        }
+
+        generatepass()
+
+
+
+        // let length = prompt('Enter the length of the password: ')
+        // let alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+        // function random_element(arr) {
+        //     let index = Math.floor(Math.random() * arr.length)
+        //     return arr[index]
+        // }
+
+        // function pw_gen(alphabet, length) {
+        //     let password = ''
+        //     for (let i = 0; i < length; ++i) {
+        //         password += random_element(alphabet)
+        //     }
+        //     console.log(password)
+        //     return password
+        // }
+
+        // pw_gen()
+
+    </script>
+</body>
+
+</html>
