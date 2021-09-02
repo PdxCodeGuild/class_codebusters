@@ -7,7 +7,7 @@ from .models import Blogpost
 
 def home(request):
     context = {
-        'message': 'Hello World!'
+        'blogposts': 'blogposts'
     }
     return render(request, 'blogpost/index.html', context)
 
@@ -62,15 +62,19 @@ def profile(request):
 
 
 def create(request):
-    posts = Blogpost()
-    print(request.POST)
-    print(request.POST['title'])
 
-    form = request.POST
-    # print(form)
-    posts.title = form['title']
-    context = {
-        'posts': posts
-    }
-    posts.save()
-    return render(request, 'blogpost/create.html', context)
+    if request.method == "GET":
+        return render(request, 'blogpost/create.html')
+
+    elif request.method == "POST":
+   
+        posts = Blogpost()
+        print(request.POST['title'])
+        form = request.POST
+        posts.title = form['title']
+
+        context = {
+            'posts': posts
+        }
+        posts.save()
+        return render(request, 'blogpost/create.html', context)

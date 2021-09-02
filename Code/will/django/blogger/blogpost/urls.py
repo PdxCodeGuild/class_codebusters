@@ -1,5 +1,8 @@
 from django.urls import path
-from . import views
+# from .import views
+# from .views import home, register, login_user, logout, profile, create 
+from .import views 
+
 
 app_name = 'blogpost'
 urlpatterns = [
@@ -10,3 +13,6 @@ urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('create/', views.create, name='create'),
 ]
+
+
+# path('create/', views.create, name='create'),

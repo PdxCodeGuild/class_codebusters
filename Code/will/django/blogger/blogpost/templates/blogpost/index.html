@@ -12,6 +12,15 @@
     {% include 'blogpost/_navbar.html' %}
     <h2> Welcome {{request.user}} </h2>
     <p> Select an option from the navigation bar </p>
+
+    <!-- {% for blogpost in blogposts %}
+    <h4> {{ blogpost.title }} </h4>
+    {% endfor %} -->
+
+    {% if posts %}
+    <h2>{{posts.title}}</h2>
+    {% endif %}
+
 </body>
 
 </html>

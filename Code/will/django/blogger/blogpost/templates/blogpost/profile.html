@@ -10,27 +10,14 @@
 
 <body>
     {% include 'blogpost/_navbar.html' %}
-
-    <!-- {% if user.is_authenticated %} -->
     <h1> Welcome {{user.username}} </h1>
     {{user.username}} created the following posts:
-    <!-- {% else %}
-    
-    {% endif %} -->
+    <!-- Showing posts for {{user.username}} -->
 
-    <!-- {% if user.blogpost.all %} -->
-    Showing posts for {{user.username}}
-    <!-- {% endif %}
-    {% for blogpost in user.blogpost.all %}
-    <h3>{{ blogpost.title }}</h3>
-    <ul>
-        {% for blogpost in blogpost.all %}
-        <li>{{blogpost.title }}</li>
-        {% endfor %}
-    </ul>
-    {% empty %}
-    No posts created.
-    {% endfor %} -->
+    {% for post in posts %}
+    <h4> {{ post.title }}</h4>
+    {% endfor %}
+   
 </body>
 
 </html>

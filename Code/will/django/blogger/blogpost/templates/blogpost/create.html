@@ -12,18 +12,25 @@
     {% include 'blogpost/_navbar.html' %}
 
     <form action="{% url 'blogpost:create' %}" method="POST">
+
         {% csrf_token %}
         <input type="title" name="title" placeholder="Title" required>
         <input type="text" name="body" placeholder="Body" required>
         <!-- <input type="radio" name="public" placeholder="Public" required> -->
         <input type="datetime-local" name="datetime-local" placeholder="Date Created">
         <input type="datetime-local" name="datetime-local" placeholder="Date Edited">
-        <button type="submit">Create post</button>
+
+        <label for="public">
+            public:
+            <input name="public" type="checkbox">
+        </label>
+        <button type="submit">submit</button>
+
     </form>
 
-{% for post in posts %}
-<h2>{{post.title}}</h2>
-            {% endfor %}
+    {% if posts %}
+    <h2>{{posts.title}}</h2>
+    {% endif %}
 
 </body>
 
