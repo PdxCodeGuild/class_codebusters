@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+</head>
+
+<body>
+
+    <h2> Generic Pokedex </h2>
+
+
+    <table>
+        <tr>
+            <th>Number:</th>
+            <th>Name:</th>
+            <th>Height:</th>
+            <th>Weight:</th>
+            <th>Image Front: </th>
+            <th>Image Back:</th>
+            <th>Types:</th>
+        </tr>
+        <tr>
+            <td>
+                {% for pokemon in pokemons %}
+                <ul>{{ pokemon.number }}</ul>
+                {% endfor %}
+            </td>
+            <td>
+                {% for pokemon in pokemons %}
+                <ul>{{ pokemon.name }}</ul>
+                {% endfor %}
+            </td>
+            <td>
+                {% for pokemon in pokemons %}
+                <ul>{{ pokemon.height }}</ul>
+                {% endfor %}
+            </td>
+            <td>
+                {% for pokemon in pokemons %}
+                <ul>{{ pokemon.weight }}</ul>
+                {% endfor %}
+            </td>
+            <td>
+                {% for pokemon in pokemons %}
+                <ul>{{ pokemon.image_front }}</ul>
+                <!-- <img src="pokemon.image_front" alt="Pokemon front" width="50" height="60"> -->
+                {% endfor %}
+            </td>
+            <td>
+                {% for pokemon in pokemons %}
+                <ul>{{ pokemon.image_back }}</ul>
+                {% endfor %}
+            </td>
+            <td>
+                {% for pokemon in pokemons %}
+                <ul>{{ pokemon.types }}</ul>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+
+    <!-- <ul>
+        {% for pokemon in pokemons %}
+        <li>{{ pokemon.name }}</li>
+        {% endfor %}
+    </ul> -->
+</body>
+
+</html>
