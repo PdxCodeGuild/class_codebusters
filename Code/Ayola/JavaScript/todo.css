@@ -1,0 +1,35 @@
+#outerdiv {
+  margin: 0 auto;
+  width: 500px;
+}
+.todo_item > * {
+  display: inline-block;
+}
+.todo_item div {
+  width: 200px;
+}
+ul {
+  list-style: circle;
+}
+button {
+  background-color: transparent;
+  border: none;
+  color: black;
+}
+button:hover {
+  color: darkgoldenrod;
+}
+button:active {
+  outline: none;
+  color: goldenrod;
+}
+button:focus {
+  outline: none;
+}
+#todo_list {
+  list-style-type: none;
+}
+#completed_list {
+  text-decoration: line-through;
+  list-style-type: none;
+}
