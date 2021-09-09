@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'lab1/styles.css' %}">
+  <title>Todo</title>
+</head>
+<body>
+  <h3>Todo List</h3>
+  <form action="{% url 'lab1:save' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="todo_text"/>
+    <button type="submit">submit</button>
+  </form>
+  <ul>
+    {% for item in items %}
+    <div>
+      <li>{{ item.text }}</li>
+    
+      <li>{{ item.created_date }}</li>
+    </div>
+    {% endfor %}
+  </ul>
+</body>
+</html>

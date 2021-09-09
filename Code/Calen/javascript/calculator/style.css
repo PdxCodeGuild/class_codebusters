@@ -1,0 +1,17 @@
+.display{
+    height: 1.5em;
+    background-color: rgba(128, 128, 128, 0.589);
+}
+.display2{
+    height: 1.5em;
+    background-color: rgba(209, 209, 209, 0.589);
+}
+
+.calculator{
+    background-color: rgba(37, 37, 37, 0.897);
+    
+}
+
+*{
+    font-size: 25px;
+}

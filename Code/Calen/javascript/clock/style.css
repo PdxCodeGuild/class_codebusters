@@ -1,0 +1,30 @@
+:root {
+    --main-bg-color: #121212;
+    --compliment-color: #272727;
+    --primary-color: #fdfdfd;
+}
+
+body{
+    background-color: var(--main-bg-color);
+    color: var(--primary-color)
+
+}
+
+body div{
+    background-color: var(--compliment-color);
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+.header{
+    height: 3.5vh;
+}
+
+.clock{
+    font-size: 19vh;
+    text-shadow: 25px 25px var(--main-bg-color);
+}
+
+.controls{
+    background-color: transparent !important;
+}

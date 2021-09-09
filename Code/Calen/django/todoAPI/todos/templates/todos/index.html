@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script defer src="{% static 'todos/app.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'todos/style.css' %}">
+    <title>Todos</title>
+</head>
+<body>
+
+    <div class="add-tiem">
+        {% csrf_token %}
+        <input id='add-input' type="text">
+        <select id="add-select">
+            <option value="3" selected disabled>Priority</option>
+            <option value="3">low</option>
+            <option value="2">medium</option>
+            <option value="1">high</option>
+        </select>
+        <button id='add-btn'>Add Todo</button>
+    </div>
+
+
+    <div id="todo-items">
+
+    </div>
+</body>
+</html>

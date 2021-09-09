@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+<h3>Login</h3>
+<form action="{% url 'blog:login' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+    <a href="{% url 'blog:register' %}">or register</a>
+</form>
+{% endblock %}

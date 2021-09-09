@@ -1,0 +1,35 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 400px 200px;
+
+}
+
+html, body {
+    min-height: 100%;
+}
+
+div {
+    background-color: yellow;
+    border: 1px solid red;
+}
+
+/* body div + div { 
+    grid-column: 1/3;
+    grid-row: 2/3;
+    
+} */
+
+nav {
+    grid-column: 4;
+    grid-row: 1;
+} 
+
+h1 {
+    grid-column: 2;
+}
+
+.parag {
+    grid-column: 2;
+    grid-row: 2;
+}

@@ -1,0 +1,67 @@
+{% extends 'contacts/base.html' %}
+{% block title %} All Contacts {% endblock %}
+{% block content %}
+<div class="container">
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col text-center text-danger"><h1>All Contacts</h1></div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col m-3 p-3 border border-dark rounded">
+            <form action="{% url 'contacts:save_contact' %}" method="POST">
+                {% csrf_token %}
+                <div class="row m-1">
+                    <div class="col"><label for="first_name">First Name: </label></div>
+                    <div class="col"><input type="text" name="first_name"></div>
+                </div>
+                <div class="row m-1">
+                    <div class="col"><label for="last_name">Last Name: </label></div>
+                    <div class="col"><input type="text" name="last_name"></div>
+                </div>
+                <div class="row m-1">
+                    <div class="col"><label for="email">Email: </label></div>
+                    <div class="col"><input type="text" name="email"></div>
+                </div>
+                <div class="row m-1">
+                    <div class="col"><label for="is_cool">Cool? </label></div>
+                    <div class="col"><input type="checkbox" name="is_cool"></div>
+                </div>
+                <div class="row m-1">
+                    <div class="text-center col"><input class="btn btn-primary" type="submit" value="Submit"></div>
+                </div>
+            </form>
+
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-4 text-center text-success border-bottom border-success"><h2>Cool</h2></div>
+        <div class="col-4 text-center text-warning border-bottom border-warning"><h2>Not Cool</h2></div>
+        <div class="col"></div>
+    </div>
+    <div class="row m-1">
+        <div class="col"></div>
+        <div class="col-4 text-center m-3">
+            {% for contact in cool_contacts %}
+            <div class="row m-1">
+                <div class="col"><h3><a class="text-success" href="{% url 'contacts:detail' contact.id %}">{{contact.first_name}} {{contact.last_name}}</a></h3></div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-4 text-center m-3">
+            {% for contact in not_cool_contacts %}
+            <div class="row m-1">
+                <div class="col"><h3><a class="text-warning" href="{% url 'contacts:detail' contact.id %}">{{contact.first_name}} {{contact.last_name}}</a></h3></div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}

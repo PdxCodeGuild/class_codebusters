@@ -1,0 +1,16 @@
+{% extends 'lab3/base.html' %}
+
+{% block title %}Pokedex{% endblock %}
+
+{% block content %}
+<main class="pokedex">
+  {% for pokemon in pokedex %}
+    <a href="{% url 'pokedex:details' pokemon.name %}">
+      <div class="pokemon_link">
+        #{{ pokemon.number }} {{ pokemon.name | capfirst }}
+        <img src="{{ pokemon.image_front }}" alt="">
+      </div>
+    </a>
+  {% endfor %}
+</main>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="{%  static 'pokedex/style.css' %}">
+    
+    
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="card panel teal lighten-2 z-depth-5 center-align">
+        <h2>
+            <img src="https://assets.pokemon.com/static2/_ui/img/favicon.ico" alt="">
+            <a href="{% url 'pokedex:home' %}">POKEDEX</a>
+            <img src="https://assets.pokemon.com/static2/_ui/img/favicon.ico" alt="">
+        </h2>
+    </div>
+    
+    {% block content %}
+    {% endblock %}
+    
+    {% include 'pokedex/footer.html' %}
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

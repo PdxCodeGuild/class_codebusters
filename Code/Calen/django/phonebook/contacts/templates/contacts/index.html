@@ -1,0 +1,19 @@
+
+{% extends 'contacts/base.html' %}
+{% block content %}
+
+
+<h1>Welcome to contacts</h1>
+
+
+<form action="{% url 'contacts:search_contact' %}" method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="first_name" placeholder="Lookup by firstname">
+
+    <button type="submit" >Search</button>
+    
+</form>
+
+
+{% endblock %}

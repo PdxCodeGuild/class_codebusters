@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{user.username}}</title>
+</head>
+<body>
+    <h1>{{user.username}}'s polls profile</h1>
+
+    {% for question in user.questions.all %}
+
+        <br><h3>{{question.question_text}}</h3>
+
+        <ul>
+            {% for choice in question.choices.all %}
+                <li>{{choice.choice_text}}</li>
+            {% endfor %}
+        </ul>
+
+    {% empty %}
+    <h3>No polls by {{user.username}} as of yet. </h3>
+    {% endfor %}
+</body>
+</html>

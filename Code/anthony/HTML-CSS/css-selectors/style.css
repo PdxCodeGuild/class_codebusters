@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: 1px solid black;
+  border-radius: 4px;
+  background: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: gray;
+}
+
+.btn-primary {
+  background-color: #03b1fc;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.btn-warning {
+  background-color: orangered;
+  border: none;
+}
+
+.link {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.btn-large {
+}
+button[size="large"] {
+  font-size: 50px;
+}
+
+#code {
+  background-color: crimson;
+}
+
+/* .lab {
+  color: red;
+}
+.complete {
+  color: green;
+}
+.in-progress {
+  color: orange;
+} */
+
+.lab1,
+.lab2,
+.lab3 {
+  color: green;
+}
+
+.lab4 {
+  color: orange;
+}
+
+.main p {
+  font-size: 20px;
+  margin: 10px;
+}
+.main > p {
+  font-size: 32px;
+}
+
+.main > div > p {
+  color: red;
+}
+
+.sidebar p {
+  color: gray;
+}
+p {
+  width: 80ch;
+}
+html {
+  font-size: 10px;
+}
+
+section {
+  width: 100vw;
+  height: 20vh;
+  border: 1px solid red;
+  padding: 0;
+}
+
+.box {
+  font-size: 100px;
+  height: 100%;
+  width: 100%;
+  background-color: #03a8fc;
+}
+
+.box1 {
+  background-color: hsla(240, 100%, 50%, 0.5);
+}
+
+.box2 {
+  background-color: hsl(240, 80%, 50%);
+}
+
+.box3 {
+  background-color: rgba(0, 0, 250, 0.5);
+}

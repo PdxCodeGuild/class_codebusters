@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: hsl(55, 95%, 7%);
+  background-color: hsl(0, 0%, 95%);
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+nav i {
+  font-size: 2rem;
+  color: orange;
+}
+
+.links {
+  color: gray;
+  font-size: 1.25rem;
+}
+
+.links > a {
+  margin-left: 0.5rem;
+  color: gray;
+}
+
+.links > a:hover {
+  color: orange;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  padding: 0 20%;
+}
+
+.cool-not-cool {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+
+.cool {
+  border: 2px solid hsl(120, 95%, 26%);
+  border-radius: 0px;
+  padding: 1em;
+}
+.not-cool {
+  border: 2px solid hsl(0, 100%, 50%);
+  border-radius: 0px;
+  padding: 1em;
+}
+
+/* yellow pages */
+.yellow-pages {
+  background-color: hsl(54, 98%, 50%);
+  padding: 1rem 2rem;
+}
+
+.yellow-pages > h1 {
+  background-color: hsl(55, 95%, 7%);
+  display: inline-block;
+  color: hsl(54, 98%, 50%);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+}
+
+.premium {
+  font-size: 1.1rem;
+  border: 2px dashed hsl(0, 0%, 5%);
+  position: relative;
+}
+
+.premium:after {
+  position: absolute;
+  content: "★";
+  top: 4px;
+  right: 4px;
+}
+
+.ad {
+  margin-top: 1rem;
+  background-color: hsla(0, 100%, 100%, 0.5);
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.ad > h2 {
+  margin-bottom: 0.5rem;
+}
+
+.ad h2 + p {
+  margin-bottom: 0.4rem;
+}
+
+footer {
+  width: 100%;
+  margin: 20px 0;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}

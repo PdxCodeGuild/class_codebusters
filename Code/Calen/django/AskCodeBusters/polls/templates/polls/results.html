@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results for {{question.question_text}}</title>
+</head>
+<body>
+    {% include 'polls/_navbar.html' %}
+
+
+    {% for choice in question.choices.all %}
+    <h2>Option #{{forloop.counter}}</h2>
+    <h3>{{choice.choice_text}} with a current vote of {{choice.votes}}</h3>
+    {% endfor %}
+
+
+    
+</body>
+</html>

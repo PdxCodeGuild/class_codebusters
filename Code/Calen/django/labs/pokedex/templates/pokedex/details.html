@@ -1,0 +1,53 @@
+
+{% extends 'pokedex/base.html' %}
+{% block title %} {{pokemon.name}} details {% endblock %}
+
+{% block content %}
+
+<div class='container center-align'>
+    <h2>
+        {{pokemon.name}}
+    </h2>
+    
+    <img src="{{pokemon.image_front}}" alt="">
+    <img src="{{pokemon.image_back}}" alt="">
+</div>
+
+
+<table class='container'>
+    <thead>
+        <tr>
+            <th>Data type</th>
+            <th>Data</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Weight</td>
+            <td>{{pokemon.weight}}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Height</td>
+            <td>{{pokemon.height}}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Pokedex number</td>
+            <td>{{pokemon.number}}</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Types</td>
+            {% for type in pokemon.types.all%}
+            <td><a href="{% url 'pokedex:type' type %}" class='type-icon type-{{type}}'>{{type}}</a></td>
+            {% endfor %}
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+
+{% endblock %}

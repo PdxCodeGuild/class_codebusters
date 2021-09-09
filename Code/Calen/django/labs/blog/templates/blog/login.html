@@ -1,0 +1,19 @@
+
+{% extends 'blog/base.html' %}
+{% block content %}
+
+
+<div class='container'>
+    <h3 class="center-align">Login and join us, wont you? </h3>
+    <form action="{% url 'blog:login' %}" method="POST">
+        {% csrf_token %}
+        <h5>Username</h5>
+        <input type="text" name="username" placeholder="Username">
+        <h5>Password</h5>
+        <input type="password" name="password" placeholder="Password">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Lets get back to blogging!<i class="material-icons right">person_add</i></button>
+
+    </form>
+    </div>
+
+{% endblock %}

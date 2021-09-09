@@ -1,0 +1,15 @@
+html {
+  background: radial-gradient(
+    at top left,
+    hsl(255, 50%, 50%) 0%,
+    hsl(255, 50%, 25%) 100%
+  );
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.llama {
+  color: hsl(255, 50%, 50%);
+}

@@ -1,0 +1,82 @@
+
+{% extends 'blog/base.html' %}
+{% block content %}
+
+
+{% if user.is_anonymous == False %}
+<div class="row container">
+    <ul class="collapsible  z-depth-3">
+        <li>
+            <div class=" row collapsible-header teal accent-4"><h3 class='col s8 m8 offset-m2 offset-s2 center-align'>I've got something to say!</h3></div>
+            <div class="collapsible-body">
+                <form action="{% url 'blog:create' %}" method='POST'>
+                    {% csrf_token %}
+                    
+                    <h5 class='center-align'>Title of your new post.</h5>
+                    <input type="text" name='title' placeholder='Title of your post' required>
+                    
+                    <h5 class='center-align'>Body of your new post.</h5>
+                    <input type="text" name='body' placeholder="Body of your post" required>    
+                    
+                    
+                    <label>
+                        <br><br>
+                        <span>Add a photo if you like.</span><br>
+                        <input class='waves-effect waves-light btn' type="file" name='photo'/>
+                        <br><br>
+                        <input id="indeterminate-checkbox" type="checkbox" name='public' checked/><span>Make post public?</span>
+                        
+                    </label>
+                        
+                    <br><br>
+                
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Post as {{user.username}}
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
+            </div>
+        </li>
+    </ul>
+</div>
+{% endif %}
+
+<div class="row">
+    <h3 class="col offset-m2 offset-s2 s8 m8 center-align z-depth-3 teal accent-4">Recent posts from our lovely users:</h3>
+</div>
+
+<div class="row container">
+
+    {% for post in public_posts %}
+    {% if post.public == False %}
+    <div class="col s10 m6 offset-s1">
+        <div class="card blue-grey darken-3">
+            <div class="card-content white-text">
+                <span class="card-title">PRIVATE POST, by {{post.user}}</span>
+                <p>POST IS CURRENTLY MARKED PRIVATE</p>
+            </div>
+
+            <div class="card-action">
+                <blockquote>Written on {{post.date_created}}</blockquote>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="col s10 m6 offset-s1">
+        <div class="card blue-grey darken">
+            <div class="card-content white-text">
+                <span class="card-title">{{post.title}}, by {{post.user}}</span>
+                <p>{{post.body}}</p>
+            </div>
+
+            <div class="card-action">
+                <blockquote>Written on {{post.date_created}}</blockquote>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+
+    </div>
+
+    {% endblock %}

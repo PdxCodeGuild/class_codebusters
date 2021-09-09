@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 100px) ;
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+    "purple purple purple purple purple green green"
+    "red red blue blue blue green green"
+    "red red orange orange orange orange orange";
+}
+
+.purple{
+    grid-area: purple;
+    background-color: purple;
+}
+
+.green{
+    grid-area:green ;
+    background-color: green;
+}
+
+
+.red{
+    grid-area:red;
+    background-color: red;
+}
+
+
+.blue{
+    grid-area:blue  ;
+    background-color: blue;
+}
+
+
+.orange{
+    grid-area:orange;
+    background-color:orange ;
+}

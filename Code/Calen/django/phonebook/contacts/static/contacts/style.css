@@ -1,0 +1,114 @@
+
+nav i {
+    font-size: 2rem;
+    color: orange;
+}
+
+
+.links{
+    font-size: 1.25rem;
+}
+
+.links > a{
+    color: gray;
+    margin-left: .5rem;
+}
+
+.links > a:visited{
+    color: gray;
+}
+
+.links > a:hover{
+    color: red;
+}
+
+form{
+    padding: 0 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+
+form > input,
+label {
+    font-size: 1.5em;
+}
+
+
+.cool-not-cool{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.cool{
+    border: 2px solid green;
+    border-radius: 8px;
+    padding: 1em;
+}
+
+.not-cool{
+    border: 2px solid red;
+    border-radius: 8px;
+    padding: 1em;
+}
+
+/* Yellow pages */
+.yellow-pages{
+    background-color: hsl(55, 94%, 90%);
+    padding: 2rem;
+}
+
+.yellow-pages > h1 {
+    background-color: hsla(0, 0%, 8%, 0.774);
+    display: inline-block;
+    color: hsl(55, 94%, 90%);
+    padding: .5rem 1rem;
+    border-radius: 999px;
+}
+
+.ad{
+    margin-top: 1rem;
+    background-color: hsla(0, 100%, 100%, .5);
+    padding-left: 1rem;
+}
+
+.ad > h2{
+    margin-bottom: .5rem;
+}
+
+.ad h2 + p{
+    margin-bottom: .4em;
+}
+
+.ad :nth-child(2){
+    color: red;
+}
+
+.premium {
+    font-size: 1.1rem;
+    border:  2px dashed hsl(0, 0%, 5%);
+    position: relative;
+}
+
+
+.premium:after{
+    position: absolute;
+    content: 'pro';
+    bottom: 4px;
+    right: 4px;
+}
+
+footer{
+    width: 100vw;
+    margin: 20px 0;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+.copy{
+    text-align: center;
+}

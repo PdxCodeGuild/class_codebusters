@@ -1,0 +1,28 @@
+
+{% extends 'blog/base.html' %}
+{% block content %}
+
+
+<div class='row'>
+
+    <h4 class="col offset-m2 offset-s2"> Post history for {{user.username}}.</h4>
+    <h4 class="col offset-m offset-s1"><a href="{% url 'blog:create' %}">Draft a new post.</a></h4>
+    <ul class="collapsible popout col s8 m8 offset-s2 offset-m2 ">
+        {% for post in user.posts.all %}
+        <li>
+            <div class="collapsible-header"><i class="material-icons">pageview</i>{{post.title}}, written {{post.date_created}}</div>
+            
+            <div class="collapsible-body">
+                <span>Author: {{post.user}} <br> 
+                    <blockquote>{{post.body}}</blockquote>
+                </span>
+            </div>
+        </li>
+        
+        {% endfor %}
+        
+    </ul>
+    
+</div>
+
+{% endblock %}

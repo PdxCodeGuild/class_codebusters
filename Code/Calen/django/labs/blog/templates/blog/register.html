@@ -1,0 +1,25 @@
+
+{% extends 'blog/base.html' %}
+{% block content %}
+
+
+<div class="container">
+    <h3 class="center-align">Only a few steps away from blogging your heart out-</h3>
+    <form action="{% url 'blog:register' %}" method='POST'>
+        {% csrf_token %}
+        <h5>Username</h5>
+        <input type="text" name='username' placeholder='username' required>
+        <h5>Password</h5>
+        <input type="password" name='password' placeholder="password" required>
+        <h5>Email</h5>
+        <input type="email" name="email" placeholder="Email" required>
+        <h5>First name, optional because to be honest I do not want to handle your data.</h5>
+        <input type="text" name="first_name" placeholder="First name">
+        <h5>Last name, also optional.</h5>
+        <input type="text" name="last_name" placeholder="Last name">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Lets get blogging!<i class="material-icons right">person_add</i></button>
+    </form>
+</div>
+    
+
+{% endblock %}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burrito Order Form</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    Burritos!
+  </header>
+  <main>
+    <div>
+    </div>
+    <section>
+      <form  action="https://webhook.site/bb52f338-b6eb-46e3-9b0e-afbc77bdcfa0" method="post">
+        <h3>Enter your information and order:</h3>
+        <div class="info">
+          <input type="text" name="name" placeholder="Name">
+          <input type="password" name="password" placeholder="Password">
+        </div>
+        <div class="ingredients">
+          <div class="ing-options">
+            <h4>Choose a tortilla:</h4>
+            <div>
+              <input type="radio" name="tortilla" value="whiteflour" id="whiteflour">
+              <label for="whiteflour">White Flour</label>
+            </div>
+            <div>
+              <input type="radio" name="tortilla" value="wheatflour" id="wheatflour">
+              <label for="wheatflour">Wheat Flour</label>
+            </div>
+            <div>
+              <input type="radio" name="tortilla" value="spinach" id="spinach">
+              <label for="spinach">Spinach</label>
+            </div>
+            <div>
+              <input type="radio" name="tortilla" value="corn" id="corn">
+              <label for="corn">Corn</label>
+            </div>
+          </div>
+          <div class="ing-options">
+            <h4>Choose a tortilla:</h4>
+            <div>
+              <input type="radio" name="rice" value="whiterice" id="whiterice">
+              <label for="whiterice">White Rice</label>
+            </div>
+            <div>
+              <input type="radio" name="rice" value="brownrice" id=brownrice>
+              <label for="brownrice">Brown Rice</label>
+            </div>
+          </div>
+          <div class="ing-options">
+            <h4>Choose a tortilla:</h4>
+            <div>
+              <input type="radio" name="beans" value="blackbeans" id="blackbeans">
+              <label for="blackbeans">Black Beans</label>
+            </div>
+            <div>
+              <input type="radio" name="beans" value="pintobeans" id="pintobeans">
+              <label for="pintobeans">Pinto Beans</label>
+            </div>
+          </div>
+          <div class="ing-options">
+            <h4>Choose a tortilla:</h4>
+            <div>
+              <input type="radio" name="protein" value="carnitas" id="carnitas">
+              <label for="carnitas">Carnitas</label>
+            </div>
+            <div>
+              <input type="radio" name="protein" value="chicken" id="chicken">
+              <label for="chicken">Chicken</label>
+          </div>
+            <div>
+              <input type="radio" name="protein" value="sofritas" id="sofritas">
+              <label for="sofritas">Sofritas</label>
+            </div>
+            <div>
+              <input type="radio" name="protein" value="none" id="none">
+              <label for="none">None</label>
+            </div>
+          </div>
+          <div class="ing-options">
+            <h4>Choose a tortilla:</h4>
+            <div>
+              <input type="checkbox" name="cheese" id="cheese"/>
+              <label for="cheese">Cheese</label>
+            </div>
+            <div>
+              <input type="checkbox" name="sourcream" id="sourcream">
+              <label for="sourcream">Sour Cream</label>
+            </div>
+          </div>
+        </div>
+        <div class="delivery">
+          <h4>Delivery Instructions</h4>
+          <textarea name="delivery"></textarea>
+        </div>
+        <div class="submit">
+          <button type="submit">submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

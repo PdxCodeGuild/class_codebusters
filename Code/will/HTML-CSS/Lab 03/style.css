@@ -1,0 +1,19 @@
+.logo {
+  height: 75px;
+  width: 80%;
+  padding: 10px;
+  object-fit: fill;
+}
+
+/* .container {
+  width: 100vw;
+} */
+
+/* .body{
+  width: 100vw;
+} */
+
+p {
+  font-family: arial;
+  text-align: center;
+}

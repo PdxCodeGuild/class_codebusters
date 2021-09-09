@@ -1,0 +1,17 @@
+{% extends 'contacts/base.html' %}
+{% block content %}
+
+{% if contacts %}
+
+{% for contact in contacts %}
+<h2> {{contact.full_name}} -- {{contact.coolness}} </h2>
+{% endfor %}
+
+{% else %}
+<h2>
+    no contacts found
+</h2>
+{% endif %}
+
+
+{% endblock %}

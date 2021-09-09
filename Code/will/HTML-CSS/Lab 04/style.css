@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: seashell;
+}
+
+form {
+  display: grid;
+  /* grid-template-columns: repeat(10, 1fr); */
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 100px 100px 100px 100px 100px 100px 100px 100px 100px ;
+  /* grid-template-rows: repeat(10, 1fr); */
+}
+
+.date{
+  grid-column: 7;
+  grid-row: 2;
+}
+.name{
+  grid-column: 4/6 ;
+  grid-row: 3 ;
+}
+.email{
+  grid-column: 4/6;
+  grid-row: 4;
+}
+
+.password{
+  grid-column: 6/8 ;
+  grid-row: 3 ;
+}
+.quantity{
+  grid-column: 6/8;
+  grid-row: 4;
+}
+
+.container{
+  grid-column: 4/6;
+  grid-row: 5 ;
+}
+
+.rice{
+  grid-column: 6/8 ;
+  grid-row: 5;
+}
+.beans{
+  grid-column: 6/8;
+  grid-row:6;
+}
+.protein{
+  grid-column: 4/6 ;
+  grid-row: 6;
+}
+
+.add{
+  grid-column: 4/6;
+  grid-row: 7;
+}
+.drink{
+  grid-column: 7/10;
+  grid-row: 7;
+}
+
+.comment{
+  grid-column: 4/7;
+  grid-row: 8;
+}
+.button{
+  grid-column: 7/9;
+  grid-row: 8;
+}
+
+img{
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.topnav{
+  grid-column: 1/10;
+  grid-row: 1;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: red;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+

@@ -1,0 +1,40 @@
+.box{
+    height: 400px;
+    width: 400px;
+    background-color: blueviolet;
+    /* transition: 1s; */
+    animation-duration: 3s;
+    animation-name: rainbow;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    /* animation-delay: 4s; */
+    animation-fill-mode: backwards;
+}
+/* 
+.box:hover{
+transform: translateX(400px);
+} */
+
+@keyframes test{
+    0% {transform: translateX(0)}
+    50% {transform: translateX(400px);}
+    100% {transform: translatex(0);}
+}
+
+@keyframes rainbow {
+    0% {
+        background-color: red;
+        border-radius: 50%;
+    }
+    20% {background-color: orange;}
+    40% {background-color: yellowgreen;}
+    60% {background-color: green;}
+    80% {background-color: blue;}
+    100% {background-color:violet;}
+    
+}
+
+/* .box:active{
+    background-color: aqua;
+} */

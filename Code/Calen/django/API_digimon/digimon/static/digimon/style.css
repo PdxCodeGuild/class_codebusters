@@ -1,0 +1,24 @@
+
+
+@media (preferes-color-scheme: dark){
+    :root{
+        --clr-primary: #4d4d4d;
+    }
+}
+
+
+@media (preferes-color-scheme: light){
+    :root{
+        --clr-primary: #da6767;
+        /* --clr-primary: #dbdbdb; */
+    }
+}
+
+
+.primary{
+    background-color: var(--clr-primary);
+}
+
+body{
+    background-color: red;
+}

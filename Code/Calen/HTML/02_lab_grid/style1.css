@@ -1,0 +1,43 @@
+*
+ {
+     padding: 0;
+     margin:0;
+     box-sizing: border-box;
+ }
+
+body{
+    height: 100vh;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10% 90%;
+    height: 100%;
+}
+
+header{
+    background-color: #00ffff;
+    grid-column: 1/12;
+    
+}
+
+aside {
+    background-color: #ff7f50;
+    grid-row: 2/2;
+}
+
+section {
+    grid-column: 3/12;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    overflow: scroll;
+}
+
+section > p {
+    background-color: #7fff02;
+    min-height: 100px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}

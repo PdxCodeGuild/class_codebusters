@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+}
+
+.high{
+    color: orangered;
+}
+
+.medium{
+    color: rgb(157, 214, 0);
+}
+
+.low{
+    color: lightgreen
+}
+
+.completed{
+    font-style: italic;
+    color: black;
+}
+
+.todo-items{
+    background-color: rgba(128, 128, 128, 0.548);
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Django-CodeBusters</title>
+</head>
+<body>
+  <h1>CodeBusters</h1>
+  <h2>Django -- is fun</h2>
+
+  {% for friend in friends %}
+    <h2>Hello {{friend.name}}</h2>
+    <p>{{friend.name}} is {{friend.age}} years old.</p>
+
+    {% if friend.is_cool %}
+      <p>{{friend.name}} is cool.</p>
+    {% endif %}
+
+  {% endfor %}
+
+  <ul>
+    {% for color in colors %}
+    <li>{{color}}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

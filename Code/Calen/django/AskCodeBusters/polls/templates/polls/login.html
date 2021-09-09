@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% include 'polls/_navbar.html' %}
+
+    <form action="{% url 'polls:login' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+
+    <h3>No account yet? <a href="{% url 'polls:signup' %}">Sign up here</a></h3>
+    
+</body>
+</html>

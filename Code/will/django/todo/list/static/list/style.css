@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  background-color: bisque;
+}
+
+.items {
+  display: flex;
+  margin: 5px;
+}
+

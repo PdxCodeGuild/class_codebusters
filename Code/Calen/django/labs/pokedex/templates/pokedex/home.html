@@ -1,0 +1,32 @@
+
+{% extends 'pokedex/base.html' %}
+{% block title %} Pokedex {% endblock %}
+
+{% block content %}
+
+{{types}}
+<div class="container row">
+    {% for pokemon in pokedex %}
+
+        <div class="col s3 m3">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">{{pokemon.name}}</span>
+                    <img src="{{pokemon.image_front}}" alt="">
+                    <img src="{{pokemon.image_back}}" alt="">
+                </div>
+                <div class="card-action">
+                    <a href="{% url 'pokedex:details' pokemon.number %}">#{{pokemon.number}}</a>|
+                    {% for type in pokemon.types.all%}
+                    <a href="{% url 'pokedex:type' type %}" class='type-icon type-{{type}}'>{{type}}</a>
+                    {% endfor %}
+                </div>
+            </div>  
+        </div>
+
+
+        {% endfor %}
+</div>
+
+
+{% endblock %}

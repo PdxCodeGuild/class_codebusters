@@ -1,0 +1,42 @@
+#sidenav{
+    border: 3px solid #870c28;
+    padding: 5%;
+}
+img{
+    width: 100%;
+}
+input{
+    width: 100%;
+    border-radius: 25px;
+    padding: 1%;
+    margin: 3%;
+}
+main{
+    background: url(https://www.coffeestore.com/pub/static/frontend/CoffeeHouse/theme/en_US/images/main-banner-bg.jpg);
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 2%;
+}
+#sidenav > .row{
+    padding: 10px;
+}
+#sidenav > #shopcat{
+    margin: 3%;
+    font-weight: 500;
+    color: #aaa;
+}
+.col-8{
+    border-left: black solid 1px;
+    padding: 5%;
+}
+#logo{
+    width: 50%;
+}
+.col-2 > #item{
+    margin-left: 3%;
+    font-weight: 500;
+    color: #aaa;
+}

@@ -1,0 +1,144 @@
+/*  searchbar
+    center navbar stays put when scrolling
+    navbar different color than body background
+    tell some type of story around images
+    announcement about shipping above scrol bar
+    log on background when page loading
+    go to bag icon
+    clicking on logo takes you to homebar
+*/
+
+/* reset all */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**********Heading***************/
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: #BA7D5E;
+    grid-template-columns: 2;
+    /* spacing between to and h1 */
+    padding-top: 16px;
+    text-decoration: none;
+}
+
+body {
+    display: inline-block;
+    /* fr is flexible where px is fixed. */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+    height: 100%;
+    background: radial-gradient(#c2947c, #91583B);
+    /* background-repeat: repeat-x; */
+    font-family: 'Roboto', sans-serif;
+    /* margin: 18px; */
+    color:black;
+    /* spacing between lines */
+    line-height: 2; 
+}
+
+h4 {
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+/* main quote */
+.main {
+    color: #c2947c;
+    text-align: center;   
+}
+
+img {
+    max-width: 350px;
+    width: 85%;
+}
+
+a {
+    color: inherit;
+    margin-bottom: 18px;
+
+}
+
+/***********NavigationBar***************/
+.navbar :hover {
+    background-color: #c2947c;
+    /* need help making the hover color even/rounded */
+}
+.navbar :visited {
+    color: #91583B;
+}
+.navbar {
+    display: flex;
+    /* flex box can only deal with one dimension at a time colum or row */
+    flex-direction: row;
+    /* justify aligns items on the main axis */
+    justify-content:center;
+    /* aigns items on the cross axis */
+    align-items: center;
+    /* items shrink or expand  where with wrap the go to next line*/
+    flex-wrap: nowrap;
+    max-width: 100%;
+    /* width: 85%; */
+    grid-column: 1;
+    padding: 10px;
+    /* Navbar moves with scroll */
+    /* position: fixed;
+    background-color: black;
+    margin: 20px 0; */
+}
+
+/* targets just the links */
+.navbar a {
+    /* creates space between the links */
+    padding-left: 16px;
+}
+button {
+    padding: 5px;
+    background-color: #91583B;
+}
+input {
+    background-color:#c2947c;
+    padding: 2px;
+    margin: 6px;
+    display: flex;
+    flex-direction: inherit;
+}
+/***************Footer************/
+.foot {
+    display: flex;
+    /* flex box can only deal with one dimension at a time colum or row */
+    flex-direction: center ;
+    /* justify aligns items on the main axis */
+    justify-content:center;
+    /* aigns items on the cross axis */
+    align-items: center;
+}
+
+.foot a {
+    padding: 16px;
+    /* background-color: black;
+    width: 100%; */
+}
+
+.foot :hover {
+    background-color: #c2947c;
+    
+}
+.foot :visited {
+    color: #91583B;
+}
+/* section {
+       Navbar moves with scroll 
+       position: fixed;
+       background-color: black;
+       max-width: 100%;
+   }  */
+
+   

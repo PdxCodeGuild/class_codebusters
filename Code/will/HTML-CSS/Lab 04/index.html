@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+    <title>Cilantro ‘N Onions Taco Shop</title>
+</head>
+
+<body>
+
+
+
+
+
+    <div class="wrapper">
+        <form action="https://webhook.site/110e520a-a3c6-4907-bfdb-8b108849add4" method="POST">
+
+            <div class="topnav">
+                <a class="active" href="#">Burrito Order Form</a>
+            </div>
+
+            <!-- Company Logo -->
+            <img src="Logo.png" alt=" company logo">
+
+            <!-- Order Date -->
+            <div class="date">
+                <h5 class="h5"> Order Date</h5>
+                <label for="date"></label>
+                <input id="date" name="date" type="date" required>
+            </div>
+
+            <!-- Input Number -->
+            <div class="quantity">
+                <h5> Order Quantity</h5>
+                <input name="quantity" type="number" min=0 max=99 step="1" placeholder="#">
+            </div>
+
+            <!-- Input Name -->
+            <div class="name">
+                <h5> Enter your Name</h5>
+                <br>
+                <input name="name" placeholder="Name" type="text" required>
+            </div>
+
+            <div class="email">
+                <!-- Input Email -->
+                <h5> Order Email</h5>
+                <br>
+                <input type="email" placeholder="Email" name="email">
+            </div>
+
+            <!-- Input Password -->
+            <div class="password">
+                <h5> Order Password</h5>
+                <br>
+                <input name="password" type="password" placeholder="Order Password" required>
+            </div>
+
+            <!-- Burritos, Tacos & More -->
+            <div class="container">
+                <h5> Select an option</h5>
+                <br>
+                <label for="burrito">Burrito</label>
+                <input value="burrito" id="burrito" name="type" type="radio">
+
+                <label for="bowl">Bowl</label>
+                <input value="bowl" id="Bowl" name="type" type="radio">
+
+                <label for="softtaco">Soft Taco</label>
+                <input value="softtaco" id="softtaco" name="type" type="radio">
+
+                <label for="crispytaco">Cripsy Taco</label>
+                <input value="crispytaco" id="crispytaco" name="type" type="radio">
+
+                <label for="salad">Salad</label>
+                <input value="salad" id="salad" name="type" type="radio">
+            </div>
+
+            <!-- Rice -->
+            <div class="rice">
+                <h5> Choose a rice</h5>
+                <br>
+                <label for="white">White</label>
+                <input value="white" id="white" name="type" type="checkbox">
+
+                <label for="brown">Brown</label>
+                <input value="brown" id="brown" name="type" type="checkbox">
+
+                <label for="norice">No Rice</label>
+                <input value="norice" id="norice" name="type" type="checkbox">
+
+            </div>
+
+            <!-- Beans -->
+            <div class="beans">
+                <h5>Choose a bean</h5>
+                <br>
+                <label for="black">Black</label>
+                <input value="black" id="black" name="type" type="checkbox">
+
+                <label for="pinto">Pinto</label>
+                <input value="pinto" id="pinto" name="type" type="checkbox">
+
+                <label for="nobeans">No Beans</label>
+                <input value="nobeans" id="nobeans" name="type" type="checkbox">
+
+            </div>
+
+            <!-- Protein -->
+            <div class="protein">
+                <h5>Choose a protein</h5>
+                <br>
+                <label for="chicken">Chicken</label>
+                <input value="chicken" id="chicken" name="type" type="checkbox">
+
+                <label for="steak">Steak</label>
+                <input value="steak" id="steak" name="type" type="checkbox">
+
+                <label for="carnitas">Carnitas</label>
+                <input value="carnitas" id="carnitas" name="type" type="checkbox">
+
+                <label for="barbacoa">Barbacoa</label>
+                <input value="barbacoa" id="barbacoa" name="type" type="checkbox">
+
+                <label for="veggie">Veggie</label>
+                <input value="veggie" id="veggie" name="type" type="checkbox">
+
+            </div>
+
+
+            <!-- Additional Ingredients-->
+            <div class="add">
+                <h5>Additional Ingredients</h5>
+                <br>
+                <label for="cheese">Cheese</label>
+                <input id="cheese" name="cheese" type="checkbox">
+
+                <label for="sourcream">Sour Cream</label>
+                <input id="sourcream" name="sourcream" type="checkbox">
+
+                <label for="lettuce">Lettuce</label>
+                <input id="lettuce" name="lettuce" type="checkbox">
+
+                <label for="salsa">Salsa</label>
+                <input id="salsa" name="salsa" type="checkbox">
+
+                <label for="fries">Fries</label>
+                <input id="fries" name="fries" type="checkbox">
+            </div>
+
+            <div class="drink">
+                <!-- Drinks -->
+                <h5>Choose a drink</h5>
+                <label for="drinks"></label>
+                <select name="choose-1" id="drinks">
+                    <option value="soda">Soda</option>
+                    <option value="bottledwater">Bottled Water</option>
+                    <option value="juice">Juice</option>
+                    <option value="icetea">Ice Tea</option>
+                </select>
+
+            </div>
+
+            <div class="comment">
+                <!-- Additional Comments or Instructions -->
+                <textarea name="comments" placeholder="Additional Comments or Instructions?"></textarea>
+            </div>
+
+            <div class="button">
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{% extends 'contacts/base.html' %}
+
+{% block title %}
+Yellow pages
+{% endblock %}
+
+{% block content %}
+<h1> Yellow Pages</h1>
+
+{% for ad in ads %}
+<div class="add">
+    <h2>{{ad.title}}</h2>
+    <p>{{ad.description}}</p>
+    <a href="{{ad.url}}">{{ad.company_name}}</a>
+    <p>{{ad.phone_number}}</p>
+    <p>{{ad.address}</p>
+</div>
+{% endfor %}
+
+{% endblock %}

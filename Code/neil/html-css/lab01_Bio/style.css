@@ -1,0 +1,95 @@
+/* 
+Lab 01 - Bio
+Parts 1, 2, & 3
+Neil Orbase 
+http://neilkin-park.surge.sh/
+*/
+* {
+  margin: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 11px;
+  box-sizing: border-box;
+  text-align: center;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Linkin_Park_logo_2014.jpg/640px-Linkin_Park_logo_2014.jpg");
+  background-size: 250px;
+  background-position: 0px;
+  background-attachment: fixed;
+  background-position: center;
+}
+body {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3c/Linkin_Park%2C_O2_Arena%2C_London_%2815873077701%29.jpg");
+  background-position: top;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: 1000px 300px;
+}
+h1 {
+  font-size: 50px;
+  font-family: "Monoton", cursive;
+  background: 0%;
+  color: red;
+  margin: 60px;
+  padding: 0;
+  border: 5px solid black;
+  border-block: dashed red;
+}
+p {
+  background: 0%;
+  color: olive;
+  font-style: italic;
+}
+p.front {
+  padding-top: 0%;
+  text-align: center;
+}
+img {
+  padding: 10px;
+  background: 0%;
+}
+a {
+  background: 0%;
+  color: red;
+}
+h3 {
+  font-family: "Monofett", cursive;
+  background: 0%;
+  color: gray;
+  /* margin-left: 15%; */
+  font-size: 50px;
+  margin-top: 200px;
+}
+ol {
+  background: 0%;
+  font-size: x-large;
+  margin-bottom: 10%;
+  list-style-type: "🎧";
+}
+ol li {
+  background: 0%;
+  font-family: "Press Start 2P", cursive;
+  color: rgb(194, 39, 0);
+  text-align: center;
+  width: 5em;
+}
+blockquote {
+  margin-top: 300px;
+  padding-bottom: 100px;
+  background: 0%;
+  color: olive;
+  font-size: 65px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Caveat Brush", cursive;
+  margin-bottom: 5%;
+}
+
+/* Center the entire content of the body
+Modify the padding and margins on your paragraphs to look better.
+Here are docs on margin and padding
+Add a background image
+Take a look at the background-image property. 
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Linkin_Park_logo_2014.jpg/640px-Linkin_Park_logo_2014.jpg
+
+*/

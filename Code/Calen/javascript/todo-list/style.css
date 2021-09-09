@@ -1,0 +1,12 @@
+
+.title{
+    font-weight: bold;
+    font-style: italic;
+    color: wheat;
+    text-shadow: 5px 5px 5px black;
+}
+
+.btn{
+    font-weight: bold;
+    color: wheat;
+}

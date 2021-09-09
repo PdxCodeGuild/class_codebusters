@@ -1,0 +1,19 @@
+{% extends 'pokedex/base.html' %}
+{% block title %} All Pokemon {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col text-center"><h1>All Pokemon</h1></div>
+        <div class="col"></div>
+    </div>
+    {% for pokemon in pokemons %}
+    <div class="row align-items-center">
+        <div class="col-4"></div>
+        <div class="col text-center"><img src="{{pokemon.image_front}}" alt="image of {{pokemon.name}}"></div>
+        <div class="col text-center"><a href="{% url 'pokedex:details' pokemon.id %}">{{pokemon.name|title}}</a></div>
+        <div class="col-4"></div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do Homepage</title>
+</head>
+<body>
+    <div class="card panel teal lighten-2 z-depth-5 center-align">
+        <h1>
+            The best to-do list ever made &#153
+        </h1>
+    </div>
+
+    <div class="new-item">
+        <br>
+        <form method="POST" action="save">
+            {% csrf_token %}
+            <div class="row">
+                <div class="input-field col m6 offset-m2">
+                  <input value="" name="text" id="text" type="text" class="validate">
+                  <label class="active" for="text">Insert Todo item</label>
+                </div>
+
+                <button class="btn waves-effect waves-light col m1 " type="submit" name="action">
+                    Submit
+                <i class="material-icons right">send</i>
+                </button>
+              </div>
+        </form>
+    </div>
+
+
+
+
+
+    <div>
+        <h3 class="card panel teal lighten-2 z-depth-5 center-align">
+            Current items to be done, get it done.
+        </h3>
+        <br><br><br>
+    </div>
+
+    <container class='row'>
+
+        {% for item in todoitems %}
+        <div class="todo-content col m2 offset-m1">
+            <div class="card {% if item.completed == False %} blue-grey darken-1 {% else %} green accent-4 {% endif %}">
+                <div class="card-content white-text">
+                    <span class="card-title ">{{item.text}}</span>
+                    <p>initialized on:</p>
+                    <p>{{item.created_date}}</p>
+                        <a href='completed/{{item.id}}' id='{{item.id}}' class="waves-effect waves-light btn">Set as done</a>
+                        <a href='delete/{{item.id}}' id='{{item.id}}' class="waves-effect waves-light btn red darken-4">Delete</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </container>
+
+<script>
+
+    $(document).ready(function() {
+        M.updateTextFields();
+      });
+            
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+    "pokemon": [
+        {
+            "number": 1,
+            "name": "bulbasaur",
+            "height": 7,
+            "weight": 69,
+            "image_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+            "image_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png",
+            "types": [
+                "poison",
+                "grass"
+            ],
+            "url": "https://pokemon.fandom.com/wiki/bulbasaur"
+        },
+        {
+            "number": 2,
+            "name": "ivysaur",
+            "height": 10,
+            "weight": 130,
+            "image_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+            "image_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png",
+            "types": [
+                "poison",
+                "grass"
+            ],
+            "url": "https://pokemon.fandom.com/wiki/ivysaur"
+        },
+        {
+            "number": 3,
+            "name": "venusaur",
+            "height": 20,
+            "weight": 1000,
+            "image_front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+            "image_back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png",
+            "types": [
+                "poison",
+                "grass"
+            ],
+            "url": "https://pokemon.fandom.com/wiki/venusaur"
+        }
+    ]
+}

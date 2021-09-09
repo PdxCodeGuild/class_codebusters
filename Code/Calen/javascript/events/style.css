@@ -1,0 +1,23 @@
+#box{
+    background-color: purple;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: beige;
+}
+
+.scale-larger{
+    transform: scale(1.2);
+}
+
+.color-name{
+    align-items: right;
+    font-size: 50px;
+}
+
+.hide{
+    visibility: hidden;
+}

@@ -1,0 +1,11 @@
+<nav>
+  <h1><a href="{% url 'polls:home' %}">AskCodeBusters</a></h1>
+  <div>
+    {% if request.user.is_anonymous %}
+    <a href="{% url 'polls:signup' %}">Sign Up</a>
+    <a href="{% url 'polls:login' %}">Login</a>
+    {% else %}
+    <a href="{% url 'polls:logout' %}">Logout</a>
+    {% endif %}
+  </div>
+</nav>

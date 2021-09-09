@@ -1,0 +1,32 @@
+
+{% extends 'blog/base.html' %}
+{% block content %}
+<br>
+<div class="row container">
+    <form action="{% url 'blog:create' %}" method='POST'>
+        {% csrf_token %}
+        
+        <h5 class='center-align'>Title of your new post.</h5>
+        <input type="text" name='title' placeholder='Title of your post' required>
+        
+        <h5 class='center-align'>Body of your new post.</h5>
+        <input type="text" name='body' placeholder="Body of your post" required>    
+        
+        
+        <label>
+            <br><br>
+            <input id="indeterminate-checkbox" type="checkbox" name='public' checked/><span>Make post public?</span>
+        </label>
+            
+        <br><br>
+    
+        <button class="btn waves-effect waves-light" type="submit" name="action">Post as {{user.username}}
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+</div>
+
+
+
+
+{% endblock %}

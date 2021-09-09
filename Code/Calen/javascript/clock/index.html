@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <title>The clock</title>
+</head>
+<body>
+
+
+    <div class="row header">
+        <div class="logo col s2 m2">LOGO</div>
+        <div class="dropdown col s3 m3 offset-s7 offset-m7 right-align">MENU</div>
+    </div>
+
+
+    <br><br><br><br><br>
+
+    <div class="container row">
+        <div class="clock center-align" id='clock'>
+            00:00:00
+        </div>
+    </div>
+    
+    <div class="container row center-align controls">
+
+        <div class=" col s4 m4">
+            STOP WATCH 
+            <br>
+            <div class="switch ">
+                <label>
+                    Off
+                    <input type="checkbox" id='stop-watch-switch'>
+                    <span class="lever"></span>
+                    On
+                </label>
+                <br><br>
+            </div>
+            <a class="waves-effect waves-light btn-large blue-grey darken-2" id='stop-watch-go'> GO!</a>
+            <a class="waves-effect waves-light btn-large blue-grey darken-2" id='stop-watch-lap'> LAP!</a>
+            <a class="waves-effect waves-light btn-large blue-grey darken-2" id='stop-watch-stop'> STOP!</a>
+        </div>
+
+        <div class=" col s4 m4">
+            CLOCK
+            <br>
+            <div class="switch controls">
+                <label>
+                    Off
+                    <input type="checkbox" id='clock-switch' checked>
+                    <span class="lever"></span>
+                    On
+                </label>
+                <br><br>
+            </div>
+        </div>
+
+        <div class=" col s4 m4">
+            COUNT DOWN
+            <br>
+            <div class="switch controls">
+                <label>
+                    Off
+                    <input type="checkbox" id='countdown-switch'>
+                    <span class="lever"></span>
+                    On
+                </label>
+                <br><br>
+            </div>
+            <a class="waves-effect waves-light btn-large blue-grey darken-2" id='countdown-start'> START!</a>
+            <a class="waves-effect waves-light btn-large blue-grey darken-2" id='countdown-stop'> STOP!</a>
+            <input class='col s2 m2' type="text" placeholder="minutes" id='countdown-time'>
+        </div>
+
+    <div>
+
+    <container class="container row" id='timer-area'>
+
+    </container>
+    
+    
+</body>
+</html>
