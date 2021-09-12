@@ -5,6 +5,8 @@
 // Jared Nistler
 //-----------------------------------------------
 
+
+
 //-----------------------------------------------#
 // Utilities
 //-----------------------------------------------#
@@ -113,33 +115,22 @@ function randPassGen() {
 
 
 function encryptStr(text, num) {
+  let lowerText = text.toLowerCase()
   let encrypted = "" 
-  for (char of text) {
+  for (char of lowerText) {
     encrypted += lower_bank[((lower_bank.indexOf(char)) + num) % 26]
   }
   return encrypted
 }
 
-function decryptStr(text, num) {
-  let decrypted = "" 
-  for (char of text) {
-    decrypted += lower_bank[((lower_bank.indexOf(char)) - num) % 26]
-  }
-  return decrypted
-}
-
 function rotCypher(str) {
-  let user_text = document.getElementById("RotTextArea").textContent
-  let rot_num = document.getElementById("RotNumArea").textContent;
 
-  console.log(user_text)
-  console.log(rot_num)
+  const RotText = document.getElementById("RotTextArea")
+  const RotNum = document.getElementById("RotNumArea")
 
-  // if (str == "e"){
-  //   encryptStr()
-  // }
-  // else {
-  //   decryptStr()
-  // }
+  let user_text = RotText.value;
+  let rot_num = parseInt(RotNum.value);
+  
+  RotText.value = encryptStr(user_text, rot_num)
 
 }

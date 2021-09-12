@@ -21,7 +21,7 @@
   <body>
     <header><h1>Lab01 - Javascript Redo</h1></header>
     <div class="main">
-      <!-- <div class="accordion" id="accordionContent">
+      <div class="accordion" id="accordionContent">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button
@@ -39,17 +39,12 @@
             id="collapseOne"
             class="accordion-collapse collapse"
             aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample"
+            data-bs-parent="#accordionContent"
           >
             <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <button class="btn btn-primary" id="rps" onclick="rockPaperScissors()">
+                Rock, Paper, Scissors, Lizard, Spock
+              </button>
             </div>
           </div>
         </div>
@@ -70,17 +65,11 @@
             id="collapseTwo"
             class="accordion-collapse collapse"
             aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
+            data-bs-parent="#accordionContent"
           >
             <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <button class="btn btn-primary" id="rpg" onclick="randPassGen()">Random Password Generator</button>
+            </button>
             </div>
           </div>
         </div>
@@ -101,7 +90,7 @@
             id="collapseThree"
             class="accordion-collapse collapse"
             aria-labelledby="headingThree"
-            data-bs-parent="#accordionExample"
+            data-bs-parent="#accordionContent"
           >
             <div class="accordion-body">
               <h3>Welcome to the Rot Cypher</h3>
@@ -110,6 +99,10 @@
                 select "Encrypt" or "Decrypt"
               </p>
               <div class="mb-3">
+                <div class="form-outline">
+                  <label class="form-label" for="RotNumArea">Enter Rot Level</label>
+                  <input type="number" id="RotNumArea" class="form-control" />
+                </div>
                 <label for="RotTextArea" class="form-label"
                   >Enter Your Text Here</label
                 >
@@ -118,17 +111,13 @@
                   id="RotTextArea"
                   rows="3"
                 ></textarea>
-                <button id="r13e" onclick="rotCypher('e')">Encrypt Text</button>
-                <button id="r13d" onclick="rotCypher()">Decrypt Text</button>
+                <button class="btn btn-primary" id="r13e" onclick="rotCypher('e')">Encrypt Text</button>
+                <!-- <button class="btn btn-success" id="r13d" onclick="rotCypher()">Decrypt Text</button> -->
               </div>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
-    <button id="rps" onclick="rockPaperScissors()">
-      Rock, Paper, Scissors
-    </button>
-    <button id="rpg" onclick="randPassGen()">Random Password Generator</button>
   </body>
 </html>
