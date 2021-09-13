@@ -1,0 +1,42 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: 10vh 85vh 5vh;
+    background: radial-gradient(at top left, hsl(98, 100%, 69%) 0%,  hsl(121, 50%, 38%)100%);
+}
+
+
+.container1{
+    font-family: Oswald;
+    grid-column: 1/5;
+    background-color: cornflowerblue; 
+    /* Place holder colors  */
+    text-align: center;
+    padding-top: .5em;
+    font-size: 30px;
+}
+
+.container2 {
+    grid-column: 1/2;
+    /* background-color: lime; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: .5em;
+    padding-top: .5em;
+    gap: .3em;
+}   
+
+.container3{
+    grid-column: 2/5;
+    border: 5px solid red;
+}
+
+.container4{
+    grid-column: 1/4;
+    text-align: center;
+    font-size: 15px;
+}
+.container5 {
+    text-align: right;
+}
