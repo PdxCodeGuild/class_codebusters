@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header-bar">
+        <div class="header-text">
+                Big burritos inc. 
+        </div>
+    </div>
+    <div class="grid-me">
+
+        <div class="sidebar">
+            <ul>
+                <li>Home</li>
+                <li>Order status</li>
+                <li>FAQ</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <form action="https://webhook.site/cee920f6-874e-45d6-8e6e-a46ef44afbfc" method="post">
+            
+            <h3>First and last name: </h3>
+            <input type="text" name="name" required/>
+            
+            <h3>Password for some reason</h3>
+            <input type="text" name="password" required/>
+            
+            <h4>Please select a tortilla style: </h4>
+            <div class="tortilla">
+                <input type="radio" name="tortilla_type" value="White flour tortilla">White flour tortilla
+                <input type="radio" name="tortilla_type" value="Wheat flour tortilla" >Wheat flour tortilla
+                <input type="radio" name="tortilla_type" value="pinach tortilla" >spinach tortilla
+                <input type="radio" name="tortilla_type" value="Corn tortilla" >Corn tortilla
+                <input type="radio" name="tortilla_type" value="egg tortilla" >egg tortilla
+                
+            </div>
+            
+            <h4>What style of rice? </h4>
+            <div class="rice">
+                <input type="radio" name="rice" value="White rice">White rice
+                <input type="radio" name="rice" value="rown rice">Brown rice
+                <input type="radio" name="rice" value="No rice">No rice
+            </div>
+            
+            <h4>Bean style</h4>
+            <div class="beans">
+                <input type="radio" name="beans" value="Black beans">Black beans
+                <input type="radio" name="beans" value="Pinto Beans">Pinto Beans
+                <input type="radio" name="beans" value="No Beans">No Beans
+            </div>
+            
+            <h4>Protein type:</h4>
+            <div class="protein">
+                <input type="radio" name="protein" value="Carnitas">Carnitas
+                <input type="radio" name="protein" value="Chicken">Chicken
+                <input type="radio" name="protein" value="Sofritas">Sofritas
+                <input type="radio" name="protein" value="None">None
+            </div>
+            
+            <h4>Additional ingredient</h4>
+            <div class="other">
+                <input type="checkbox" value="cheese">Extra cheese
+                <input type="checkbox" value="!=cheese">No cheese
+                <input type="checkbox" value="sour_cream">Sour cream
+                <input type="checkbox" value="the_codo">Avacodo
+                <input type="checkbox" value="lettuce">lettuce
+                <input type="checkbox" value="sasla">Hot salsa
+            </div>
+            
+            <div class="delivery">
+                <br>
+                <h4>Please include and helpful delivery instructions I.E "Down the road, stop at the party baloons"</h4>
+                <br>
+                <input type="text" name="delivery" value="pickup, no delivery needed">
+            </div>
+            <br>
+            
+                <button type="submit">submit</button>
+            
+        </form>
+    </div>
+        
+        <!-- Compiled and minified JavaScript -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+       
+</body>
+</html>

@@ -1,0 +1,74 @@
+*{
+    padding:0px;
+    margin:0px;
+    /* overflow: hidden; */
+
+}
+
+
+.grid-me{
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 100vw;
+}
+
+.header-bar{
+    background-color: coral;
+    height: 10vh;
+    width: 100vw;
+}
+
+.header-text{
+    font-size: 50px;
+    /* font-family: wingdings; #lmao */
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+}
+
+.sidebar{
+    background-color: darkgray;
+
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    padding:.25em;
+    font-weight: bold;
+}
+
+.text, .tortilla, .rice, .beans, .protein, .other, .delivery{
+ margin: .5em;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ gap: .5em;
+}
+
+button{
+    height: 10vh;
+    width: 30vw;
+    justify-content: center;
+
+}
+
+button:hover{
+
+}
+
+button:active{
+
+}
+
+
+
