@@ -2,14 +2,7 @@
 <nav>
   <div class="logo"><h4>Pokebusters</h4></div>
   <ul class="nav-links">
-    <li><a href="#work">All Pokemon</a></li>
-    {% if request.user.is_anonymous %}
-    <li><a href="#">Register</a></li>
-    <li><a href="#">Log In</a></li>
-    {% else %}
-    <li><a href="#">{{request.user}}</a></li>   
-    <li><a href="#">Log Out</a></li>
-    {% endif %}
+    <li><a href="#">All Pokemon</a></li>
 
   </ul>
   <!-- Mobile Navigation -->

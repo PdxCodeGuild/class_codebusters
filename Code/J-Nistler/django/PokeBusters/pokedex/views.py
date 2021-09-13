@@ -1,15 +1,15 @@
 from django.http.request import HttpRequest
-from django.http.response import HttpResponse
+from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import render
 from .models import Pokemon, PokemonType
 import json
 
 # Create your views here.
 def home (request):
-    pokemons = Pokemon.objects.all()
 
-    context = {
-        'pokemons' : json.dumps(pokemons)
-    }
+    return render(request, 'pokedex/index.html')
 
-    return render(request, 'pokedex/index.html', context)
+def all_pokemon (request):
+    pokemons = list(Pokemon.objects.all().values())
+
+    return JsonResponse(pokemons, safe=False)

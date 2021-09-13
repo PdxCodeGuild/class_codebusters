@@ -80,6 +80,10 @@ nav {
 
 .container {
   height: 92vh;
+}
+
+.table-container {
+  height: 50vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
