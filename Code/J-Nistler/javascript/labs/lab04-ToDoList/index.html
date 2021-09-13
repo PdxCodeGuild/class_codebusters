@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to ToDo!</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script defer src="app.js"></script>
+    <script src="list.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="title"><h1>Welcome to ToDo!</h1></div>
+      <div class="container">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <div class="form-group">
+              <input
+                class="form-control"
+                placeholder="Submit a New ToDo"
+                type="text"
+                id="todo-text"
+              />
+              <button id="button-submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="list_gen">
+              <table class="table table-striped table-hover list" width="100%">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">To Do Item</th>
+                    <th scope="col"><button id= "button-delete" type="button" class="btn btn-secondary btn-sm">Edit</button></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

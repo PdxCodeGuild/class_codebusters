@@ -1,0 +1,170 @@
+:root {
+  --white: #ede7e3;
+  --nav: #577590;
+  --pokey: #ffcb05;
+  --pokelb: #2a75bb;
+  --pokegld: #c7a008;
+  --pokedb: #3c5aa6;
+
+}
+
+@font-face {
+  font-family: "pokemon_hollownormal";
+  src: url("pokemon_hollow-webfont.woff2") format("woff2"),
+    url("pokemon_hollow-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+html {
+  font-size: 14px;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  max-height: 125px;
+  background-color: var(--pokelb);
+}
+
+.logo {
+  color: var(--pokey);
+  font-size: 4rem;
+}
+
+.logo h4 {
+  font-family: "pokemon_hollownormal", sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links a {
+  color: var(--pokey);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-burger {
+  display: none;
+}
+
+.nav-burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--pokey);
+  margin: 5px;
+}
+
+/* MAIN BODY */
+
+.container {
+  height: 92vh;
+}
+
+.table-container {
+  height: 50vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.main {
+  height: 92vh;
+  background-color: #2a75bb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.pokedex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  min-height: 75vh;
+  width: 60%;
+  border-radius: 25px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+  
+  .logo {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    position: fixed;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: var(--pokelb);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .nav-burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* NAV ANIMATION */
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

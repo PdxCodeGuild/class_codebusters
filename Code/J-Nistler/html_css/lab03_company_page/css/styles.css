@@ -1,0 +1,226 @@
+/* css coded by Jared Nistler */
+
+/* BASIC ELEMENTS */
+html {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    
+}
+h1, h2{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    margin: 0px;
+}
+h1 {
+    font-size: 3.0rem;
+}
+h2 {
+    font-size: 2.5rem;
+    padding-top: 1rem;
+}
+main .container p img {
+    float: right;
+    width: 100%;
+}
+/* SPECIFIC DIVS */
+.logo{
+    width: 30px;
+}
+.container {
+    max-width: 1170px;
+    margin: 0px auto;
+    padding: 0rem 1rem;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+  }
+  .portfolio-item {
+    margin-bottom: 30px;
+  }
+  
+  .navbar-brand {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+  }
+.jumbotron{
+    background-position: center;
+    background-size: cover;
+    color: whitesmoke;
+    height: 30rem;
+}
+.jumbotron h1 {
+    padding-top: 10rem;
+}
+#jumbo-index{
+    background-image: url(../images/banner_1.png);
+}
+#jumbo-equip{
+    background-image: url(../images/banner_2.png);
+}
+#jumbo-mat{
+    background-image: url(../images/banner_3.png);
+}
+#jumbo-abt{
+    background-image: url(../images/banner_4.png);
+}
+#jumbo-port{
+    background-image: url(../images/banner_5.jpg);
+}
+#main-tiles{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+#about-main {
+    padding-bottom: 2.5rem;
+}
+#about-main img{
+    width: 180px;
+}
+#equip-upgrades h4{
+    padding-bottom: 2rem;
+}
+.featurette-divider {
+    margin: 2rem 0;
+  }
+  .featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+  }
+.feature-icon{
+    width: 64px;
+    height: 64px;
+    margin: auto;
+}
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+
+  .carousel-caption h4 {
+    color: black;
+    text-align: left;
+    font-family: "ubuntu";
+}
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 50rem;
+    background-color: #777;
+    width:100%;
+    height: auto;
+  }
+  .carousel-item > img {
+    margin-left: auto;
+    margin-right: auto;;
+    width: 100%;
+    height: auto;
+  }
+  
+.footer-area{
+background-color: #f8f9fa !important;
+}
+
+ .footer-padding {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+.footer-area p a{
+    text-decoration: none;
+}
+footer svg{
+    width: 3rem;
+    transition: fill 0.2s ease-out;
+    padding: 1.2rem 0.5rem;
+}
+footer svg:hover {
+    fill: #d0d0d0;
+}
+/* RESPOND TO SCREEN SIZE */
+  /* rules that apply only to screens 768 pixels and wider */
+  @media (min-width: 768px) {
+    .logo{
+        width: 3rem;
+    }
+    header h1 {
+        font-size: 5.0rem;
+    }
+    .container{
+        max-width: 750px;
+    }
+    ul.features {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul.features li {
+        flex-basis: 50%;
+    }
+    .jumbotron h1 {
+        padding-top: 12rem;
+    }
+    .featurette-heading {
+        font-size: 50px;
+      }
+      main .container p img {
+        width: 50%;
+    }
+    main .container p img {
+        padding-top: 30rem;
+    }
+    #about-main img{
+        padding-top: 0;
+    }
+}
+  /* rules that apply only to screens 992 pixels and wider */
+@media (min-width: 992px) {
+    .jumbotron h2 {
+        font-size: 1.5rem;
+    }
+    .logo{
+        width: 5rem;
+    }
+    .container{
+        max-width: 970px;
+    }
+    .featurette-heading {
+        margin-top: 3rem;
+      }
+      main .container p img {
+        padding-top: 20rem;
+    }
+    #about-main img{
+        padding-top: 0;
+        width: 250px;
+    }
+}
+  /* rules that apply only to screens 1200 pixels and wider */
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1170px;
+    }
+    ul.features li {
+        flex-basis: 33%;
+    }
+    .featurette-heading {
+        margin-top: 6.5rem;
+      }
+      main .container p img {
+        padding-top: 15rem;
+    }
+    #about-main img{
+        padding-top: 0;
+        width: 350px;
+    }
+}
