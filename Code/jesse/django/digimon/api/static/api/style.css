@@ -1,0 +1,23 @@
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --clr-primary: #4d4d4d;
+    --clr-foreground: # 236be8;
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --clr-primary: #dbdbdb;
+    --clr-foreground: #6799f0;
+  }
+}
+
+.primary{
+  background-color: var(--clr-primary);
+  color: var(--clr-foreground);
+}
+
+img {
+  border-radius: 50px;
+}

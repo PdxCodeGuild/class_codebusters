@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1em;
+  font-size: 1em;
+}
+
+.todo-item {
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.todo-item button {
+  font-size: 1em;
+  border: none;
+  background-color: transparent;
+  margin: 2px;
+  height: 20px;
+}
+
+.todo-item p {
+  /* border: 2px solid darkblue; */
+  margin: 5px;
+  /* padding: 3px; */
+  font-size: 1.5em;
+}
+
+.complete-item {
+  font-size: 1.5em;
+  text-decoration: line-through;
+}
+
+.input{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input input {
+  margin-top: .4em;
+  font-size: 1.5em;
+}
+
+.input button {
+  margin-top: 1em;
+  width: 8em;
+  height: 3em;
+}
