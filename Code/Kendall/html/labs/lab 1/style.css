@@ -1,0 +1,22 @@
+div {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ8N32eyl85MKx7UFjGNHuxxeKGUYujJ-3Lw&usqp=CAU");
+}
+h1 {
+  background-color: aqua;
+}
+
+p {
+  color: greenyellow;
+}
+
+li {
+  color: greenyellow;
+}
+
+q {
+  color: greenyellow;
+}

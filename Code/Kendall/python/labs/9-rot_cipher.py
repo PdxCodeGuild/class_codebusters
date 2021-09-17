@@ -20,6 +20,9 @@ user_input = input("Enter a word: ")
 
 cipher = []
 for char in user_input:
-    cipher.append(ROT13[English.index(char)])
+    if char in English:
+        cipher.append(ROT13[English.index(char)])
+    else:
+        cipher.append(char)
 
 print(''.join(cipher))

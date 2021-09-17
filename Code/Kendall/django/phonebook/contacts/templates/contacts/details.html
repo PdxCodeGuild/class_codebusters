@@ -1,0 +1,21 @@
+{%  extends 'contacts/base.html'%}
+{%block title%}
+{{contact.first_name}} {{contact.last_name}}
+{% endblock %}
+{% block content %}
+
+<h1>Name: {{contact.first_name}} {{contact.last_name}}</h1>
+<!-- Use if statement to only display if email is in contact -->
+{% if contact.email %}
+<p>Email: {{contact.email}}</p>
+{% endif %}
+
+{% if contact.phone_number %}
+<p>Phone: {{contact.phone_number}}</p>
+{% endif %}
+
+{% if contact.address %}
+<p>Address: {{contact.address}}</p>
+{% endif %}
+
+{% endblock %}

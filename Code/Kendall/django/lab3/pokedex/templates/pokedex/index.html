@@ -1,0 +1,37 @@
+{% extends 'pokedex/base.html' %}
+{% block title %} Pokedex {% endblock %}
+
+{% block content%}
+
+<table class="container">
+    <thead>
+        <tr>
+            <th scope="col"> # </th>
+            <th scope="col"> Name </th>
+            <th scope="col"> Image </th>
+            <th scope="col"> Weight </th>
+            <th scope="col"> Height </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pokemon in pokemons %}
+        <!-- list pokemon attributes -->
+        <tr>
+            <th scope="row"> {{ pokemon.number }} </th>
+            <td> {{ pokemon.name }} </td>
+            <td>
+                <img src="{{ pokemon.image_front }}" alt="{{ pokemon.name }}">
+                <img src={{pokemon.image_back}} alt={{pokemon.name}}>
+            </td>
+            <td> {{ pokemon.weight }} </td>
+            <td> {{ pokemon.height }} </td>
+
+        </tr>
+
+        {% endfor %}
+    </tbody>
+
+</table>
+
+
+{% endblock %}

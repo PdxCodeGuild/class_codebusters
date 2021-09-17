@@ -1,0 +1,11 @@
+td {
+  max-width: 40ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+span {
+  color: green;
+  font-weight: bold;
+  font-size: 1.1em;
+}

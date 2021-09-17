@@ -1,0 +1,32 @@
+
+
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: green;
+    text-align: center;
+}
+
+.sidebar {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: orange;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.post > p{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 10px;
+    background-color: aqua;
+    text-align: center;
+}
+
+.post {
+    display: grid;
+    background-color: yellow;
+}
+
