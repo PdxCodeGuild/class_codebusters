@@ -1,0 +1,18 @@
+{% extends 'todo/base.html' %}
+{% block title %} Todo List {% endblock %}
+
+{% block content%}
+
+    <form action="{% url 'todo:save' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="text">
+        <button type="submit">SUBMIT</button>
+    </form>
+    <h2>Todo List</h2>
+    <ul>
+        {% for todo in todos %}
+        <li>{{ todo.text }} : {{ todo.created_date }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

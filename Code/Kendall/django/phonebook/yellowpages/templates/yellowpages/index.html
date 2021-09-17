@@ -1,0 +1,34 @@
+{% extends 'contacts/base.html' %}
+
+{% block title %}
+Yellow Pages
+{% endblock %}
+
+{% block content %}
+<div class="yellow-pages">
+
+<h1>Yellow Pages</h1>
+
+{% for ad in ads %}
+    <div class="ad {% if ad.premium %} premium {% endif%}">
+        <h2><a href="{{ad.url}}">{{ad.company_name}}</a></h2>
+        <h3>{{ad.title}}</h3>
+        <p>Description: {{ad.description}}</p>
+        <p>Phone: {{ad.phone_number}}</p>
+        <p>Address: {{ad.address}}</p>
+    </div>
+{% endfor %}
+
+</div>
+{% endblock %}
+
+
+{% comment %}
+
+<!-- {% if ad.premium %}
+<div class="ad premium">
+{% else %}
+<div class="ad">
+{% endif %} -->
+
+{% endcomment %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <h2>Unit Converter</h2>
+    <p>Type a value in the Meters field to convert the value to desired unit:</p>
+
+    <p>
+        <label>Meters:</label>
+        <input id="input_distance" type="number" placeholder="Distance" oninput="LengthConverter(this.value)"
+            onchange="LengthConverter(this.value)">
+    </p>
+    <p>Miles: <span id="outputMiles"></span></p>
+    <p>Kilometers: <span id="outputKilometers"></span></p>
+    <p>Yards: <span id="outputYards"></span></p>
+    <p>Feet: <span id="outputFeet"></span></p>
+    <p>Inches: <span id="outputInches"></span></p>
+</body>
+
+</html>

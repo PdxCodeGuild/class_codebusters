@@ -1,0 +1,27 @@
+{%  extends 'contacts/base.html'%}
+{%block title%}
+
+{% endblock %}
+{% block content %}
+Search Results
+{% if contacts %}
+    {% for contact in contacts %}
+        {{contact.first_name}} {{contact.last_name}}
+        {% if contact.email %}
+        <p>Email: {{contact.email}}</p>
+        {% endif %}
+
+        {% if contact.phone_number %}
+        <p>Phone: {{contact.phone_number}}</p>
+        {% endif %}
+
+        {% if contact.address %}
+        <p>Address: {{contact.address}}</p>
+        {% endif %}
+
+    {% endfor %}
+{% else %}
+<h2>No contacts with that name</h2>
+{% endif %}
+
+{% endblock %}

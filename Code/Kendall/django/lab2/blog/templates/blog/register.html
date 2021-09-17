@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block title %} Register {% endblock %}
+
+{% block content%}
+
+    <form action="{% url 'blog:register' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="first_name" placeholder="First Name">
+        <input type="text" name="last_name" placeholder="Last Name">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="email" name="email" placeholder="Email" required>
+
+        <button type="submit">Register</button>
+    </form>
+
+{% endblock %}
