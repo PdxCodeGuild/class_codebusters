@@ -42,7 +42,7 @@ score = sum(score)
 message = ''
 if score < 17:
     message = 'Hit!'
-elif 17 >= score < 21:
+elif 17 <= score < 21:
     message = 'Stay!'
 elif score == 21:
     message = 'Blackjack!'
